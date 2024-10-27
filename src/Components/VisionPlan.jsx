@@ -1,4 +1,65 @@
 import React from 'react';
+import {motion, AnimatePresence} from 'framer-motion'
+import { X, Clock, Users, Sprout } from 'lucide-react';
+
+const milestones = [
+  {
+    id: 1,
+    area: "Human Individual Development",
+    icon: <Users className="w-6 h-6" />,
+    timeframe: "2023-2027",
+    goals: [
+      {
+        title: "Healthy Individuals",
+        description: "Prioritizing healthcare initiatives, from basic medical access to preventative care. Special programs focus on maternal health, child nutrition, and mental health awareness."
+      },
+      {
+        title: "Individuals with Dignity",
+        description: "Promotes social welfare programs to support the most vulnerable, including poverty eradication initiatives and support for the elderly, disabled, and those affected by crises."
+      },
+      {
+        title: "Educated Individuals",
+        description: "Advocates for equal access to quality education, from early childhood to tertiary education, with a focus on bridging the digital divide."
+      }
+    ]
+  },
+  {
+    id: 2,
+    area: "Development of the Collective",
+    icon: <Clock className="w-6 h-6" />,
+    timeframe: "2027-2031",
+    goals: [
+      {
+        title: "Safe, Healthy, and Appealing Environment",
+        description: "Focuses on clean and sustainable infrastructure, providing clean water, sanitation, safe housing, and accessible public spaces."
+      },
+      {
+        title: "Valued Identity and Cultural Heritage",
+        description: "Supports cultural revitalization through traditional practices, oral histories, festivals, and arts initiatives."
+      },
+      {
+        title: "Good Governance and Leadership",
+        description: "Emphasizes transparent governance, community engagement, and youth leadership roles."
+      }
+    ]
+  },
+  {
+    id: 3,
+    area: "Sustainability and Growth",
+    icon: <Sprout className="w-6 h-6" />,
+    timeframe: "2031-2035",
+    goals: [
+      {
+        title: "Stewardship of Our Resources",
+        description: "Encourages responsible management of land and natural resources through sustainable practices and conservation efforts."
+      },
+      {
+        title: "Economic Opportunity",
+        description: "Focuses on building a thriving economy by supporting small businesses and creating diverse employment opportunities."
+      }
+    ]
+  }
+];
 
 function VisionPlan() {
   return (
