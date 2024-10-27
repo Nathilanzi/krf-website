@@ -1,4 +1,83 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {
+  Users, 
+  TreePine,
+  HeartHandshake,
+  Building2,
+  GraduationCap,
+  Target,
+  ChevronDown,
+  CircleDollarSign,
+  Shield,
+  Lightbulb,
+  HandHeart,
+  School
+} from 'lucide-react'
+
+const ObjectiveCard = ({ title, description, icon: Icon, details, image }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <motion.div 
+      className="bg-white rounded-xl shadow-lg overflow-hidden"
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.2 }}
+    >
+      <div className="p-6">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="p-3 bg-[#1B5538] rounded-lg">
+            <Icon className="w-8 h-8 text-white" />
+          </div>
+          <h3 className="text-2xl font-semibold text-[#1B5538]">{title}</h3>
+        </div>
+        
+        <p className="text-gray-700 mb-4">{description}</p>
+        
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-2 text-[#397D5A] hover:text-[#1B5538] transition-colors"
+        >
+          Learn more
+          <motion.div
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ChevronDown />
+          </motion.div>
+        </button>
+
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="pt-4 space-y-4">
+                {details.map((detail, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    {detail.icon}
+                    <p className="text-gray-700">{detail.text}</p>
+                  </div>
+                ))}
+                {image && (
+                  <img 
+                    src={image} 
+                    alt={title}
+                    className="w-full h-64 object-cover rounded-lg mt-4"
+                  />
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+};
 
 function Objectives() {
   return (
