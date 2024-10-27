@@ -61,6 +61,51 @@ const milestones = [
   }
 ];
 
+const Modal = ({ isOpen, onClose, milestone }) => (
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.95, opacity: 0 }}
+          className="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+          onClick={e => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-2xl font-bold text-[#1B5538]">{milestone.area}</h3>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="w-6 h-6 text-gray-500" />
+            </button>
+          </div>
+          
+          <div className="mb-4">
+            <p className="text-gray-600 font-semibold">{milestone.timeframe}</p>
+          </div>
+
+          <div className="space-y-6">
+            {milestone.goals.map((goal, index) => (
+              <div key={index} className="border-l-4 border-[#397D5A] pl-4">
+                <h4 className="text-lg font-semibold text-[#1B5538] mb-2">{goal.title}</h4>
+                <p className="text-gray-700">{goal.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+);
+
 function VisionPlan() {
   return (
     <div className="container mx-auto px-6 py-12">
