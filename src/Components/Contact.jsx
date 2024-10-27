@@ -1,69 +1,182 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaEnvelope, FaPhoneAlt, FaArrowDown, FaMapMarkerAlt, FaCheck } from 'react-icons/fa';
 
 function Contact() {
+  const [category, setCategory] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send email, show confirmation)
+    // Handle form submission logic here
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-6 text-center text-green-800">Contact Us</h1>
-      <p className="text-lg text-gray-700 mb-6 text-center">
-        Get in touch with the Office of Kgosana Koketso Rakhudu:
-      </p>
+    <div className="min-h-screen">
+      {/* Hero Section - Enhanced with overlay */}
+      <section className="relative text-center py-16 bg-gradient-to-b from-gray-100 to-white">
+        <div className="absolute inset-0 bg-[#1B5538] opacity-5 pattern-grid-lg"></div>
+        <div className="relative z-10">
+          <div className="relative">
+            <img 
+              src="/images/KgosanaKoketso.jpeg" 
+              alt="Kgosana Koketso Rakhudu" 
+              className="mx-auto w-40 h-40 rounded-full mb-4 shadow-lg border-4 border-white"
+            />
+            <div className="absolute bottom-0 right-1/2 transform translate-x-16 translate-y-2">
+              <div className="bg-[#397D5A] w-4 h-4 rounded-full animate-ping"></div>
+            </div>
+          </div>
+          <h1 className="text-4xl font-bold mb-2 text-[#1B5538]">Contact the Office of Kgosana Koketso Rakhudu</h1>
+          <p className="text-lg text-gray-700 mb-4">"We're here to listen and support our community."</p>
+          <FaArrowDown className="animate-bounce text-[#397D5A] text-2xl mx-auto mt-4 cursor-pointer" />
+        </div>
+      </section>
 
-      <div className="text-center mb-8">
-        <p className="text-gray-700">
-          Email: 
-          <a href="mailto:executivesupport@koketsorakhudu.com" className="text-blue-500 hover:underline">
-            executivesupport@koketsorakhudu.com
-          </a>
-        </p>
-        <p className="text-gray-700">Phone: +27 63 644 5723 | +27 82 948 1438</p>
+      <div className="container mx-auto px-6 py-12">
+        {/* Contact Information - Enhanced with cards */}
+        <section className="text-center mt-8">
+          <h2 className="text-2xl font-semibold mb-8 text-[#1B5538]">Get in Touch</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Email</h3>
+              <a href="mailto:executivesupport@koketsorakhudu.com" 
+                 className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                executivesupport@koketsorakhudu.com
+              </a>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Primary Phone</h3>
+              <a href="tel:+27636445723" 
+                 className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                +27 63 644 5723
+              </a>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Secondary Phone</h3>
+              <a href="tel:+27829481438" 
+                 className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                +27 82 948 1438
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Interactive Contact Form - Enhanced with animation and feedback */}
+        <section className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-16 relative overflow-hidden">
+          {submitted && (
+            <div className="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center z-10">
+              <div className="text-center text-[#1B5538]">
+                <FaCheck className="text-4xl mb-2 mx-auto" />
+                <p className="font-semibold">Message Sent Successfully!</p>
+              </div>
+            </div>
+          )}
+          
+          <h2 className="text-2xl font-semibold text-[#1B5538] mb-6">Send Us a Message</h2>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="group">
+              <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
+                Inquiry Type <span className="text-red-500">*</span>
+              </label>
+              <select
+                id="category"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
+                required
+              >
+                <option value="">Select an option</option>
+                <option value="general">General Inquiry</option>
+                <option value="partnership">Community Partnership</option>
+                <option value="event">Event Participation</option>
+              </select>
+            </div>
+
+            <div className="group">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                Your Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
+                required
+              />
+            </div>
+
+            <div className="group">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                Your Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
+                required
+              />
+            </div>
+
+            <div className="group">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                Message <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 px-4 bg-[#397D5A] hover:bg-[#1B5538] text-white font-bold rounded-md transition-colors duration-200 flex items-center justify-center space-x-2 hover:shadow-lg"
+            >
+              <span>Send Message</span>
+              <FaEnvelope className="text-sm" />
+            </button>
+          </form>
+        </section>
+
+        {/* Closing Section - Enhanced with styling */}
+        <section className="text-center mt-16 max-w-2xl mx-auto">
+          <div className="relative py-8">
+            <div className="absolute left-0 right-0 top-1/2 h-px bg-gray-200"></div>
+            <div className="relative bg-white inline-block px-4">
+              <p className="text-xl text-gray-600 italic mb-2">
+                "True leadership is about cultivating an environment where everyone can thrive."
+              </p>
+              <p className="text-gray-600 font-medium">- Kgosana Koketso Rakhudu</p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <form className="max-w-lg mx-auto space-y-4" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name" className="block text-gray-700">Your Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            className="w-full px-4 py-2 border rounded-md shadow-sm" 
-            placeholder="Enter your name" 
-            required 
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email" className="block text-gray-700">Your Email</label>
-          <input 
-            type="email" 
-            id="email" 
-            className="w-full px-4 py-2 border rounded-md shadow-sm" 
-            placeholder="Enter your email" 
-            required 
-          />
-        </div>
-
-        <div>
-          <label htmlFor="message" className="block text-gray-700">Message</label>
-          <textarea 
-            id="message" 
-            className="w-full px-4 py-2 border rounded-md shadow-sm" 
-            placeholder="Enter your message" 
-            rows="4" 
-            required 
-          ></textarea>
-        </div>
-
-        <button 
-          type="submit" 
-          className="w-full bg-blue-500 text-white py-2 rounded-md shadow-lg hover:bg-blue-600 transition duration-200"
-        >
-          Send Message
-        </button>
-      </form>
     </div>
   );
 }
