@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, ArrowRight, Calendar, Users, Target, Phone } from 'lucide-react';
 
 const TaglineCarousel = () => {
   const taglines = [
@@ -16,13 +17,27 @@ const TaglineCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % taglines.length);
-    }, 4000); // Change tagline every 4 seconds
-
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="h-16 overflow-hidden bg-gradient-to-r from-[#1B5538] to-[#397D5A] py-4">
+    <div className="h-20 overflow-hidden bg-gradient-to-r from-[#1B5538] to-[#397D5A] py-4 relative">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-full opacity-10">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute h-full w-0.5 bg-white"
+              style={{
+                left: `${i * 8}px`,
+                transform: 'rotate(45deg)',
+                transformOrigin: 'top'
+              }}
+            />
+          ))}
+        </div>
+      </div>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -32,106 +47,180 @@ const TaglineCarousel = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <p className="text-xl font-semibold text-white">{taglines[currentIndex]}</p>
+          <p className="text-2xl font-semibold text-white">{taglines[currentIndex]}</p>
         </motion.div>
       </AnimatePresence>
     </div>
   );
 };
 
+const FeatureCard = ({ icon: Icon, title, description }) => (
+  <motion.div 
+    whileHover={{ y: -5 }}
+    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+  >
+    <div className="w-12 h-12 bg-[#1B5538]/10 rounded-full flex items-center justify-center mb-4">
+      <Icon className="text-[#1B5538] w-6 h-6" />
+    </div>
+    <h3 className="text-xl font-semibold text-[#1B5538] mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </motion.div>
+);
+
 function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
-    <TaglineCarousel />
-    <div className="container mx-auto px-6 py-12">
-      <header className="text-center">
-        <h1 className="text-4xl font-bold mb-4 text-[#1B5538]">Office Of Kgosana Koketso Rakhudu</h1>
-        <p className="text-lg text-gray-700 mb-8">Welcome to the official site of the Office of Kgosana Koketso Rakhudu.</p>
-        <div className="rounded-lg overflow-hidden shadow-xl mb-8">
-          <img 
-            src="/images/OfficeofKgosanaTeam.jpeg" 
-            alt="Community" 
-            className="w-full h-[400px] object-cover" 
+      <TaglineCarousel />
+      
+      {/* Hero Section with Parallax Effect */}
+      <motion.div 
+        className="relative h-[600px] overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
+        <img 
+          src="/images/OfficeofKgosanaTeam.jpeg" 
+          alt="Community" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+          <div className="max-w-4xl relative z-20">
+            <motion.h1 
+              className="text-5xl font-bold text-white mb-6 shadow-lg"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              Office Of Kgosana Koketso Rakhudu
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-white/90 mb-8 shadow-lg"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              Welcome to the official site of the Office of Kgosana Koketso Rakhudu
+            </motion.p>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              <Link 
+                to="/about"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
+              >
+                Learn More <ChevronRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      <div className="container mx-auto px-6 py-16">
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <FeatureCard 
+            icon={Calendar}
+            title="Community Events"
+            description="Regular gatherings and traditional meetings fostering community engagement"
+          />
+          <FeatureCard 
+            icon={Users}
+            title="Cultural Heritage"
+            description="Preserving and celebrating our rich cultural identity"
+          />
+          <FeatureCard 
+            icon={Target}
+            title="Vision 2035"
+            description="Strategic planning for sustainable community development"
+          />
+          <FeatureCard 
+            icon={Phone}
+            title="Stay Connected"
+            description="Easy access to community resources and support"
           />
         </div>
-      </header>
 
-      <section className="text-left mt-12 bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-semibold mb-4 text-[#1B5538]">Overview of the Office of Kgosana Koketso Rakhudu</h2>
-        <p className="text-gray-700 mb-6">
-          The Office of Kgosana Koketso Rakhudu is vital to the Tsitsing community and the Royal Bafokeng Nation (RBN), bridging traditional leadership with modern governance through the VisionPlan 2035. Kgosana Rakhudu guides the community by balancing cultural heritage with contemporary approaches to education and economic empowerment.
-        </p>
-        <ul className="list-disc list-inside mb-6 text-gray-700">
-          <li><strong>Community Engagement:</strong> Hosting forums and traditional meetings for inclusive participation.</li>
-          <li><strong>Strategic Partnerships:</strong> Collaborating with national and international partners to attract sustainable investments.</li>
-          <li><strong>Cultural Preservation:</strong> Organizing festivals and heritage projects to maintain cultural identity.</li>
-        </ul>
-        <p className="text-gray-700 mb-6">
-          Overall, the Office represents progressive leadership and embodies the aspirations of Tsitsing and the RBN, focusing on good governance and community empowerment.
-        </p>
-        <div className="rounded-lg overflow-hidden shadow-lg">
-          <img 
-            src="/images/KgosanaKoketso.jpeg" 
-            alt="Kgosana" 
-            className="w-full h-[400px] object-cover" 
-          />
-        </div>
-      </section>
+        {/* Vision Plan Section */}
+        <motion.section 
+          className="bg-white rounded-xl shadow-lg overflow-hidden mb-16"
+          whileInView={{ y: [50, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8">
+              <h2 className="text-3xl font-bold text-[#1B5538] mb-4">VisionPlan 2035</h2>
+              <p className="text-gray-600 mb-6">
+                Our comprehensive roadmap for community development and growth...
+              </p>
+              <Link 
+                to="/vision-plan"
+                className="inline-flex items-center gap-2 text-[#1B5538] hover:text-[#397D5A] font-semibold"
+              >
+                Explore the Vision <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+            <div className="relative h-[400px]">
+              <img 
+                src="/images/Kgosanaquote.jpeg" 
+                alt="Vision" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </motion.section>
 
-      <section className="text-center mt-12 bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-semibold mb-4 text-[#1B5538]">VisionPlan 2035</h2>
-        <p className="text-gray-700 mb-6">
-          VisionPlan 2035 is the community's roadmap for development, focusing on three main areas:
-        </p>
-        <ul className="list-disc list-inside mb-6 text-gray-700 text-left">
-          <li><strong>Human Individual Development:</strong> Ensuring that individuals in the community lead healthy, dignified, and educated lives.</li>
-          <li><strong>Collective Development:</strong> Creating a safe, healthy, and culturally rich environment that fosters identity and promotes good governance.</li>
-          <li><strong>Sustainability and Growth:</strong> Stewarding resources responsibly and fostering economic opportunities that ensure long-term prosperity for all.</li>
-        </ul>
-        <Link to="/vision-plan" className="inline-block px-6 py-2 bg-[#397D5A] text-white rounded-full hover:bg-[#1B5538] transition-colors duration-300">
-          Learn more about VisionPlan 2035
-        </Link>
-        <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
-          <img 
-            src="/images/Kgosanaquote.jpeg" 
-            alt="Quote" 
-            className="w-full h-[400px] object-cover" 
-          />
-        </div>
-      </section>
+        {/* Objectives Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-[#1B5538] mb-8 text-center">Objectives</h2>
+          <div className="flex justify-center">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg overflow-hidden max-w-md" // Changed max-w-xs to max-w-md for a wider card
+              whileHover={{ y: -5 }}
+            >
+              <img 
+                src="/images/Gasgiveaway.jpeg" 
+                alt="Objectives" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#1B5538] mb-2">Our Objectives</h3>
+                <p className="text-gray-600 mb-4">Discover the key objectives guiding our initiatives...</p>
+                <Link 
+                  to="/objectives"
+                  className="text-[#397D5A] hover:text-[#1B5538] font-semibold inline-flex items-center gap-2"
+                >
+                  View Objectives <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-      <section className="text-center mt-12 bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-semibold mb-4 text-[#1B5538]">Objectives</h2>
-        <p className="text-gray-700 mb-6">
-          The Office of Kgosana Koketso Rakhudu is dedicated to building a self-reliant and thriving community through traditional governance that integrates modern development strategies. This is achieved through the following:
-        </p>
-        <ul className="space-y-4 mb-6">
-          <li className="bg-gray-50 p-4 rounded-lg"><strong>Community engagement</strong></li>
-          <li className="bg-gray-50 p-4 rounded-lg"><strong>Sustainable development</strong></li>
-          <li className="bg-gray-50 p-4 rounded-lg"><strong>Social empowerment programmes</strong></li>
-        </ul>
-        <Link to="/objectives" className="inline-block px-6 py-2 bg-[#397D5A] text-white rounded-full hover:bg-[#1B5538] transition-colors duration-300">
-          View our Objectives
-        </Link>
-        <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
-          <img 
-            src="/images/Communityengagement.jpeg" 
-            alt="Students initiative" 
-            className="w-full h-[400px] object-cover" 
-          />
-        </div>
-      </section>
-
-      <footer className="mt-16 text-center p-8 bg-white rounded-lg shadow-md">
-        <p className="text-gray-600">
-          Contact us: {" "}
-          <Link to="/contact" className="text-[#397D5A] hover:text-[#1B5538] font-semibold">
-            Get in touch
+        {/* Contact Section */}
+        <motion.footer 
+          className="text-center p-8 bg-white rounded-xl shadow-lg"
+          whileInView={{ y: [20, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl font-bold text-[#1B5538] mb-4">Get in Touch</h2>
+          <p className="text-gray-600 mb-6">
+            We're here to serve our community. Reach out to us for any inquiries or support.
+          </p>
+          <Link 
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
+          >
+            Contact Us <ChevronRight className="w-5 h-5" />
           </Link>
-        </p>
-      </footer>
+        </motion.footer>
+      </div>
     </div>
-  </div>
   );
 }
 
