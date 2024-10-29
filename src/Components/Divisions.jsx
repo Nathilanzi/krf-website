@@ -94,7 +94,7 @@ function Divisions() {
         <img 
           src="/images/constructionlearnersfull.jpeg" 
           alt="Community stakeholders discussing development plans" 
-          className="w-full sm:w-3/4 lg:w-2/3 h-64 object-cover rounded-lg shadow-lg"
+          className="w-full sm:w-3/4 lg:w-2/3 h-full object-cover rounded-lg shadow-lg"
         />
       </div>
     </div>
