@@ -8,6 +8,7 @@ import Divisions from './Components/Divisions';
 import Leadership from './Components/Leadership';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
+import Foundation from './Components/Foundation';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/divisions" element={<Divisions />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/foundation" element={<Foundation />} />
         </Routes>
       </Layout>
     </Router>

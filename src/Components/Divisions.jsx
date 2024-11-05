@@ -43,27 +43,37 @@ function Divisions() {
         </div>
       </section>
 
-      {/* Koketso Rakhudu Foundation */}
-      <section className="mb-12 bg-white p-6 rounded-lg shadow-lg relative">
-        <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Koketso Rakhudu Foundation</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          The foundation serves as an educational platform, providing training and development opportunities to community members. Accredited by the Education, Training & Development Practices Sector Education and Training Authority, the foundation focuses on skills development in areas like entrepreneurship, technology, and community leadership.
-        </p>
+    {/* Koketso Rakhudu Foundation */}
+<section className="mb-12 bg-white p-6 rounded-lg shadow-lg relative">
+  <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Koketso Rakhudu Foundation</h2>
+  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+    The foundation serves as an educational platform, providing training and development opportunities to community members. Accredited by the Education, Training & Development Practices Sector Education and Training Authority, the foundation focuses on skills development in areas like entrepreneurship, technology, and community leadership.
+  </p>
 
-        {/* Facebook Link */}
-        <div className="text-center mt-6">
-          <a 
-            href="https://www.facebook.com/p/Koketso-Rakhudu-Foundation-100064528696915/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-[#1B5538] text-white font-semibold rounded-lg shadow-md hover:bg-[#397D5A] transition duration-200"
-          >
-            <FaFacebook className="mr-2 text-xl" />
-            Follow us on Facebook
-          </a>
-          <p className="mt-2 text-sm text-gray-500">Stay connected and up-to-date with our latest initiatives and community programs.</p>
-        </div>
-      </section>
+  {/* Facebook Link */}
+  <div className="text-center mt-6">
+    <a 
+      href="https://www.facebook.com/p/Koketso-Rakhudu-Foundation-100064528696915/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-4 py-2 bg-[#1B5538] text-white font-semibold rounded-lg shadow-md hover:bg-[#397D5A] transition duration-200"
+    >
+      <FaFacebook className="mr-2 text-xl" />
+      Follow us on Facebook
+    </a>
+    <p className="mt-2 text-sm text-gray-500">Stay connected and up-to-date with our latest initiatives and community programs.</p>
+  </div>
+
+  {/* Button to Foundation Page */}
+  <div className="text-center mt-6">
+    <Link 
+      to="/foundation"
+      className="inline-block px-8 py-3 bg-[#397D5A] text-white font-semibold rounded-lg shadow-md hover:bg-[#1B5538] transition duration-200"
+    >
+      Learn More About the Foundation
+    </Link>
+  </div>
+</section>
 
       {/* Coffee with Dr. Koketso Rakhudu */}
       <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
