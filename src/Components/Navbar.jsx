@@ -28,8 +28,12 @@ const Navbar = () => {
     <>
       {/* Desktop Top Navbar */}
       <nav className="hidden lg:flex items-center justify-between px-6 py-4 bg-[#1B5538] text-white">
-        <Link to="/" className="text-xl font-bold">
-          OOKKR
+        <Link to="/">
+          <img
+            src="/images/Logo.png"
+            alt="Logo"
+            className="h-12 w-auto transition-transform transform hover:scale-105"
+           />
         </Link>
         <div className="flex items-center space-x-6">
           {navLinks.map((link, index) => (
