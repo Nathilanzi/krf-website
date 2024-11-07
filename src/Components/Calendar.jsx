@@ -51,3 +51,15 @@ const events = [
 ];
 
 Modal.setAppElement('#root');
+
+const CalendarComponent = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const formatDateToUTC = (date) => {
+    return new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
+      .toISOString()
+      .split('T')[0];
+  };
+
