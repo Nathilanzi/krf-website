@@ -63,3 +63,20 @@ const CalendarComponent = () => {
       .split('T')[0];
   };
 
+  const getTileClass = ({ date }) => {
+    const formattedDate = formatDateToUTC(date);
+    const event = events.find(event => event.date === formattedDate);
+    return event ? 'bg-green-600 text-yellow font-bold rounded-lg shadow-lg' : '';
+  };
+
+  const handleDayClick = (date) => {
+    const formattedDate = formatDateToUTC(date);
+    const event = events.find(event => event.date === formattedDate);
+
+    if (event) {
+      setSelectedEvent(event);
+      setSelectedDate(date);
+      setIsModalOpen(true);
+    }
+  };
+
