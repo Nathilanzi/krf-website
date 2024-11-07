@@ -9,6 +9,7 @@ import Leadership from './Components/Leadership';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
 import Foundation from './Components/Foundation';
+import Calendar from './Components/Calendar';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path="/calendar" element={<Calendar />} />
           <Route path="/vision-plan" element={<VisionPlan />} />
           <Route path="/objectives" element={<Objectives />} />
           <Route path="/divisions" element={<Divisions />} />
