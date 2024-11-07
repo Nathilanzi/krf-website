@@ -80,3 +80,13 @@ const CalendarComponent = () => {
     }
   };
 
+  return (
+    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-gray-100 via-white to-gray-200">
+      <div className="w-full max-w-4xl p-6 bg-white rounded-lg shadow-xl">
+        <h2 className="text-center text-3xl font-serif font-bold text-green-700 mb-4">Community Event Calendar</h2>
+        <Calendar
+          onClickDay={handleDayClick}
+          tileClassName={getTileClass}
+          className="rounded-lg shadow-md p-4"
+        />
+      </div>
