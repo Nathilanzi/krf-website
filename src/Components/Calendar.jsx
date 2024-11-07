@@ -110,3 +110,33 @@ const CalendarComponent = () => {
         </button>
       </Modal>
 
+      {/* Additional Tailwind styling for calendar customization */}
+      <style jsx>{`
+          .react-calendar {
+    font-family: 'Merriweather', serif;
+    color: #4a4a4a;
+    background-color: #FFFFFF; /* White background for the calendar */
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .react-calendar__tile--now {
+    background: #f0fff4 !important;
+    border-radius: 8px;
+  }
+  .react-calendar__tile:hover {
+    background: #e6fffa;
+    color: #1a202c;
+    border-radius: 8px;
+  }
+  .react-calendar__tile--active {
+    background: #FFD966 !important; /* Yellow background for active tiles */
+    color: #333333 !important; /* Darker text color for readability */
+    font-weight: bold;
+    border-radius: 8px;
+  }
+      `}</style>
+    </div>
+  );
+};
+
+export default CalendarComponent;
