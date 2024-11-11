@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ArrowRight, Calendar, Users, Target, Phone } from 'lucide-react';
 import Carousel from './Carousel';
 
+
 const TaglineCarousel = () => {
   const taglines = [
     "Building a Legacy Together",
@@ -23,37 +24,75 @@ const TaglineCarousel = () => {
   }, []);
 
   return (
-    <div className="h-20 overflow-hidden bg-gradient-to-r from-[#1B5538] to-[#397D5A] py-4 relative">
+    <div className="relative h-24 bg-white/80 backdrop-blur-md shadow-sm">
+      {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-full opacity-10">
-          {[...Array(5)].map((_, i) => (
+        {/* Animated subtle patterns */}
+        <div className="absolute inset-0 opacity-5">
+          {[...Array(8)].map((_, i) => (
             <div
               key={i}
-              className="absolute h-full w-0.5 bg-white"
+              className="absolute h-full w-0.5 bg-green-800"
               style={{
-                left: `${i * 8}px`,
-                transform: 'rotate(45deg)',
+                left: `${i * 12}%`,
+                transform: `rotate(${45 + i * 5}deg)`,
                 transformOrigin: 'top'
               }}
             />
           ))}
         </div>
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-50/30 to-transparent" />
       </div>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -50, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <p className="text-2xl font-semibold text-white">{taglines[currentIndex]}</p>
-        </motion.div>
-      </AnimatePresence>
+
+      {/* Content */}
+      <div className="relative h-full flex items-center justify-center px-4">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ 
+              duration: 0.5,
+              ease: "easeOut"
+            }}
+            className="text-center"
+          >
+            <p className="text-2xl font-serif text-green-800 tracking-wide">
+              {taglines[currentIndex]}
+            </p>
+            
+            {/* Decorative line */}
+            <motion.div 
+              className="mt-2 mx-auto h-0.5 bg-green-800/20"
+              initial={{ width: 0 }}
+              animate={{ width: '100px' }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Progress indicators */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
+          {taglines.map((_, index) => (
+            <div
+              key={index}
+              className={`h-1 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'w-6 bg-green-800' 
+                  : 'w-2 bg-green-800/20'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
+
+
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <motion.div 

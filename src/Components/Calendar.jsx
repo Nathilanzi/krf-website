@@ -1,60 +1,64 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import Modal from 'react-modal';
+import { Calendar as CalendarIcon, Phone } from 'lucide-react';
 import 'react-calendar/dist/Calendar.css';
+import './styles/Calendar.css'
 
 const events = [
-  { 
-    date: '2024-11-13', 
-    title: 'Tsitsing Itireleng Sustainable Farming Programme 2024', 
-    description: `Kgosana Koketso Rakhudu is launching the Tsitsing Itireleng Sustainable Farming Programme 2024.
-    Join us for the launch of an initiative aimed at promoting sustainable farming practices and supporting our community. 
-    As part of this program, we will be distributing 500 food hampers to identified families in Tsitsing.
-    Venue: Tsitsing
-    Date: Wednesday, 13 November 2024
-    Time: 8:30 AM
-    For more information, please contact Ms. Tsholo Nape at +27 (82) 972-5629`
+  {
+    date: '2024-11-13',
+    title: 'Tsitsing Itireleng Sustainable Farming Programme 2024',
+    details: {
+      description: 'Join us as Kgosana Koketso Rakhudu launches the 2024 Sustainable Farming Programme, a pivotal event focused on food security and community empowerment.',
+      venue: 'Tsitsing Village Hall',
+      time: '8:30 AM',
+      contact: {
+        name: 'Ms. Tsholo Nape',
+        phone: '+27 (82) 972-5629'
+      },
+      highlights: [
+        'Learning sustainable farming practices',
+        'Distributing 500 food hampers to families in need'
+      ]
+    }
   },
-  { 
-    date: '2024-11-17', 
-    title: 'Recognising Excellence in Tsitsing with Keesana Koketso Rakhudu', 
-    description: `Venue: Tsitsing Primary School
-    Date: Sunday, 17 November 2024
-    Time: 8:00 AM - 10:30 AM
-    Dress Code: Traditional attire
-    Key Area Focus:
-    • 2025 Kgotla Calendar Launch
-    • Tsitsing Excellence Awards Launch
-    • Investment & Sustainability Development Trust Launch
-    • Tsitsing Sim Cards Launch
-    • Tsitsing Clinic Launch
-    • Online Radio Station Launch
-    • Tsitsing Graduate Programme
-    • Strategic Partnerships MOUs Signing
-    • Hakem Energies LPG Programme
-    • Tsitsing Family Literacy Programme
-    Contact Details: Ms. Tsholo Nape, +27 (82) 972-5629`
+  {
+    date: '2024-11-17',
+    title: 'Celebrating Excellence in Tsitsing',
+    details: {
+      venue: 'Tsitsing Primary School',
+      time: '8:00 AM - 10:30 AM',
+      dressCode: 'Traditional Attire',
+      contact: {
+        name: 'Ms. Tsholo Nape',
+        phone: '+27 (82) 972-5629'
+      },
+      keyFocus: [
+        '2025 Kgotla Calendar Launch',
+        'Tsitsing Excellence Awards',
+        'Launch of Tsitsing Family Literacy Program'
+      ]
+    }
   },
-  { 
-    date: '2024-11-29', 
-    title: 'Celebrating 9 Years of Kgosana Koketso Rakhudu', 
-    description: `Kgosana Koketso Rakhudu's 9th Year of Community Leadership Excellence Graduation Ceremony & Historical Inauguration of Dr. Koketso Rakhudu as the Chancellor of KRF CET.
-    Special Guests:
-    Prof. Keo Motaung, Trailblazing Biomedical Scientist, Full Professor, and Founder and CEO of Global Health Biotech (PTY) Ltd
-    Dr. Koketso Rakhudu, Incoming Chancellor of KRF CET
-    Prof. Kgomo Mathabe, Head of the Department of Urology at the University of Pretoria and Steve Biko Academic Hospital
-    Venue: Maile Kopman
-    Date: Friday, 29 November 2024
-    Time: 8:00 AM
-    Dress Code: Formal`
+  {
+    date: '2024-11-29',
+    title: '9th Year Leadership Celebration',
+    details: {
+      description: "Celebrate Kgosana Koketso Rakhudu's 9 years of dedication and leadership with a special graduation ceremony and inauguration of Dr. Koketso Rakhudu as Chancellor of KRF CET.",
+      venue: 'Maile Kopman',
+      time: '8:00 AM',
+      dressCode: 'Formal Attire',
+      specialGuests: [
+        'Prof. Keo Motaung - Biomedical Scientist & CEO of Global Health Biotech',
+        'Dr. Koketso Rakhudu - Incoming Chancellor of KRF CET',
+        'Prof. Kgomo Mathabe - Head of Urology, University of Pretoria'
+      ]
+    }
   }
 ];
 
-Modal.setAppElement('#root');
-
 const CalendarComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const formatDateToUTC = (date) => {
@@ -63,78 +67,141 @@ const CalendarComponent = () => {
       .split('T')[0];
   };
 
-  const getTileClass = ({ date }) => {
+  const getTileContent = ({ date }) => {
     const formattedDate = formatDateToUTC(date);
     const event = events.find(event => event.date === formattedDate);
-    return event ? 'bg-green-600 text-yellow font-bold rounded-lg shadow-lg' : '';
+
+    if (event) {
+      return (
+        <div className="relative w-full h-full flex justify-center items-center">
+          <div className="absolute w-3 h-3 bg-green-700 rounded-full opacity-80 shadow-md"></div>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const getTileClassName = ({ date, view }) => {
+    const formattedDate = formatDateToUTC(date);
+    const hasEvent = events.some(event => event.date === formattedDate);
+    const isCurrentDate = date.toDateString() === new Date().toDateString();
+    
+    return `
+      ${hasEvent ? 'event-tile' : ''} 
+      ${isCurrentDate ? 'current-date' : ''} 
+      hover:bg-green-100 rounded-lg transition-colors duration-200
+    `;
   };
 
   const handleDayClick = (date) => {
     const formattedDate = formatDateToUTC(date);
     const event = events.find(event => event.date === formattedDate);
+    setSelectedDate(date);
+    setSelectedEvent(event);
+  };
 
-    if (event) {
-      setSelectedEvent(event);
-      setSelectedDate(date);
-      setIsModalOpen(true);
-    }
+  const EventDetails = ({ event }) => {
+    if (!event) return null;
+
+    return (
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-green-800 mb-4">{event.title}</h2>
+        <p className="text-gray-600 mb-4 italic">{event.details.description}</p>
+        
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2 text-sm text-gray-700">
+            <CalendarIcon className="w-5 h-5 text-green-700" />
+            <p>{new Date(event.date).toLocaleDateString('en-US', { 
+              weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            })}</p>
+          </div>
+          
+          <div className="text-sm grid grid-cols-2 gap-4">
+            <div>
+              <h3 className="font-semibold text-green-700">Venue</h3>
+              <p>{event.details.venue}</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-green-700">Time</h3>
+              <p>{event.details.time}</p>
+            </div>
+          </div>
+
+          {event.details.dressCode && (
+            <div className="mt-4">
+              <h3 className="font-semibold text-green-700">Dress Code</h3>
+              <p className="text-gray-700">{event.details.dressCode}</p>
+            </div>
+          )}
+
+          {event.details.contact && (
+            <div className="mt-4">
+              <h3 className="font-semibold text-green-700">Contact</h3>
+              <p>{event.details.contact.name}</p>
+              <p><Phone className="inline w-4 h-4 text-green-700 mr-1" />{event.details.contact.phone}</p>
+            </div>
+          )}
+
+          {event.details.highlights && (
+            <div className="mt-4">
+              <h3 className="font-semibold text-green-700">Highlights</h3>
+              <ul className="list-disc list-inside space-y-1">
+                {event.details.highlights.map((item, index) => (
+                  <li key={index} className="text-gray-700">{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {event.details.specialGuests && (
+            <div className="mt-4">
+              <h3 className="font-semibold text-green-700">Special Guests</h3>
+              <ul className="list-disc list-inside space-y-1">
+                {event.details.specialGuests.map((guest, index) => (
+                  <li key={index} className="text-gray-700">{guest}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    );
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-gray-100 via-white to-gray-200">
-      <div className="w-full max-w-4xl p-6 bg-white rounded-lg shadow-xl">
-        <h2 className="text-center text-3xl font-serif font-bold text-green-700 mb-4">Community Event Calendar</h2>
-        <Calendar
-          onClickDay={handleDayClick}
-          tileClassName={getTileClass}
-          className="rounded-lg shadow-md p-4"
-        />
+    <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 p-6">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-center text-3xl font-serif font-bold text-green-800 mb-8">
+          Community Event Calendar
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-xl">
+            <Calendar
+              onClickDay={handleDayClick}
+              tileClassName={getTileClassName}
+              tileContent={getTileContent}
+              className="rounded-lg shadow-md p-4"
+              value={selectedDate}
+            />
+          </div>
+          
+          <div className="h-full">
+            {selectedEvent ? (
+              <EventDetails event={selectedEvent} />
+            ) : (
+              <div className="bg-white p-6 rounded-lg shadow-lg h-full flex items-center justify-center">
+                <div className="text-center">
+                  <CalendarIcon className="w-12 h-12 text-green-600 mb-4" />
+                  <p className="text-gray-700 font-semibold">
+                    Select a date to view event details
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-
-      {/* Event Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        contentLabel="Event Details"
-        className="w-full max-w-md p-6 bg-white rounded-lg shadow-2xl mx-auto text-center"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
-      >
-        <h2 className="text-2xl font-bold text-green-700">{selectedEvent?.title}</h2>
-        <p className="text-gray-700 mt-4"><strong>Date:</strong> {selectedDate?.toDateString()}</p>
-        <p className="text-gray-700 mt-2"><strong>Description:</strong> {selectedEvent?.description}</p>
-        <button
-          onClick={() => setIsModalOpen(false)}
-          className="mt-6 px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300"
-        >
-          Close
-        </button>
-      </Modal>
-
-      {/* Additional Tailwind styling for calendar customization */}
-      <style jsx>{`
-          .react-calendar {
-    font-family: 'Merriweather', serif;
-    color: #4a4a4a;
-    background-color: #FFFFFF; /* White background for the calendar */
-    border-radius: 8px;
-    padding: 16px;
-  }
-  .react-calendar__tile--now {
-    background: #f0fff4 !important;
-    border-radius: 8px;
-  }
-  .react-calendar__tile:hover {
-    background: #e6fffa;
-    color: #1a202c;
-    border-radius: 8px;
-  }
-  .react-calendar__tile--active {
-    background: #FFD966 !important; /* Yellow background for active tiles */
-    color: #333333 !important; /* Darker text color for readability */
-    font-weight: bold;
-    border-radius: 8px;
-  }
-      `}</style>
     </div>
   );
 };

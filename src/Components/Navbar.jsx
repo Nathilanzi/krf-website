@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FaHome, 
@@ -12,9 +12,20 @@ import {
   FaTrophy
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
+import ResponsiveLogo from './ResponsiveLogo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { icon: <FaHome className="w-5 h-5" />, text: "Home", path: "/" },
@@ -31,20 +42,21 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Top Navbar */}
-      <nav className="hidden lg:flex items-center justify-between px-6 py-4 bg-[#1B5538] text-white">
+      <nav className={`hidden lg:flex items-center justify-between px-6 py-4 sticky top-0 transition-all duration-300 z-50 ${
+        scrolled ? 'bg-white/50 backdrop-blur-md shadow-md' : 'bg-transparent'
+      }`}>
         <Link to="/">
-          <img
-            src="/images/Logo.png"
-            alt="Logo"
-            className="h-12 w-auto transition-transform transform hover:scale-105"
+          <ResponsiveLogo
+            scrolled={scrolled}
+            className="transform hover:scale-105"
            />
         </Link>
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-6 text-green-700">
           {navLinks.map((link, index) => (
             <Link
               key={index}
               to={link.path}
-              className="flex items-center hover:text-[#397D5A] transition-colors duration-200"
+              className="flex items-center hover:text-green-800 transform transition-transform duration-200 hover:scale-105"
             >
               <span className="flex-shrink-0 mr-2">
                 {link.icon}
@@ -60,7 +72,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsOpen(!isOpen)} 
-          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[#1B5538] text-white hover:bg-[#397D5A]"
+          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-100 text-green-700 hover:bg-gray-200"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -74,15 +86,16 @@ const Navbar = () => {
         )}
 
         {/* Mobile Side Navbar */}
-        <nav className={`fixed top-0 left-0 h-full w-64 bg-[#1B5538] text-white z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <nav className={`fixed top-0 left-0 h-full w-64 bg-gray-100 text-green-700 z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           {/* Logo */}
           <Link 
             to="/" 
-            className="block p-4 text-xl font-bold text-center border-b border-[#397D5A]"
+            className="block p-4 text-center border-b border-gray-300"
             onClick={() => setIsOpen(false)}
           >
-            OOKKR
-          </Link>
+          <ResponsiveLogo
+           scrolled={false} className="mx-auto" />
+</Link>
 
           {/* Nav Links */}
           <div className="py-4">
@@ -91,7 +104,7 @@ const Navbar = () => {
                 key={index}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center px-4 py-3 hover:bg-[#397D5A] transition-colors duration-200"
+                className="flex items-center px-4 py-3 text-green-700 hover:text-green-800 hover:bg-gray-200 transform transition-transform duration-200 hover:scale-105"
               >
                 <span className="flex-shrink-0 w-6">
                   {link.icon}
