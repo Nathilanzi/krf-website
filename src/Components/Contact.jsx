@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaPhoneAlt, FaArrowDown, FaMapMarkerAlt, FaCheck } from 'react-icons/fa';
+import { initializeApp } from 'firebase/app';
+     import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 function Contact() {
   const [category, setCategory] = useState('');
@@ -17,17 +19,42 @@ function Contact() {
       [id]: value
     }));
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    try {
+      const form = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      // Send the form data to EmailJS (replace with your own EmailJS service ID and template ID)
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'your_service_id',
+          template_id: 'your_template_id',
+          user_id: 'your_user_id',
+          template_params: form,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 3000);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   };
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Enhanced with overlay */}
+      {/* Hero Section */}
       <section className="relative text-center py-16 bg-gradient-to-b from-gray-100 to-white">
         <div className="absolute inset-0 bg-[#1B5538] opacity-5 pattern-grid-lg"></div>
         <div className="relative z-10">
@@ -48,10 +75,11 @@ function Contact() {
       </section>
 
       <div className="container mx-auto px-6 py-12">
-        {/* Contact Information - Enhanced with cards */}
+        {/* Contact Information */}
         <section className="text-center mt-8">
           <h2 className="text-2xl font-semibold mb-8 text-[#1B5538]">Get in Touch</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {/* Existing Contact Information */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Email</h3>
@@ -69,7 +97,7 @@ function Contact() {
                 +27 63 644 5723
               </a>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Secondary Phone</h3>
@@ -78,11 +106,22 @@ function Contact() {
                 +27 82 948 1438
               </a>
             </div>
+
+            {/* Calvin Molokwane's Contact Info */}
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow mt-6">
+              <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Calvin Molokwane</h3>
+              <p className="mb-2">Executive Head of Programmes and Stakeholder Engagement</p>
+              <a href="mailto:calvin@koketsorakhudu.com" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                calvin@koketsorakhudu.com
+              </a>
+              <p className="mt-2">Cell: <a href="tel:+27606165450" className="text-[#397D5A] hover:text-[#1B5538]">+27 60 616 5450</a></p>
+            </div>
           </div>
         </section>
 
-        {/* Interactive Contact Form - Enhanced with animation and feedback */}
-        <section className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-16 relative overflow-hidden">
+        {/* Contact Form */}
+        {/* <section className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-16 relative overflow-hidden">
           {submitted && (
             <div className="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center z-10">
               <div className="text-center text-[#1B5538]">
@@ -94,7 +133,8 @@ function Contact() {
           
           <h2 className="text-2xl font-semibold text-[#1B5538] mb-6">Send Us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="group">
+            {/* Inquiry Category */}
+            {/* <div className="group">
               <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
                 Inquiry Type <span className="text-red-500">*</span>
               </label>
@@ -110,9 +150,10 @@ function Contact() {
                 <option value="partnership">Community Partnership</option>
                 <option value="event">Event Participation</option>
               </select>
-            </div>
+            </div> */}
 
-            <div className="group">
+            {/* Name Input */}
+            {/* <div className="group">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                 Your Name <span className="text-red-500">*</span>
               </label>
@@ -124,9 +165,10 @@ function Contact() {
                 className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
                 required
               />
-            </div>
+            </div> */}
 
-            <div className="group">
+            {/* Email Input */}
+            {/* <div className="group">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Your Email <span className="text-red-500">*</span>
               </label>
@@ -138,9 +180,10 @@ function Contact() {
                 className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
                 required
               />
-            </div>
+            </div> */}
 
-            <div className="group">
+            {/* Message Textarea */}
+            {/* <div className="group">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                 Message <span className="text-red-500">*</span>
               </label>
@@ -152,9 +195,10 @@ function Contact() {
                 className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:border-[#1B5538] focus:ring-1 focus:ring-[#1B5538] transition-colors"
                 required
               ></textarea>
-            </div>
+            </div> */}
 
-            <button
+            {/* Submit Button */}
+            {/* <button
               type="submit"
               className="w-full py-3 px-4 bg-[#397D5A] hover:bg-[#1B5538] text-white font-bold rounded-md transition-colors duration-200 flex items-center justify-center space-x-2 hover:shadow-lg"
             >
@@ -162,20 +206,7 @@ function Contact() {
               <FaEnvelope className="text-sm" />
             </button>
           </form>
-        </section>
-
-        {/* Closing Section - Enhanced with styling */}
-        <section className="text-center mt-16 max-w-2xl mx-auto">
-          <div className="relative py-8">
-            <div className="absolute left-0 right-0 top-1/2 h-px bg-gray-200"></div>
-            <div className="relative bg-white inline-block px-4">
-              <p className="text-xl text-gray-600 italic mb-2">
-                "True leadership is about cultivating an environment where everyone can thrive."
-              </p>
-              <p className="text-gray-600 font-medium">- Kgosana Koketso Rakhudu</p>
-            </div>
-          </div>
-        </section>
+        </section> */} 
       </div>
     </div>
   );
