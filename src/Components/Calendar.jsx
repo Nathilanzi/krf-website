@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Calendar as CalendarIcon, Phone } from 'lucide-react';
 import 'react-calendar/dist/Calendar.css';
+import './styles/Calendar.css'
 
 const events = [
-  { 
+  {
     date: '2024-11-13',
     title: 'Tsitsing Itireleng Sustainable Farming Programme 2024',
     details: {
@@ -69,7 +70,7 @@ const CalendarComponent = () => {
   const getTileContent = ({ date }) => {
     const formattedDate = formatDateToUTC(date);
     const event = events.find(event => event.date === formattedDate);
-    
+
     if (event) {
       return (
         <div className="relative w-full h-full flex justify-center items-center">
@@ -86,8 +87,8 @@ const CalendarComponent = () => {
     const isCurrentDate = date.toDateString() === new Date().toDateString();
     
     return `
-      ${hasEvent ? 'event-tile' : ''}
-      ${isCurrentDate ? 'current-date' : ''}
+      ${hasEvent ? 'event-tile' : ''} 
+      ${isCurrentDate ? 'current-date' : ''} 
       hover:bg-green-100 rounded-lg transition-colors duration-200
     `;
   };
@@ -191,9 +192,9 @@ const CalendarComponent = () => {
             ) : (
               <div className="bg-white p-6 rounded-lg shadow-lg h-full flex items-center justify-center">
                 <div className="text-center">
-                  <CalendarIcon className="w-12 h-12 text-green-700 opacity-50 mx-auto mb-4" />
-                  <p className="text-gray-500">
-                    Select a highlighted date to view event details
+                  <CalendarIcon className="w-12 h-12 text-green-600 mb-4" />
+                  <p className="text-gray-700 font-semibold">
+                    Select a date to view event details
                   </p>
                 </div>
               </div>
@@ -201,22 +202,6 @@ const CalendarComponent = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .react-calendar {
-          font-family: 'Merriweather', serif;
-          color: #1b5538;
-          border: none;
-        }
-        .react-calendar__tile--now {
-          background: #1b5538 !important;
-          color: #ffffff !important;
-        }
-        .react-calendar__tile--now:hover {
-          background: #1b5538 !important;
-          color: #ffffff;
-        }
-      `}</style>
     </div>
   );
 };
