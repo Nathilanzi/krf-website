@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ArrowRight, Calendar, Users, Target, Phone } from 'lucide-react';
+import Carousel from './Carousel';
 
 const TaglineCarousel = () => {
   const taglines = [
@@ -143,6 +144,30 @@ function Home() {
             description="Easy access to community resources and support"
           />
         </div>
+
+         {/* Success Story Carousel */}
+         <section className="mb-16">
+  <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Success Stories and Impact</h2>
+  <p className="text-lg text-gray-700 mb-4">KRF has positively impacted over 1,100 individuals through various programs:</p>
+
+  <Carousel
+    slides={[
+      {
+        title: "Social, Women & Disability Development Program (2016)",
+        description: "Benefited 30 participants, empowering them through skill-building and community support initiatives.",
+      },
+      {
+        title: "Grade 12 Re-write Program (2017)",
+        description: "Assisted 105 students to improve their education, helping them access new academic and career opportunities.",
+      },
+      {
+        title: "Microsoft Software Development Program (2023)",
+        description: "Equipped 25 participants with vital IT skills, preparing them for careers in the tech industry.",
+      }
+    ]}
+  />
+</section>
+
 
         {/* Vision Plan Section */}
         <motion.section 
