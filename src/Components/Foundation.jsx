@@ -1,8 +1,19 @@
 import React from 'react';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+
 
 function Foundation() {
   return (
     <div className="container mx-auto px-6 py-16">
+        {/* Title Section */}
+        <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-[#397D5A] mb-2">Koketso Rakhudu Foundation</h1>
+      </div>
+      <img 
+                src="/images/KRFDesign.jpg" 
+                alt="Logo" 
+                className="mx-auto mb-4 w-64 h-64 object-contain opacity-90"
+              />
       {/* About Us Section */}
       <section className="mb-16">
         <h1 className="text-4xl font-bold mb-6 text-[#1B5538]">About Us</h1>
@@ -74,6 +85,39 @@ function Foundation() {
       <section className="mb-16">
         <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Accreditations and Partnerships</h2>
         <p className="text-lg text-gray-700 mb-4">KRF holds accreditation from seven SETAs, offering 44 full qualifications. Partnerships with companies such as Anglo American, BMW, and Metropolitan have expanded our reach and integrated modern technologies like augmented reality into our e-learning systems.</p>
+           {/* Download Link for PDF */}
+        <div className="pdf-container">
+          <a
+            href="/KRFAccreditation.pdf" // The path to your PDF
+            download="KRFAccreditation.pdf" // Suggested name for the downloaded file
+            className="text-[#397D5A] hover:text-[#1B5538] text-lg"
+          >
+            Download PDF
+          </a>
+        </div>
+      </section>
+
+      {/* Donation Section */}
+      <section className="mb-16 bg-gray-100 p-6 rounded-lg">
+        <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Support Our Mission</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          If you believe in the Koketso Rakhudu Foundation's mission to empower and uplift the community through sustainable and inclusive education, we invite you to support us. Every donation makes a difference and helps us continue our work.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-[#397D5A]">Donation Banking Details</h3>
+        <ul className="text-lg text-gray-700 mb-4 space-y-1">
+          <li><strong>Account Holder:</strong> KOKETSO RAKHUDU FOUNDATION</li>
+          <li><strong>ID/Reg Number:</strong> 177/109/NPO</li>
+          <li><strong>Account Type:</strong> CURRENT</li>
+          <li><strong>Account Number:</strong> 10 12 997 812 2</li>
+          <li><strong>Branch:</strong> WATERFALL MALL</li>
+          <li><strong>Branch Code:</strong> 007045</li>
+          <li><strong>SWIFT Code:</strong> SBZAZAJJ</li>
+        </ul>
+
+        <p className="text-lg text-gray-700">
+          Thank you for helping us bring lasting, positive change to our community!
+        </p>
       </section>
 
       {/* Contact Information Section */}
