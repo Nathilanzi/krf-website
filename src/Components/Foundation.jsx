@@ -24,7 +24,7 @@ function Foundation() {
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           <li><strong>Love:</strong> Promoting unity and understanding.</li>
           <li><strong>Integrity:</strong> Upholding transparency and trustworthiness.</li>
-          <li><strong>Lead:</strong> Leading by example and active involvement.</li>
+          <li><strong>Faith:</strong> With the faith of a mustard seed you can move mountains.</li>
           <li><strong>Excellence:</strong> Ensuring top-tier delivery in education and training programs.</li>
         </ul>
       </section>
