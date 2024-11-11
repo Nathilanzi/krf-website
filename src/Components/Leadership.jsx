@@ -46,6 +46,13 @@ function Leadership() {
         {/* Header */}
         <h1 className="text-4xl font-bold mb-8 text-center text-[#1B5538]">Our Leadership</h1>
 
+          {/* Organisation organogram */}
+        <img 
+                src="/images/LeadershipOrganisation.jpg" 
+                alt="Logo" 
+                className="mx-auto mb-4 w-full h-full object-contain opacity-90"
+              />
+
         {/* Intro Section */}
         <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto">
           Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu, a revered civic leader known for his integrity and dedication.
