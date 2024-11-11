@@ -3,11 +3,18 @@ import React from 'react';
 const VillageEconomyIndaba = () => {
   return (
     <section className="village-economy-indaba px-8 py-12 bg-gray-50 rounded-lg shadow-lg">
+        
       {/* Title Section */}
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-[#397D5A] mb-2">Village Economy Indaba</h1>
         <p className="text-lg text-gray-600 italic">Empowering Rural Economies for a Sustainable Future</p>
       </div>
+
+      <img 
+                src="/images/TVEILogo.png" 
+                alt="Logo" 
+                className="mx-auto mb-4 w-64 h-64 object-contain opacity-90"
+              />
 
       {/* Introduction Section */}
       <div className="mb-8">
