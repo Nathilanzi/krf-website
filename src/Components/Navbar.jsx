@@ -9,6 +9,7 @@ import {
   FaEnvelope, 
   FaSeedling,
   FaCalendar, 
+  FaTrophy
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
 
@@ -21,6 +22,7 @@ const Navbar = () => {
     { icon: <FaCalendar className="w-5 h-5" />, text: "Calendar", path: "/calendar" },
     { icon: <FaSeedling className="w-5 h-5" />, text: "VisionPlan 2035", path: "/vision-plan" },
     { icon: <FaBullseye className="w-5 h-5" />, text: "Objectives", path: "/objectives" },
+    { icon: <FaTrophy className="w-5 h-5" />, text: "Success Stories", path: "/successstories" },
     { icon: <FaUsers className="w-5 h-5" />, text: "Divisions", path: "/divisions" },
     { icon: <FaUserTie className="w-5 h-5" />, text: "Leadership", path: "/leadership" },
     { icon: <FaEnvelope className="w-5 h-5" />, text: "Contact", path: "/contact" }

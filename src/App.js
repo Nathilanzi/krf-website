@@ -10,6 +10,8 @@ import Contact from './Components/Contact';
 import Layout from './Components/Layout';
 import Foundation from './Components/Foundation';
 import Calendar from './Components/Calendar';
+import SuccessStories from './Components/SuccessStories';
+import VillageEconomyIndaba from './Components/VillageEconomyIndaba';
 
 function App() {
   return (
@@ -21,10 +23,12 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/vision-plan" element={<VisionPlan />} />
           <Route path="/objectives" element={<Objectives />} />
+          <Route path='/successstories' element={<SuccessStories />} />
           <Route path="/divisions" element={<Divisions />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/foundation" element={<Foundation />} />
+          <Route path="/tvei" element={<VillageEconomyIndaba />} />
         </Routes>
       </Layout>
     </Router>
