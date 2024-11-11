@@ -12,6 +12,7 @@ import Foundation from './Components/Foundation';
 import Calendar from './Components/Calendar';
 import SuccessStories from './Components/SuccessStories';
 import VillageEconomyIndaba from './Components/VillageEconomyIndaba';
+import CoffeeWithDrRakhudu from './Components/CoffeeWithDrRakhudu';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/foundation" element={<Foundation />} />
           <Route path="/tvei" element={<VillageEconomyIndaba />} />
+          <Route path="/coffee-with-drrakhudu" element={<CoffeeWithDrRakhudu />} />
+          
         </Routes>
       </Layout>
     </Router>
