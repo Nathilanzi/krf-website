@@ -118,7 +118,7 @@ function Divisions() {
         {/* Join the Conversation Link */}
         <div className="text-center mt-8">
           <Link
-            to="/coffee-with-koketso"
+            to="/coffee-with-drrakhudu"
             className="inline-block px-8 py-3 bg-[#1B5538] text-white font-semibold rounded-lg shadow-lg hover:bg-[#397D5A] transition duration-200 transform hover:scale-105"
           >
             Join the Conversation
