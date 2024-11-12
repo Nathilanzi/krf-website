@@ -1,5 +1,6 @@
 import React from 'react';
 import '@react-pdf-viewer/core/lib/styles/index.css';
+import { Download } from 'lucide-react';
 
 
 function Foundation() {
@@ -81,22 +82,30 @@ function Foundation() {
         <p className="text-lg text-gray-700">Hear from community members about how KRF programs have impacted their lives and career trajectories.</p>
       </section>
 
-      {/* Accreditations and Partnerships Section */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Accreditations and Partnerships</h2>
-        <p className="text-lg text-gray-700 mb-4">KRF holds accreditation from seven SETAs, offering 44 full qualifications. Partnerships with companies such as Anglo American, BMW, and Metropolitan have expanded our reach and integrated modern technologies like augmented reality into our e-learning systems.</p>
-           {/* Download Link for PDF */}
-        <div className="pdf-container">
-          <a
-            href="/KRFAccreditation.pdf" // The path to your PDF
-            download="KRFAccreditation.pdf" // Suggested name for the downloaded file
-            className="text-[#397D5A] hover:text-[#1B5538] text-lg"
-          >
-            Download PDF
-          </a>
-        </div>
-      </section>
-
+     {/* Accreditations and Partnerships Section */}
+<section className="mb-16">
+  <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Accreditations and Partnerships</h2>
+  <p className="text-lg text-gray-700 mb-8">
+    KRF holds accreditation from seven SETAs, offering 44 full qualifications. 
+    Partnerships with companies such as Anglo American, BMW, and Metropolitan have 
+    expanded our reach and integrated modern technologies like augmented reality 
+    into our e-learning systems.
+  </p>
+  
+  {/* Enhanced Download Button */}
+  <div className="flex justify-center mt-8">
+    <a
+      href="/KRFAccreditation.pdf"
+      download="KRFAccreditation.pdf"
+      className="group flex items-center gap-3 bg-[#397D5A] hover:bg-[#1B5538] text-white px-6 py-3 rounded-lg 
+                transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl
+                animate-pulse hover:animate-none"
+    >
+      <Download className="w-6 h-6 group-hover:animate-bounce" />
+      <span className="text-lg font-semibold">Download Accreditation PDF</span>
+    </a>
+  </div>
+</section>
       {/* Donation Section */}
       <section className="mb-16 bg-gray-100 p-6 rounded-lg">
         <h2 className="text-3xl font-bold mb-4 text-[#1B5538]">Support Our Mission</h2>
