@@ -12,11 +12,7 @@ const SuccessStory = ({ story }) => {
             <img src={story.image} alt={story.title} className="w-full h-48 object-cover rounded-md" />
             <h3 className="mt-4 text-2xl font-semibold text-green-800">{story.title}</h3>
             <p className="mt-2 text-gray-700">{story.description}</p>
-            {story.video && (
-                <button onClick={toggleModal} className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
-                    Watch Video
-                </button>
-            )}
+            
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -37,18 +33,18 @@ const SuccessStories = () => {
         {
             title: "Empowering Rural Women",
             description: "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
-            image: "/images/women-empowerment.jpg",
+            image: "/images/constructionlearners.jpeg",
             video: "/videos/women-empowerment.mp4"
         },
         {
             title: "Youth Entrepreneurship",
             description: "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
-            image: "/images/youth-entrepreneurship.jpg",
+            image: "/images/LuBookworld.jpeg",
         },
         {
             title: "Agricultural Advancements",
             description: "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
-            image: "/images/agriculture.jpg",
+            image: "/images/Communityengagement.jpeg",
             video: "/videos/agriculture.mp4"
         }
     ];
