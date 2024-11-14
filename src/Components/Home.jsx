@@ -260,7 +260,7 @@ function Home() {
           Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
         </p>
         
-        <div className="flex justify-center items-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
           {/* Logos */}
           <img src="/images/KgotlhaLogo.png" alt="Kgotlha ya Rakhudu" loading= "lazy" className="w-40 h-40 object-contain" />
           <img src="/images/InvestmentSustainabilityLogo.png" alt="Investment & Sustainability Development Trust" loading= "lazy" className="w-40 h-40 object-contain" />
