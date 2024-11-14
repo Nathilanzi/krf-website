@@ -86,6 +86,7 @@ function Objectives() {
       description: "Building strong relationships through traditional governance and active participation.",
       icon: Users,
       image: "/images/Gasgiveaway.jpeg",
+      alt: "Gas giveaway from Hakeem Energies through Ofiice of Kgosana Koketso Rakhudu",
       details: [
         {
           icon: <Building2 className="w-5 h-5 text-[#397D5A]" />,
@@ -125,6 +126,7 @@ function Objectives() {
       description: "Uplifting community members through education and support programs.",
       icon: HeartHandshake,
       image: "/images/constructionlearners.jpeg",
+      alt: "Construction learners from Koketso Rakhudu Foundation",
       details: [
         {
           icon: <GraduationCap className="w-5 h-5 text-[#397D5A]" />,

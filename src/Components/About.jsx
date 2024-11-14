@@ -1,8 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
     <div className="container mx-auto px-6 py-12">
+<Helmet>
+        <title>About the Office of Kgosana Koketso Rakhudu | Tsitsing Leadership</title>
+        <meta name="description" content="Discover the impactful work of the Office of Kgosana Koketso Rakhudu, bridging tradition and modernity to guide Tsitsing towards a sustainable future." />
+        <meta name="keywords" content="Kgosana Koketso Rakhudu, Tsitsing, Royal Bafokeng Nation, VisionPlan 2035, Community Development" />
+      </Helmet>
+
+
       {/* Header Section */}
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold text-[#1B5538] mb-4">About the Office of Kgosana Koketso Rakhudu</h1>
@@ -17,7 +25,7 @@ function About() {
         <p className="mb-6">
           Kgosana Koketso Rakhudu, as the traditional leader (Kgosana), is tasked with the immense responsibility of guiding his community through a dynamic and challenging world. His office bridges the gap between tradition and modernity, maintaining the community's cultural heritage while introducing innovative approaches to governance, education, and economic empowerment.
         </p>
-        <img src="/images/Officeofkgosanateams.jpeg" alt="Office team" className="w-full h-64 object-contain rounded-lg shadow-lg mb-8"/>
+        <img src="/images/Officeofkgosanateams.jpeg" alt="Team of the Office of Kgosana Koketso Rakhudu" loading='lazy' className="w-full h-64 object-contain rounded-lg shadow-lg mb-8"/>
 
         <p className="mb-6">
           The VisionPlan 2035 focuses on the key areas of education, economic empowerment, governance, and cultural preservation, all of which the Office is actively engaged in. The Office functions as the executive arm that turns this vision into actionable strategies and projects that directly impact the lives of Tsitsing's residents. It does this by:

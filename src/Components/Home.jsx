@@ -112,7 +112,7 @@ function Home() {
     {name: "Kgotlha ya Rakhudu", logo: "images/KgotlhaLogo.png"}
   ]
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="home-page min-h-screen bg-gray-50">
       <TaglineCarousel />
       
       {/* Hero Section with Parallax Effect */}
@@ -125,7 +125,8 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
         <img 
           src="/images/OfficeofKgosanaTeam.jpeg" 
-          alt="Community" 
+          alt="Office Of Kgosana Koketso Rakhudu Team" 
+          loading= "lazy"
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 flex items-center justify-center text-center px-4">
@@ -171,16 +172,22 @@ function Home() {
                 slides={[
                   {
                     image: "images/Women.jpeg",
+                    alt: "Women in the Koketso Rakhudu Foundation Social, Women & disability development program",
+                    loading: "lazy",
                     title: "Social, Women & Disability Development Program (2016)",
                     description: "Benefited 30 participants, empowering them through skill-building and community support initiatives.",
                   },
                   {
                     image: "images/Grade12.jpeg",
+                    alt: "Koketso Rakhudu Foundation Grade 12 Re-write program students",
+                    loading: "lazy",
                     title: "Grade 12 Re-write Program (2017)",
                     description: "Assisted 105 students to improve their education, helping them access new academic and career opportunities.",
                   },
                   {
                     image: "images/IT.jpeg",
+                    alt: "Microsoft Software Development Program students",
+                    loading: "lazy",
                     title: "Microsoft Software Development Program (2023)",
                     description: "Equipped 25 participants with vital IT skills, preparing them for careers in the tech industry.",
                   }
@@ -255,11 +262,12 @@ function Home() {
         
         <div className="flex justify-center items-center gap-8">
           {/* Logos */}
-          <img src="/images/KgotlhaLogo.png" alt="Kgotlha ya Rakhudu" className="w-20 h-20 object-contain" />
-          <img src="/images/InvestmentSustainabilityLogo.png" alt="Investment & Sustainability Development" className="w-20 h-20 object-contain" />
-          <img src="/images/KRFLogo.png" alt="Youth Empowerment" className="w-20 h-20 object-contain" />
-          <img src="/images/CoffeeKoketsoLogo.png" alt="Women Development" className="w-20 h-20 object-contain" />
-          <img src="/images/TVEILogo.png" alt="Education" className="w-20 h-20 object-contain" />
+          <img src="/images/KgotlhaLogo.png" alt="Kgotlha ya Rakhudu" loading= "lazy" className="w-40 h-40 object-contain" />
+          <img src="/images/InvestmentSustainabilityLogo.png" alt="Investment & Sustainability Development Trust" loading= "lazy" className="w-40 h-40 object-contain" />
+          <img src="/images/KRFLogo.png" alt="Koketso Rakhudu Foundation" loading= "lazy" className="w-40 h-40 object-contain" />
+          <img src="/images/CoffeeKoketsoLogo.png" alt="Coffee With Dr Koketso Rakhudu" loading= "lazy" className="w-40 h-40 object-contain" />
+          <img src="/images/TVEILogo.png" alt="The Village Economy Indaba" loading= "lazy" className="w-40 h-40 object-contain" />
+          <img src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" alt="Business School Of Leadership Excellence logo" loading= "lazy" className="w-40 h-40 object-contain" />
         </div>
 
         {/* Call to Action */}

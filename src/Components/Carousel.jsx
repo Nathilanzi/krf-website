@@ -29,6 +29,7 @@ const Carousel = ({ slides, interval = 5000 }) => {
               <img 
                 src={slide.image} 
                 alt={slide.title} 
+                loading='lazy'
                 className="w-full h-full object-cover opacity-80"
               />
               {/* Dark overlay */}

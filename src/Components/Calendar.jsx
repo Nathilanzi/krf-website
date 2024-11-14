@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import { Calendar as CalendarIcon, Phone } from 'lucide-react';
 import 'react-calendar/dist/Calendar.css';
 import './styles/Calendar.css'
+import { Helmet } from 'react-helmet';
 
 const events = [
   {
@@ -170,6 +171,10 @@ const CalendarComponent = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 p-6">
+        <Helmet>
+        <title>Community Event Calendar | Tsitsing</title>
+        <meta name="description" content="Stay updated on community events organized by the Office of Kgosana Koketso Rakhudu, including sustainable farming programs and community awards." />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-3xl font-serif font-bold text-green-800 mb-8">
           Community Event Calendar

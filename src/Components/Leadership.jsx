@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHandHoldingHeart, FaUsers, FaChalkboardTeacher, FaHandsHelping } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 function Leadership() {
   return (
@@ -44,28 +45,49 @@ function Leadership() {
       {/* Main Content */}
       <div className="container mx-auto px-6 py-16 relative">
         {/* Header */}
-        <h1 className="text-4xl font-bold mb-8 text-center text-[#1B5538]">Our Leadership</h1>
+        <motion.h1 
+          className="text-4xl font-bold mb-8 text-center text-[#1B5538]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Our Leadership
+        </motion.h1>
 
           {/* Organisation organogram */}
-        <img 
-                src="/images/LeadershipOrganisation.jpg" 
-                alt="Logo" 
-                className="mx-auto mb-4 w-full h-full object-contain opacity-90"
-              />
+        <motion.img
+                 src="/images/LeadershipOrganisation.jpg"
+                 alt="Office of Kgosana Koketso Rakhudu Office structure"
+                 className="mx-auto mb-4 w-full h-full object-contain opacity-90"
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 transition={{ duration: 0.5 }}
+               />
+              
 
         {/* Intro Section */}
-        <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto">
-          Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu, a revered civic leader known for his integrity and dedication.
-        </p>
+        <motion.p 
+          className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu.
+        </motion.p>
 
         {/* Leadership and Legacy Section */}
-        <section className="flex flex-col items-center mb-12 relative">
+        <motion.section 
+          className="flex flex-col items-center mb-12 relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45" />
           <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full" />
           
           <img 
             src="/images/KgosanaKoketso.jpeg" 
-            alt="Kgosana Koketso Rakhudu" 
+            alt="Dr Kgosana Koketso Rakhudu" 
             className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
           />
           <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">
@@ -80,13 +102,13 @@ function Leadership() {
           <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl text-center">
             Integrating African traditional governance with modern principles, the Office of Kgosana Koketso Rakhudu encourages each community member to reach their potential through various empowerment initiatives in education, healthcare, and economic development, all contributing to VisionPlan 2035.
           </p>
-        </section>
+        </motion.section>
 
         {/* Community Initiatives Image */}
         <section className="flex flex-col items-center mb-12">
           <img 
             src="/images/Hlolelo.jpeg" 
-            alt="Community Empowerment Initiatives" 
+            alt="Head of Stakeholder Engagements Office of Kgosana Koketso Rakhudu" 
             className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
           />
         </section>

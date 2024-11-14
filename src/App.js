@@ -8,11 +8,14 @@ import Divisions from './Components/Divisions';
 import Leadership from './Components/Leadership';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
-import Foundation from './Components/Foundation';
+import Foundation from './Components/KoketsoRakhuduFoundation';
 import Calendar from './Components/Calendar';
 import SuccessStories from './Components/SuccessStories';
 import VillageEconomyIndaba from './Components/VillageEconomyIndaba';
 import CoffeeWithDrRakhudu from './Components/CoffeeWithDrRakhudu';
+import InvestmentSustainabilityTrust from './Components/InvestmentSustainabilityTrust';
+import BusinessSchoolOfLeadershipExcellence from './Components/BusinessSchoolOfLeadershipExcellence';
+import KoketsoRakhuduFoundation from './Components/KoketsoRakhuduFoundation';
 
 function App() {
   return (
@@ -28,10 +31,11 @@ function App() {
           <Route path="/divisions" element={<Divisions />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/foundation" element={<Foundation />} />
-          <Route path="/tvei" element={<VillageEconomyIndaba />} />
-          <Route path="/coffee-with-drrakhudu" element={<CoffeeWithDrRakhudu />} />
-          
+          <Route path="/koketso-rakhudu-foundation" element={<KoketsoRakhuduFoundation />} />
+          <Route path="/the-village-economy-indaba" element={<VillageEconomyIndaba />} />
+          <Route path="/coffee-with-dr-rakhudu" element={<CoffeeWithDrRakhudu />} />
+          <Route path="/investment-sustainability-trust" element={<InvestmentSustainabilityTrust />} />
+          <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
         </Routes>
       </Layout>
     </Router>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSeedling, FaLeaf, FaHandHoldingUsd, FaFacebook, FaCoffee } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const Divisions = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -11,19 +12,28 @@ const Divisions = () => {
 
   return (
     <div className="container mx-auto px-6 py-16">
+      <Helmet>
+        <title>Our Divisions | Kgosana Koketso Rakhudu</title>
+        <meta name="description" content="Explore divisions under Kgosana Koketso Rakhudu focused on sustainable development and community empowerment in the Royal Bafokeng Nation." />
+        <meta name="keywords" content="Kgosana Koketso Rakhudu, VisionPlan 2035, Royal Bafokeng Nation, community development, sustainability" />
+      </Helmet>
+
       {/* Header */}
-      <h1 className="text-4xl font-bold mb-12 text-center text-[#1B5538]">Our Divisions</h1>
+      <header>
+        <h1 className="text-4xl font-bold mb-12 text-center text-[#1B5538]">Our Divisions</h1>
+      </header>
 
       {/* Kgothla ya Rakhudu */}
       <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
         <img 
           src="/images/KgotlhaLogo.png" 
-          alt="Logo" 
+          alt="Kgotla ya Rakhudu Logo" 
+          loading= "lazy"
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
-        <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Kgotlha ya Rakhudu</h2>
+        <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Kgotla ya Rakhudu</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Kgotlha ya Rakhudu is a community-focused organization under the guidance of Kgosana Koketso Rakhudu. Dedicated to strengthening and empowering local communities, Kgotlha ya Rakhudu organizes various initiatives that preserve cultural heritage, promote social cohesion, and foster sustainable development.
+          Kgotla ya Rakhudu is a community-focused organization under Kgosana Koketso Rakhudu. Dedicated to strengthening local communities, it preserves cultural heritage, promotes social cohesion, and fosters sustainable development.
         </p>
 
         {/* Video Display Button */}
@@ -42,7 +52,7 @@ const Divisions = () => {
               <button onClick={toggleVideoModal} className="text-gray-500 hover:text-gray-800 text-xl absolute top-2 right-2">
                 Close
               </button>
-              <video src="/videos/" controls className="w-full h-auto rounded-md" />
+              <video src="/videos/community-intro.mp4" alt= "Introduction video of the State of The Kgotla Adress" loading= "lazy" controls className="w-full h-auto rounded-md" />
             </div>
           </div>
         )}
@@ -52,15 +62,15 @@ const Divisions = () => {
       <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative">
         <img 
           src="/images/InvestmentSustainabilityLogo.png" 
-          alt="Logo" 
+          alt="Investment & Sustainability Development Trust Logo" 
+          loading= "lazy"
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Investment & Sustainability Development Trust</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          This division is responsible for driving economic growth through sustainable investment, focusing on sectors like agriculture, renewable energy, and small enterprise development.
+          Driving economic growth through sustainable investment, focusing on sectors like agriculture, renewable energy, and small enterprise development.
         </p>
 
-        {/* Impact Icons */}
         <div className="flex justify-around items-center mt-6">
           <div className="text-center">
             <FaSeedling className="text-4xl text-[#1B5538] mb-2" />
@@ -76,7 +86,6 @@ const Divisions = () => {
           </div>
         </div>
 
-        {/* Explore More Link */}
         <div className="text-center mt-8">
           <Link
             to="/investment-sustainability-trust"
@@ -84,7 +93,6 @@ const Divisions = () => {
           >
             Explore Our Initiatives
           </Link>
-          <p className="mt-2 text-sm text-gray-500">Learn more about our focus areas and sustainable projects.</p>
         </div>
       </section>
 
@@ -92,15 +100,15 @@ const Divisions = () => {
       <section className="mb-12 bg-white p-6 rounded-lg shadow-lg relative">
         <img 
           src="/images/KRFLogo.png" 
-          alt="Logo" 
+          alt="Koketso Rakhudu Foundation Logo"
+          loading= "lazy" 
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Koketso Rakhudu Foundation</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          The foundation serves as an educational platform, focusing on skills development in areas like entrepreneurship, technology, and community leadership.
+          An educational platform focusing on skills development in areas like entrepreneurship, technology, and community leadership.
         </p>
 
-        {/* Facebook Link */}
         <div className="text-center mt-6">
           <a 
             href="https://www.facebook.com/p/Koketso-Rakhudu-Foundation-100064528696915/" 
@@ -113,10 +121,9 @@ const Divisions = () => {
           </a>
         </div>
 
-        {/* Learn More Link */}
         <div className="text-center mt-6">
           <Link 
-            to="/foundation"
+            to="/koketso-rakhudu-foundation"
             className="inline-block px-8 py-3 bg-[#397D5A] text-white font-semibold rounded-lg shadow-md hover:bg-[#1B5538] transition duration-200"
           >
             Learn More About the Foundation
@@ -128,7 +135,8 @@ const Divisions = () => {
       <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
         <img 
           src="/images/CoffeeKoketsoLogo.png" 
-          alt="Logo" 
+          alt="Coffee with Dr Koketso Rakhudu" 
+          loading= "lazy"
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Coffee with Dr. Koketso Rakhudu</h2>
@@ -144,7 +152,7 @@ const Divisions = () => {
         {/* Join the Conversation Link */}
         <div className="text-center mt-8">
           <Link
-            to="/coffee-with-drrakhudu"
+            to="/coffee-with-dr-rakhudu"
             className="inline-block px-8 py-3 bg-[#1B5538] text-white font-semibold rounded-lg shadow-lg hover:bg-[#397D5A] transition duration-200 transform hover:scale-105"
           >
             Join the Conversation
@@ -156,7 +164,8 @@ const Divisions = () => {
       <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
         <img 
           src="/images/TVEILogo.png" 
-          alt="Logo" 
+          alt="The Village Economy Indaba Logo" 
+          loading= "lazy"
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">The Village Economy Indaba</h2>
@@ -167,13 +176,37 @@ const Divisions = () => {
         {/* Participate Link */}
         <div className="text-center mt-8">
           <Link
-            to="/tvei"
+            to="/the-village-economy-indaba"
             className="inline-block px-8 py-3 bg-[#1B5538] text-white font-semibold rounded-lg shadow-lg hover:bg-[#397D5A] transition duration-200 transform hover:scale-105"
           >
             Participate in the initiative
           </Link>
         </div>
       </section>
+{/* Dr. Koketso Rakhudu Business School of Leadership Excellence */}
+<section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
+        <img 
+          src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" 
+          alt="Business School Of Leadership Excellence logo"
+          loading= "lazy" 
+          className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
+        />
+        <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Dr. Koketso Rakhudu Business School of Leadership Excellence</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          The Dr. Koketso Rakhudu Business School of Leadership Excellence is a pioneering institution committed to cultivating transformative leaders. The school provides a comprehensive curriculum that merges ethical governance, sustainable development, and business acumen. Students are empowered to make a lasting impact on their communities and industries through responsible and forward-thinking leadership.
+        </p>
+
+        {/* Learn More Link */}
+        <div className="text-center mt-8">
+          <Link
+            to="/business-school-of-leadership-excellence"
+            className="inline-block px-8 py-3 bg-[#1B5538] text-white font-semibold rounded-lg shadow-lg hover:bg-[#397D5A] transition duration-200 transform hover:scale-105"
+          >
+            Learn More About the Business School
+          </Link>
+        </div>
+      </section>
+
     </div>
   );
 };
