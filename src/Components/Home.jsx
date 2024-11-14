@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ArrowRight, Calendar, Users, Target, Phone } from 'lucide-react';
 import Carousel from './Carousel';
-
+import { FaSeedling, FaLeaf, FaHandHoldingUsd, FaFacebook, FaCoffee } from 'react-icons/fa';
 
 const TaglineCarousel = () => {
   const taglines = [
@@ -108,6 +108,9 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 );
 
 function Home() {
+  const divisions = [
+    {name: "Kgotlha ya Rakhudu", logo: "images/KgotlhaLogo.png"}
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <TaglineCarousel />
@@ -167,14 +170,17 @@ function Home() {
               <Carousel
                 slides={[
                   {
+                    image: "images/Women.jpeg",
                     title: "Social, Women & Disability Development Program (2016)",
                     description: "Benefited 30 participants, empowering them through skill-building and community support initiatives.",
                   },
                   {
+                    image: "images/Grade12.jpeg",
                     title: "Grade 12 Re-write Program (2017)",
                     description: "Assisted 105 students to improve their education, helping them access new academic and career opportunities.",
                   },
                   {
+                    image: "images/IT.jpeg",
                     title: "Microsoft Software Development Program (2023)",
                     description: "Equipped 25 participants with vital IT skills, preparing them for careers in the tech industry.",
                   }
@@ -238,32 +244,35 @@ function Home() {
           </div>
         </motion.section>
 
-        {/* Objectives Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#1B5538] mb-8 text-center">Objectives</h2>
-          <div className="flex justify-center">
-            <motion.div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden max-w-md" // Changed max-w-xs to max-w-md for a wider card
-              whileHover={{ y: -5 }}
-            >
-              <img 
-                src="/images/Gasgiveaway.jpeg" 
-                alt="Objectives" 
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#1B5538] mb-2">Our Objectives</h3>
-                <p className="text-gray-600 mb-4">Discover the key objectives guiding our initiatives...</p>
-                <Link 
-                  to="/objectives"
-                  className="text-[#397D5A] hover:text-[#1B5538] font-semibold inline-flex items-center gap-2"
-                >
-                  View Objectives <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* Divisions Section */}
+      <section className="py-16 bg-white">
+        <h2 className="text-3xl font-bold text-center text-[#1B5538] mb-6">
+          Explore Our Divisions
+        </h2>
+        <p className="text-lg text-gray-700 text-center mb-8">
+          Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
+        </p>
+        
+        <div className="flex justify-center items-center gap-8">
+          {/* Logos */}
+          <img src="/images/KgotlhaLogo.png" alt="Kgotlha ya Rakhudu" className="w-20 h-20 object-contain" />
+          <img src="/images/InvestmentSustainabilityLogo.png" alt="Investment & Sustainability Development" className="w-20 h-20 object-contain" />
+          <img src="/images/KRFLogo.png" alt="Youth Empowerment" className="w-20 h-20 object-contain" />
+          <img src="/images/CoffeeKoketsoLogo.png" alt="Women Development" className="w-20 h-20 object-contain" />
+          <img src="/images/TVEILogo.png" alt="Education" className="w-20 h-20 object-contain" />
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-8">
+          <Link 
+            to="/divisions"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
+          >
+            Learn More About Our Divisions
+          </Link>
+        </div>
+        </section> 
+        
 
         {/* Contact Section */}
         <motion.footer 
