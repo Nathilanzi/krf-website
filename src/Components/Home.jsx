@@ -261,14 +261,66 @@ function Home() {
         </p>
         
         <div className="flex justify-center items-center gap-8">
-          {/* Logos */}
-          <img src="/images/KgotlhaLogo.png" alt="Kgotlha ya Rakhudu" loading= "lazy" className="w-40 h-40 object-contain" />
-          <img src="/images/InvestmentSustainabilityLogo.png" alt="Investment & Sustainability Development Trust" loading= "lazy" className="w-40 h-40 object-contain" />
-          <img src="/images/KRFLogo.png" alt="Koketso Rakhudu Foundation" loading= "lazy" className="w-40 h-40 object-contain" />
-          <img src="/images/CoffeeKoketsoLogo.png" alt="Coffee With Dr Koketso Rakhudu" loading= "lazy" className="w-40 h-40 object-contain" />
-          <img src="/images/TVEILogo.png" alt="The Village Economy Indaba" loading= "lazy" className="w-40 h-40 object-contain" />
-          <img src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" alt="Business School Of Leadership Excellence logo" loading= "lazy" className="w-40 h-40 object-contain" />
-        </div>
+  {/* Logos with hover and routing */}
+  <Link to="/koketso-rakhudu-foundation">
+    <img 
+      src="/images/KRFLogo.png" 
+      alt="Koketso Rakhudu Foundation" 
+      loading="lazy" 
+      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
+      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
+      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+    />
+  </Link>
+  
+  <Link to="/the-village-economy-indaba">
+    <img 
+      src="/images/TVEILogo.png" 
+      alt="The Village Economy Indaba" 
+      loading="lazy" 
+      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
+      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
+      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+    />
+  </Link>
+  
+  <Link to="/coffee-with-dr-rakhudu">
+    <img 
+      src="/images/CoffeeKoketsoLogo.png" 
+      alt="Coffee With Dr Koketso Rakhudu" 
+      loading="lazy" 
+      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
+      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}  className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
+    />
+  </Link>
+  
+  <Link to="/investment-sustainability-trust">
+    <img 
+      src="/images/InvestmentSustainabilityLogo.png" 
+      alt="Investment & Sustainability Development Trust" 
+      loading="lazy" 
+      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
+      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
+      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+    />
+  </Link>
+  
+  <Link to="/business-school-of-leadership-excellence">
+    <img 
+      src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" 
+      alt="Business School Of Leadership Excellence" 
+      loading="lazy" 
+      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
+      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
+      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+    />
+  </Link>
+</div>
 
         {/* Call to Action */}
         <div className="text-center mt-8">
