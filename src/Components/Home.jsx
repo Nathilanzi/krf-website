@@ -283,30 +283,32 @@ function Home() {
         
 
         {/* Contact Section */}
-        <motion.footer 
+<motion.footer 
   className="text-center p-8 bg-white rounded-xl shadow-lg"
   whileInView={{ y: [20, 0], opacity: [0, 1] }}
   transition={{ duration: 0.5 }}
   viewport={{ once: true }}
 >
-  <h2 className="text-2xl font-bold text-[#1B5538] mb-4">Contact Us</h2>
+  <h2 className="text-2xl font-bold text-[#1B5538] mb-4">Get in Touch</h2>
   <p className="text-gray-600 mb-6">
-    Feel free to reach out for more information about our programs and initiatives.
+    We're here to serve our community. Reach out to us for any inquiries or support.
   </p>
-  
-  {/* Separator */}
-  <hr className="my-6 border-t-2 border-[#1B5538]/20" />
-
-  {/* Facebook Link */}
-  <div className="flex flex-col items-center gap-4">
-    <a 
-      href="https://www.facebook.com/KoketsoRakhuduFoundation" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-4 px-6 py-3 bg-[#1B5538]/10 text-[#1B5538] rounded-full hover:bg-[#1B5538]/20 transition-all"
+  <div className="flex items-center justify-center space-x-6">
+    <Link 
+      to="/contact"
+      className="inline-flex items-center gap-2 px-8 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
     >
-      <FaFacebook className="text-[#1B5538] w-8 h-8" />
-      <span className="text-lg font-medium">Visit the Koketso Rakhudu Foundation on Facebook</span>
+      Contact Us <ChevronRight className="w-5 h-5" />
+    </Link>
+    <div className="h-12 w-px bg-gray-300"></div>
+    <a 
+      href="https://www.facebook.com/p/Koketso-Rakhudu-Foundation-100064528696915/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-[#1B5538] hover:text-[#397D5A] transition-colors duration-300"
+    >
+      <FaFacebook className="w-8 h-8" />
+      <span className="font-medium">Follow KRF on Facebook</span>
     </a>
   </div>
 </motion.footer>
