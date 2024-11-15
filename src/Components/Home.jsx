@@ -260,7 +260,7 @@ function Home() {
           Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
         </p>
         
-        <div className="flex justify-center items-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8">
   {/* Logos with hover and routing */}
   <Link to="/koketso-rakhudu-foundation">
     <img 
@@ -335,23 +335,35 @@ function Home() {
         
 
         {/* Contact Section */}
-        <motion.footer 
-          className="text-center p-8 bg-white rounded-xl shadow-lg"
-          whileInView={{ y: [20, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-2xl font-bold text-[#1B5538] mb-4">Get in Touch</h2>
-          <p className="text-gray-600 mb-6">
-            We're here to serve our community. Reach out to us for any inquiries or support.
-          </p>
-          <Link 
-            to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
-          >
-            Contact Us <ChevronRight className="w-5 h-5" />
-          </Link>
-        </motion.footer>
+<motion.footer 
+  className="text-center p-8 bg-white rounded-xl shadow-lg"
+  whileInView={{ y: [20, 0], opacity: [0, 1] }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true }}
+>
+  <h2 className="text-2xl font-bold text-[#1B5538] mb-4">Get in Touch</h2>
+  <p className="text-gray-600 mb-6">
+    We're here to serve our community. Reach out to us for any inquiries or support.
+  </p>
+  <div className="flex items-center justify-center space-x-6">
+    <Link 
+      to="/contact"
+      className="inline-flex items-center gap-2 px-8 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
+    >
+      Contact Us <ChevronRight className="w-5 h-5" />
+    </Link>
+    <div className="h-12 w-px bg-gray-300"></div>
+    <a 
+      href="https://www.facebook.com/p/Koketso-Rakhudu-Foundation-100064528696915/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-[#1B5538] hover:text-[#397D5A] transition-colors duration-300"
+    >
+      <FaFacebook className="w-8 h-8" />
+      <span className="font-medium">Follow KRF on Facebook</span>
+    </a>
+  </div>
+</motion.footer>
       </div>
     </div>
   );
