@@ -8,7 +8,7 @@ function Layout({ children }) {
 
   useEffect(() => {
     // Simulate loading time (for example, when fetching data)
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
 
