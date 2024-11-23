@@ -311,7 +311,7 @@ function Home() {
   
   <Link to="/business-school-of-leadership-excellence">
     <img 
-      src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" 
+      src="/images/BusinessSchoolOfLeadershipExcellenceLogo.png" 
       alt="Business School Of Leadership Excellence" 
       loading="lazy" 
       className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
