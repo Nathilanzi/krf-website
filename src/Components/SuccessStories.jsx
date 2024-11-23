@@ -39,7 +39,7 @@ const SuccessStories = () => {
         {
             title: "Youth Entrepreneurship",
             description: "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
-            image: "/images/LuBookworld.jpeg",
+            image: "/images/KgosanaYouthStakeholders.jpeg",
         },
         {
             title: "Agricultural Advancements",
