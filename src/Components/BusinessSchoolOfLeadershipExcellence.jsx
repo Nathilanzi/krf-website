@@ -13,7 +13,7 @@ const BusinessSchoolOfLeadershipExcellence = () => {
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-8 text-[#397D5A]">Dr. Koketso Rakhudu Business School of Leadership Excellence</h1>
         <img 
-          src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" 
+          src="/images/BusinessSchoolOfLeadershipExcellenceLogo.png" 
           alt="Business School Of Leadership Excellence logo" 
           className="mx-auto mb-4 w-64 h-64 object-contain opacity-90" 
           loading="lazy"

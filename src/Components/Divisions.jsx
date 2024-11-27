@@ -186,7 +186,7 @@ const Divisions = () => {
 {/* Dr. Koketso Rakhudu Business School of Leadership Excellence */}
 <section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
         <img 
-          src="/images/BusinessSchoolOfLeadershipExcellenceLogoBW.png" 
+          src="/images/BusinessSchoolOfLeadershipExcellenceLogo.png" 
           alt="Business School Of Leadership Excellence logo"
           loading= "lazy" 
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
