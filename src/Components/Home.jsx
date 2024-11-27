@@ -127,7 +127,7 @@ function Home() {
           src="/images/OfficeofKgosanaTeam.jpeg" 
           alt="Office Of Kgosana Koketso Rakhudu Team" 
           loading= "lazy"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-contain object-top"
         />
         <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <div className="max-w-4xl relative z-20">
