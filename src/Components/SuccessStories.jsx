@@ -1,26 +1,79 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const SuccessStory = ({ story }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState(null);
 
-    const toggleModal = () => {
-        setIsModalOpen(!isModalOpen);
+    const openModalWithVideo = (videoSrc) => {
+        setCurrentVideo(videoSrc);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setCurrentVideo(null);
     };
 
     return (
         <div className="p-6 rounded-lg shadow-lg bg-white max-w-md mx-auto">
-            <img src={story.image} alt={story.title} className="w-full h-48 object-cover rounded-md" />
+            {story.media ? (
+                <Swiper
+                    modules={[Navigation]}
+                    navigation
+                    className="w-full h-48 rounded-md"
+                >
+                    {story.media.map((item, index) =>
+                        item.type === 'image' ? (
+                            <SwiperSlide key={index}>
+                                <img
+                                    src={item.src}
+                                    alt={story.title}
+                                    className="w-full h-48 object-cover rounded-md"
+                                />
+                            </SwiperSlide>
+                        ) : (
+                            <SwiperSlide key={index}>
+                                <div className="relative w-full h-48">
+                                    <img
+                                        src="/images/video-thumbnail.jpg" // Replace with a static thumbnail or generate dynamically
+                                        alt="Video Thumbnail"
+                                        className="w-full h-48 object-cover rounded-md"
+                                    />
+                                    <button
+                                        onClick={() => openModalWithVideo(item.src)}
+                                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-md text-white"
+                                    >
+                                        ▶ Play Video
+                                    </button>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    )}
+                </Swiper>
+            ) : (
+                <img
+                    src={story.image}
+                    alt={story.title}
+                    className="w-full h-48 object-cover rounded-md"
+                />
+            )}
             <h3 className="mt-4 text-2xl font-semibold text-green-800">{story.title}</h3>
             <p className="mt-2 text-gray-700">{story.description}</p>
-            
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-                        <button onClick={toggleModal} className="text-gray-500 hover:text-gray-800 text-xl mb-2">
-                            Close
+                        <button
+                            onClick={closeModal}
+                            className="text-gray-500 hover:text-gray-800 text-xl mb-4"
+                        >
+                            ✕ Close
                         </button>
-                        <video src={story.video} controls className="w-full h-auto rounded-md" />
+                        <video src={currentVideo} controls autoPlay className="w-full h-auto rounded-md" />
                     </div>
                 </div>
             )}
@@ -34,7 +87,6 @@ const SuccessStories = () => {
             title: "Empowering Rural Women",
             description: "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
             image: "/images/constructionlearners.jpeg",
-            video: "/videos/women-empowerment.mp4"
         },
         {
             title: "Youth Entrepreneurship",
@@ -44,9 +96,21 @@ const SuccessStories = () => {
         {
             title: "Agricultural Advancements",
             description: "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
-            image: "/images/Communityengagement.jpeg",
-            video: "/videos/agriculture.mp4"
-        }
+            media: [
+           { type: "image", src: "/images/Communityengagement.jpeg",}
+            ],
+        },
+        {
+            title: "Final Kgotla of 2024",
+            description: "The final kgotla of 2024 was held on the 17th of November where Kgosana Koketso Rakhudu celebrated 9 years of Leadership excellence and appreciated those who have played a pivotal role in his leadership term.",
+            media: [
+                { type: "image", src: "/images/DancingKgotla.jpeg" },
+                { type: "image", src: "/images/DancingKgotla1.jpeg" },
+                { type: "image", src: "/images/KgotlaStakeholder.jpeg" },
+                { type: "video", src: "/videos/FinalKgotla2024.mp4", 
+                    thumbnail: "/images/KgotlhaDesign.jpg" },
+            ],
+        },
     ];
 
     return (
