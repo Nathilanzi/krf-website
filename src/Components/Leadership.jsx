@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHandHoldingHeart, FaUsers, FaChalkboardTeacher, FaHandsHelping } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Carousel from './Carousel';
 
 function Leadership() {
   return (
@@ -63,6 +64,76 @@ function Leadership() {
                  animate={{ opacity: 1 }}
                  transition={{ duration: 0.5 }}
                />
+
+                 {/* Leadership Carousel */}
+<section className="flex flex-col items-center justify-center h-screen bg-gray-100">
+  <h2 className="text-3xl font-bold mb-8 text-[#1B5538] text-center">
+    Executive Leaders
+  </h2>
+
+  <div className="w-[650px] h-[500px]">
+    <Carousel
+      slides={[
+        {
+          image: "images/OperationsStrategicPlanning.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Hlolelo Rampete",
+          description:
+            "Executive Head: Operations & Strategic Planning ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/AdministrationCompliance.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Kopano Mothibi",
+          description:
+            "Executive Head: Administration, Compliance and M&E ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/LegalSocialEthics.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Bakang Maluleka",
+          description:
+            "Executive Head: Legal & Social Ethics ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/ProgrammesStakeholdersEngagement.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Calvin Molokwane",
+          description:
+            "Executive Head: Programmes & Stakeholders Engagement ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/CommunityLiasonSupport.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Tsholo Nape",
+          description:
+            "Executive Head: Community Liaison and Support ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/InvestmentsPortfolio.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Sibusiso Nxumalo",
+          description:
+            "Executive Investments Portfolio Head ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+        {
+          image: "images/placeholder.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Jacob Seatlholo",
+          description:
+            "Product Development Specialist ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+        },
+      ]}
+    />
+  </div>
+</section>
               
 
         {/* Intro Section */}
