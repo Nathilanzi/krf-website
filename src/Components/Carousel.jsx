@@ -1,16 +1,25 @@
-// src/Components/Carousel.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Carousel = ({ slides, interval = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Auto-slide effect
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, interval);
     return () => clearInterval(timer);
   }, [slides.length, interval]);
+
+  // Manual navigation
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   return (
     <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
@@ -26,38 +35,38 @@ const Carousel = ({ slides, interval = 5000 }) => {
               className="absolute inset-0"
             >
               {/* Background Image */}
-              <img 
-                src={slide.image} 
-                alt={slide.title} 
-                loading='lazy'
-                className="w-full h-full object-cover opacity-80"
+              <img
+                src={slide.image}
+                alt={slide.title}
+                loading="lazy"
+                className="w-full h-full object-contain"
               />
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/60"></div>
-              
-              {/* Slide Text */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                <motion.h3 
-                  className="text-3xl font-bold mb-2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  {slide.title}
-                </motion.h3>
-                <motion.p
-                  className="text-lg max-w-2xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  {slide.description}
-                </motion.p>
+
+              {/* Text Overlay */}
+              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 via-black/50 to-transparent px-4 py-6 text-white">
+                <h3 className="text-lg font-bold">{slide.title}</h3>
+                <p className="text-sm">{slide.description}</p>
               </div>
             </motion.div>
           )
         ))}
       </AnimatePresence>
+
+      {/* Navigation Buttons */}
+      <button
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 hover:bg-black/70 rounded-full p-2"
+        onClick={handlePrev}
+        aria-label="Previous Slide"
+      >
+        &#8592;
+      </button>
+      <button
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 hover:bg-black/70 rounded-full p-2"
+        onClick={handleNext}
+        aria-label="Next Slide"
+      >
+        &#8594;
+      </button>
 
       {/* Progress Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
