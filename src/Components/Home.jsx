@@ -252,86 +252,72 @@ function Home() {
         </motion.section>
 
         {/* Divisions Section */}
-      <section className="py-16 bg-white">
-        <h2 className="text-3xl font-bold text-center text-[#1B5538] mb-6">
-          Explore Our Divisions
-        </h2>
-        <p className="text-lg text-gray-700 text-center mb-8">
-          Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
-        </p>
-        
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8">
-  {/* Logos with hover and routing */}
-  <Link to="/koketso-rakhudu-foundation">
-    <img 
-      src="/images/KRFLogo.png" 
-      alt="Koketso Rakhudu Foundation" 
-      loading="lazy" 
-      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
-      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
-      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
-      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-    />
-  </Link>
+        <section className="py-16 bg-white">
+  <h2 className="text-3xl font-bold text-center text-[#1B5538] mb-6">
+    Explore Our Divisions
+  </h2>
+  <p className="text-lg text-gray-700 text-center mb-8">
+    Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
+  </p>
   
-  <Link to="/the-village-economy-indaba">
-    <img 
-      src="/images/TVEILogo.png" 
-      alt="The Village Economy Indaba" 
-      loading="lazy" 
-      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
-      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
-      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
-      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-    />
-  </Link>
-  
-  <Link to="/coffee-with-dr-rakhudu">
-    <img 
-      src="/images/CoffeeKoketsoLogo.png" 
-      alt="Coffee With Dr Koketso Rakhudu" 
-      loading="lazy" 
-      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
-      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
-      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}  className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
-    />
-  </Link>
-  
-  <Link to="/investment-sustainability-trust">
-    <img 
-      src="/images/InvestmentSustainabilityLogo.png" 
-      alt="Investment & Sustainability Development Trust" 
-      loading="lazy" 
-      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
-      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
-      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
-      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-    />
-  </Link>
-  
-  <Link to="/business-school-of-leadership-excellence">
-    <img 
-      src="/images/BusinessSchoolOfLeadershipExcellenceLogo.png" 
-      alt="Business School Of Leadership Excellence" 
-      loading="lazy" 
-      className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-140" 
-      style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
-      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.4)'}
-      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-    />
-  </Link>
-</div>
+  <div className="flex flex-wrap justify-center gap-8">
+    {/* Logos with hover and routing */}
+    <Link to="/koketso-rakhudu-foundation">
+      <img 
+        src="/images/KRFLogo.png" 
+        alt="Koketso Rakhudu Foundation logo" 
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
+      />
+    </Link>
+    
+    <Link to="/the-village-economy-indaba">
+      <img 
+        src="/images/TVEILogo.png" 
+        alt="The Village Economy Indaba logo" 
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
+      />
+    </Link>
+    
+    <Link to="/coffee-with-dr-rakhudu">
+      <img 
+        src="/images/CoffeeKoketsoLogo.png" 
+        alt="Coffee With Dr Koketso Rakhudu logo" 
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
+      />
+    </Link>
+    
+    <Link to="/investment-sustainability-trust">
+      <img 
+        src="/images/InvestmentSustainabilityLogo.png" 
+        alt="Investment & Sustainability Development Trust logo" 
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
+      />
+    </Link>
+    
+    <Link to="/business-school-of-leadership-excellence">
+      <img 
+        src="/images/BusinessSchoolOfLeadershipExcellenceLogo.png" 
+        alt="Business School of Leadership Excellence logo" 
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
+      />
+    </Link>
+  </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-8">
-          <Link 
-            to="/divisions"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
-          >
-            Learn More About Our Divisions
-          </Link>
-        </div>
-        </section> 
+  {/* Call to Action */}
+  <div className="text-center mt-8">
+    <Link 
+      to="/divisions"
+      className="inline-flex items-center gap-2 px-6 py-3 bg-[#1B5538] text-white rounded-full hover:bg-[#397D5A] transition-colors duration-300"
+    >
+      Learn More About Our Divisions
+    </Link>
+  </div>
+</section>
         
 
         {/* Contact Section */}
