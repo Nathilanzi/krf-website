@@ -43,6 +43,25 @@ const events = [
   },
   {
     date: '2024-11-29',
+    title: '9th Year Leadership Celebration',
+    details: {
+      description:
+        "Celebrate Kgosana Koketso Rakhudu's 9 years of dedication and leadership with a special graduation ceremony and inauguration of Dr. Koketso Rakhudu as Chancellor of KRF CET.",
+      venue: 'Maile Kopman',
+      time: '8:00 AM',
+      dressCode: 'Formal Attire',
+      specialGuests: [
+        'Prof. Keo Motaung - Biomedical Scientist & CEO of Global Health Biotech',
+        'Dr. Koketso Rakhudu - Incoming Chancellor of KRF CET',
+        'Prof. Kgomo Mathabe - Head of Urology, University of Pretoria',
+      ],
+    },
+    image: 'images/9thYear.jpg',
+    alt: 'Leadership Celebration Event',
+    loading: 'lazy',
+  },
+  {
+    date: '2024-11-29',
     title: 'KRF Graduation ceremony',
     details: {
       description:
@@ -53,6 +72,21 @@ const events = [
     },
     image: 'images/KRFGraduation.jpeg',
     alt: 'Leadership Celebration Event',
+    loading: 'lazy',
+  },
+  {
+    date: '2024-12-02',
+    title: 'Ha Kutama Traditional Authority',
+    details: {
+      description:
+        "Key Area Focus: Ha Kutama Traditional Authority Investment & Sustainability Development Trust, Economic Development, Skills Development Programme & Community Public-Private Partnership, The Village Economy Indaba, Limpopo Province",
+      venue: 'Limpopo Province, Venda, Tshikwarani Tribal Office',
+      time: '9:00AM',
+      dressCode: 'Traditional Attire',
+      
+    },
+    image: 'images/HaKutama.jpeg',
+    alt: 'Cape Town Business Breakfast with Dr Koketso Rakhudu',
     loading: 'lazy',
   },
   {
@@ -99,7 +133,8 @@ const events = [
 
 const CalendarComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvents, setSelectedEvents] = useState([]);
+  const [modalImage, setModalImage] = useState(null);
 
   const formatDateToUTC = (date) => {
     return new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
@@ -109,12 +144,17 @@ const CalendarComponent = () => {
 
   const getTileContent = ({ date }) => {
     const formattedDate = formatDateToUTC(date);
-    const event = events.find((event) => event.date === formattedDate);
+    const eventsOnDate = events.filter((event) => event.date === formattedDate);
 
-    if (event) {
+    if (eventsOnDate.length > 0) {
       return (
         <div className="relative w-full h-full flex justify-center items-center">
           <div className="absolute w-3 h-3 bg-green-700 rounded-full opacity-80 shadow-md"></div>
+          {eventsOnDate.length > 1 && (
+            <span className="absolute bottom-0 right-0 text-xs text-white bg-green-600 rounded-full px-1">
+              {eventsOnDate.length}
+            </span>
+          )}
         </div>
       );
     }
@@ -135,102 +175,89 @@ const CalendarComponent = () => {
 
   const handleDayClick = (date) => {
     const formattedDate = formatDateToUTC(date);
-    const event = events.find((event) => event.date === formattedDate);
+    const eventsOnDate = events.filter((event) => event.date === formattedDate);
     setSelectedDate(date);
-    setSelectedEvent(event);
+    setSelectedEvents(eventsOnDate);
   };
 
-  const EventDetails = ({ event }) => {
-    const [isModalOpen, setModalOpen] = useState(false);
-  
-    if (!event) return null;
-  
-    const handleImageClick = () => {
-      setModalOpen(true);
-    };
-  
-    const closeModal = (e) => {
-      // Close modal if clicking outside the image or on the close button
-      if (e.target.id === 'modal-overlay' || e.target.id === 'close-button') {
-        setModalOpen(false);
-      }
-    };
+  const openModal = (image) => {
+    setModalImage(image);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
+  const EventDetails = ({ events }) => {
+    if (!events || events.length === 0) return null;
 
     return (
-      <div className="bg-white p-6 rounded-lg shadow-lg">
-      {event.image && (
-        <div className="mb-4">
-          <img
-            src={event.image}
-            alt={event.alt || 'Event image'}
-            className="w-full h-64 object-contain rounded-lg shadow-md cursor-pointer"
-            loading={event.loading || 'lazy'}
-            onClick={handleImageClick}
-          />
-          {isModalOpen && (
-  <div
-    id="modal-overlay"
-    onClick={closeModal}
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-  >
-    <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-full max-h-screen">
-      <button
-        id="close-button"
-        onClick={closeModal}
-        className="absolute top-2 right-2 text-red-600 hover:text-red-800 text-4xl font-bold focus:outline-none"
-        aria-label="Close"
-      >
-        &times;
-      </button>
-      <img
-        src={event.image}
-        alt={event.alt || 'Enlarged event image'}
-        className="w-auto max-w-full max-h-screen rounded-lg object-contain"
-      />
-    </div>
-  </div>
-)}
-        </div>
-      )}
-      <h2 className="text-2xl font-bold text-green-800 mb-4">{event.title}</h2>
-      {event.details.description && (
-        <p className="text-gray-600 mb-4 italic">{event.details.description}</p>
-      )}
+      <div className="bg-white p-6 rounded-lg shadow-lg space-y-8">
+        {events.map((event, index) => (
+          <div key={index}>
+            {event.image && (
+              <img
+                src={event.image}
+                alt={event.alt || 'Event image'}
+                className="w-full h-64 object-contain rounded-lg shadow-md mb-4 cursor-pointer"
+                loading={event.loading || 'lazy'}
+                onClick={() => openModal(event.image)}
+              />
+            )}
+            <h2 className="text-2xl font-bold text-green-800 mb-4">{event.title}</h2>
+            {event.details.description && (
+              <p className="text-gray-600 mb-4 italic">{event.details.description}</p>
+            )}
 
-      <div className="space-y-4">
-        <div className="flex items-center space-x-2 text-sm text-gray-700">
-          <CalendarIcon className="w-5 h-5 text-green-700" />
-          <p>
-            {new Date(event.date).toLocaleDateString('en-US', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}
-          </p>
-        </div>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2 text-sm text-gray-700">
+                <CalendarIcon className="w-5 h-5 text-green-700" />
+                <p>
+                  {new Date(event.date).toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+              </div>
 
-        <div className="text-sm grid grid-cols-2 gap-4">
-          <div>
-            <h3 className="font-semibold text-green-700">Venue</h3>
-            <p>{event.details.venue}</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-green-700">Time</h3>
-            <p>{event.details.time}</p>
-          </div>
-        </div>
+              <div className="text-sm grid grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold text-green-700">Venue</h3>
+                  <p>{event.details.venue}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-green-700">Time</h3>
+                  <p>{event.details.time}</p>
+                </div>
+              </div>
 
-        {event.details.dressCode && (
-          <div className="mt-4">
-            <h3 className="font-semibold text-green-700">Dress Code</h3>
-            <p className="text-gray-700">{event.details.dressCode}</p>
+              {event.details.dressCode && (
+                <div>
+                  <h3 className="font-semibold text-green-700">Dress Code</h3>
+                  <p className="text-gray-700">{event.details.dressCode}</p>
+                </div>
+              )}
+
+              {event.details.specialGuests && (
+                <div>
+                  <h3 className="font-semibold text-green-700">Special Guests</h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    {event.details.specialGuests.map((guest, idx) => (
+                      <li key={idx} className="text-gray-700">
+                        {guest}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
-        )}
+        ))}
       </div>
-    </div>
-  );
-};
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 p-6">
@@ -258,8 +285,8 @@ const CalendarComponent = () => {
           </div>
 
           <div className="h-full">
-            {selectedEvent ? (
-              <EventDetails event={selectedEvent} />
+            {selectedEvents.length > 0 ? (
+              <EventDetails events={selectedEvents} />
             ) : (
               <div className="bg-white p-6 rounded-lg shadow-lg h-full flex items-center justify-center">
                 <div className="text-center">
@@ -273,6 +300,28 @@ const CalendarComponent = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal for Image */}
+      {modalImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={closeModal}
+        >
+          <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-full max-h-screen">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-red-600 hover:text-red-800 text-4xl font-bold focus:outline-none"
+            >
+              &times;
+            </button>
+            <img
+              src={modalImage}
+              alt="Enlarged event"
+              className="w-auto max-w-full max-h-screen rounded-lg object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
