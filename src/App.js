@@ -16,10 +16,12 @@ import CoffeeWithDrRakhudu from './Components/CoffeeWithDrRakhudu';
 import InvestmentSustainabilityTrust from './Components/InvestmentSustainabilityTrust';
 import BusinessSchoolOfLeadershipExcellence from './Components/BusinessSchoolOfLeadershipExcellence';
 import KoketsoRakhuduFoundation from './Components/KoketsoRakhuduFoundation';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+       <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
