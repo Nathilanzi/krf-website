@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 const SuccessStory = ({ story }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentVideo, setCurrentVideo] = useState(null);
 
+    // Log the story object and media array
+    console.log("SuccessStory Loaded:", story);
+
     const openModalWithVideo = (videoSrc) => {
+        console.log("Opening Modal with Video Src:", videoSrc); // Log the video src
         setCurrentVideo(videoSrc);
         setIsModalOpen(true);
     };
 
     const closeModal = () => {
+        console.log("Closing Modal"); // Log when the modal is closed
         setIsModalOpen(false);
         setCurrentVideo(null);
     };
 
     return (
-        <div className="p-6 rounded-lg shadow-lg bg-white max-w-md mx-auto">
+        <div className="flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full h-[450px]">
             {story.media ? (
                 <Swiper
                     modules={[Navigation]}
@@ -27,7 +32,7 @@ const SuccessStory = ({ story }) => {
                     className="w-full h-48 rounded-md"
                 >
                     {story.media.map((item, index) =>
-                        item.type === 'image' ? (
+                        item.type === "image" ? (
                             <SwiperSlide key={index}>
                                 <img
                                     src={item.src}
@@ -39,9 +44,9 @@ const SuccessStory = ({ story }) => {
                             <SwiperSlide key={index}>
                                 <div className="relative w-full h-48">
                                     <img
-                                        src="/images/video-thumbnail.jpg" // Replace with a static thumbnail or generate dynamically
+                                        src={item.thumbnail || "/images/defaultThumbnail.png"} // Custom thumbnail or fallback
                                         alt="Video Thumbnail"
-                                        className="w-full h-48 object-cover rounded-md"
+                                        className="w-full h-48 object-contain rounded-md"
                                     />
                                     <button
                                         onClick={() => openModalWithVideo(item.src)}
@@ -73,7 +78,12 @@ const SuccessStory = ({ story }) => {
                         >
                             ✕ Close
                         </button>
-                        <video src={currentVideo} controls autoPlay className="w-full h-auto rounded-md" />
+                        <video
+                            src={currentVideo}
+                            controls
+                            autoPlay
+                            className="w-full h-auto rounded-md"
+                        />
                     </div>
                 </div>
             )}
@@ -85,30 +95,43 @@ const SuccessStories = () => {
     const stories = [
         {
             title: "Empowering Rural Women",
-            description: "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
+            description:
+                "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
             image: "/images/constructionlearners.jpeg",
         },
         {
             title: "Youth Entrepreneurship",
-            description: "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
+            description:
+                "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
             image: "/images/KgosanaYouthStakeholders.jpeg",
         },
         {
             title: "Agricultural Advancements",
-            description: "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
+            description:
+                "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
+            media: [{ type: "image", src: "/images/Communityengagement.jpeg" }],
+        },
+        {
+            title: "The Village Economy Indaba Launch 01 November 2024",
+            description:
+                "The Village Economy Indaba marked a significant milestone in fostering collaboration, celebrating Kgosana Koketso Rakhudu's leadership, and driving sustainable development across the community.",
             media: [
-           { type: "image", src: "/images/Communityengagement.jpeg",}
+                {
+                    type: "video",
+                    src: "https://drive.google.com/uc?export=download&id=1zVxBsaVYQH-pSe8naFzqryoF-7IZktOh",
+                    thumbnail: "/images/TVEILogo.png",
+                },
             ],
         },
         {
             title: "Final Kgotla of 2024",
-            description: "The final kgotla of 2024 was held on the 17th of November where Kgosana Koketso Rakhudu celebrated 9 years of Leadership excellence and appreciated those who have played a pivotal role in his leadership term.",
+            description:
+                "The final kgotla of 2024 was held on the 17th of November where Kgosana Koketso Rakhudu celebrated 9 years of leadership excellence and appreciated those who have played a pivotal role in his leadership term.",
             media: [
                 { type: "image", src: "/images/DancingKgotla.jpeg" },
                 { type: "image", src: "/images/DancingKgotla1.jpeg" },
                 { type: "image", src: "/images/KgotlaStakeholder.jpeg" },
-                { type: "video", src: "/videos/FinalKgotla2024.mp4", 
-                    thumbnail: "/images/KgotlhaDesign.jpg" },
+                { type: "video", src: "/videos/FinalKgotla2024.mp4", thumbnail: "/images/KgotlhaLogo.png" },
             ],
         },
     ];
@@ -117,7 +140,9 @@ const SuccessStories = () => {
         <section className="py-12 bg-gray-100">
             <div className="container mx-auto text-center mb-8">
                 <h2 className="text-3xl font-semibold text-green-700">Success Stories</h2>
-                <p className="text-gray-600 mt-2">Discover inspiring stories from our community members who have achieved remarkable milestones.</p>
+                <p className="text-gray-600 mt-2">
+                    Discover inspiring stories from our community members who have achieved remarkable milestones.
+                </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
                 {stories.map((story, index) => (
