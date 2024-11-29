@@ -66,12 +66,12 @@ function Leadership() {
                />
 
                  {/* Leadership Carousel */}
-<section className="flex flex-col items-center justify-center h-screen bg-gray-100">
+                 <section className="flex flex-col items-center justify-center bg-gray-100 py-12">
   <h2 className="text-3xl font-bold mb-8 text-[#1B5538] text-center">
     Executive Leaders
   </h2>
 
-  <div className="w-[650px] h-[500px]">
+  <div className="w-full max-w-4xl h-[400px] sm: w-[350] h-[500px] md:h-[550px] lg:h-[600px]">
     <Carousel
       slides={[
         {
