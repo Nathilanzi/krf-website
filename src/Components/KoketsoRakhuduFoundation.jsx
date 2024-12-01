@@ -124,14 +124,14 @@ function KoketsoRakhuduFoundation() {
           <ul className="text-lg text-gray-700 mb-4 space-y-1">
             <li><strong>Account Holder:</strong> KOKETSO RAKHUDU FOUNDATION</li>
             <li><strong>ID/Reg Number:</strong> 177/109/NPO</li>
-            <li><strong>Account Type:</strong> CURRENT</li>
-            <li><strong>Bank Name:</strong> FNB</li>
-            <li><strong>Branch Name:</strong> Mogwase</li>
-            <li><strong>Branch Code:</strong> 251445</li>
-            <li><strong>Account Number:</strong> 62746873237</li>
+            <li><strong>Account Type:</strong> Current</li>
+            <li><strong>Bank Name:</strong> Standard Bank</li>
+            <li><strong>Branch Name:</strong> Waterfall Mall</li>
+            <li><strong>Branch Code:</strong> 007045</li>
+            <li><strong>Account Number:</strong> 10 12 997 812 2</li>
           </ul>
           <p className="text-lg text-gray-700">
-            Your generosity will help us extend our outreach and build a brighter future for the Royal Bafokeng Nation.
+            Your generosity will help us extend our outreach and build a brighter future for the Koketso Rakhudu Foundation.
           </p>
         </section>
     </div>
