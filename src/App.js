@@ -8,7 +8,6 @@ import Divisions from './Components/Divisions';
 import Leadership from './Components/Leadership';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
-import Foundation from './Components/KoketsoRakhuduFoundation';
 import Calendar from './Components/Calendar';
 import SuccessStories from './Components/SuccessStories';
 import VillageEconomyIndaba from './Components/VillageEconomyIndaba';
@@ -16,6 +15,7 @@ import CoffeeWithDrRakhudu from './Components/CoffeeWithDrRakhudu';
 import InvestmentSustainabilityTrust from './Components/InvestmentSustainabilityTrust';
 import BusinessSchoolOfLeadershipExcellence from './Components/BusinessSchoolOfLeadershipExcellence';
 import KoketsoRakhuduFoundation from './Components/KoketsoRakhuduFoundation';
+import KgosanaKoketsoRakhuduGroup from './Components/KgosanaKoketsoRakhuduGroup';
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
           <Route path="/coffee-with-dr-rakhudu" element={<CoffeeWithDrRakhudu />} />
           <Route path="/investment-sustainability-trust" element={<InvestmentSustainabilityTrust />} />
           <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
+          <Route path="/kgosana-koketso-rakhudu-group" element={<KgosanaKoketsoRakhuduGroup />} />
         </Routes>
       </Layout>
     </Router>
