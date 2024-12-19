@@ -306,6 +306,16 @@ function Home() {
         className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110" 
       />
     </Link>
+    
+    <Link to="/kgosana-koketso-rakhudu-group">
+    <img 
+          src="/images/KKRGLogo.png" 
+          alt="Kgosana Koketso Rakhudu Group logo"
+          loading= "lazy" 
+          className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
+        />
+    </Link>
+
   </div>
 
   {/* Call to Action */}
