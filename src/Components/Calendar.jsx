@@ -129,6 +129,20 @@ const events = [
     alt: 'Cape Town Business Breakfast with Dr Koketso Rakhudu',
     loading: 'lazy',
   },
+  {
+    date: '2024-12-24',
+    title: '100 Family Christmas Giveaway',
+    details: {
+      description:
+        "Donating Christmas hampers to 100 families",
+      venue: 'Tsitsing/Tlaseng',
+      time: '9:00 - 11:30 AM',
+           
+    },
+    image: 'images/ChristmasDrive.jpg',
+    alt: 'Christmas Giveaway with Dr Kgosana Koketso Rakhudu',
+    loading: 'lazy',
+  },
 ];
 
 const CalendarComponent = () => {
