@@ -215,6 +215,8 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
                 { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
                 { type: "image", src: "/images/DancingParty.jpeg" },
+                { type: "video", src: "/videos/KgosanaRakhuduXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "/videos/RefilweHakemXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
             ],
         },
     ];
