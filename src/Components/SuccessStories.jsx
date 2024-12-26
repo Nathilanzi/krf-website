@@ -206,7 +206,7 @@ const SuccessStories = () => {
             ],
         },
         {
-            title: "100 Families Christmas Giveaway",
+            title: "100 Families Christmas Donation",
             description:
                 "Hakem Energies Community Christmas Party with Kgosana Koketso Rakhudu & Mrs Refilwe Sebothoma, CEO of Hakem Energies were celebrating the spirit of togetherness with the Christmas Party! To remind people that the true sense of the season lies in unity, kindness and giving back.",
             media: [
