@@ -205,6 +205,18 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEICptSB.jpg" },
             ],
         },
+        {
+            title: "100 Families Christmas Giveaway",
+            description:
+                "Hakem Energies Community Christmas Party with Kgosana Koketso Rakhudu & Mrs Refilwe Sebothoma, CEO of Hakem Energies were celebrating the spirit of togetherness with the Christmas Party! To remind people that the true sense of the season lies in unity, kindness and giving back.",
+            media: [
+                { type: "image", src: "/images/KgosanaHelping.jpeg" },
+                { type: "image", src: "/images/RefilweSebothomaHelping.jpeg" },
+                { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
+                { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
+                { type: "image", src: "/images/DancingParty.jpeg" },
+            ],
+        },
     ];
 
     return (
