@@ -217,6 +217,10 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/DancingParty.jpeg" },
                 { type: "video", src: "/videos/KgosanaRakhuduXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
                 { type: "video", src: "/videos/RefilweHakemXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "/videos/HakemEnergiesTumeloPhalane.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "/videos/HakemEnergiesInterview1.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "/videos/HakemEnergiesInterview2.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "/videos/HakemEnergiesHowToConnectGas.mp4", thumbnail: "/images/KRFDesign.jpg" },
             ],
         },
     ];
