@@ -57,7 +57,7 @@ function Leadership() {
 
           {/* Organisation organogram */}
         <motion.img
-                 src="/images/LeadershipOrganisation.jpg"
+                 src="/images/2025OOKKRFunctionalStructure.png"
                  alt="Office of Kgosana Koketso Rakhudu Office structure"
                  className="mx-auto mb-4 w-full h-full object-contain opacity-90"
                  initial={{ opacity: 0 }}
