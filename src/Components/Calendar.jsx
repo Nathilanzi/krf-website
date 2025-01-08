@@ -143,6 +143,101 @@ const events = [
     alt: 'Christmas Giveaway with Dr Kgosana Koketso Rakhudu',
     loading: 'lazy',
   },
+  {
+    date: '2025-01-16',
+    title: 'Executive Committee Lekgotla',
+    details: {
+      description:
+        "Finding out where do we Improve",
+      time: '5:30 PM',
+           
+    },
+    image: 'images/LekgotlaWithKgosanaKoketso.jpeg',
+    alt: 'Lekgitla with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-01-21',
+    title: 'Community Forums Lekgotla',
+    details: {
+      description:
+        "Answering what is our role?",
+      time: '5:30 PM',
+           
+    },
+    image: 'images/LekgotlaWithKgosanaKoketso.jpeg',
+    alt: 'Lekgitla with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-01-23',
+    title: 'Faithbased Leaders Lekgotla',
+    details: {
+      description:
+        "Answering where is the Church? ",
+      time: '5:30 PM',
+           
+    },
+    image: 'images/LekgotlaWithKgosanaKoketso.jpeg',
+    alt: 'Lekgitla with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-01-28',
+    title: 'Tuckshops, Tavern Owners & Landlords Lekgotla',
+    details: {
+      description:
+        "Ensuring that they comply",
+      time: '5:30 PM',
+           
+    },
+    image: 'images/LekgotlaWithKgosanaKoketso.jpeg',
+    alt: 'Lekgitla with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-01-30',
+    title: 'All Makgotla Exco Lekgotla',
+    details: {
+      description:
+        "Finding what is our collective Responsibility",
+      time: '5:30 PM',
+           
+    },
+    image: 'images/LekgotlaWithKgosanaKoketso.jpeg',
+    alt: 'Lekgitla with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-21',
+    title: '10th Year Leadership Vision Impact Of Dr Koketso Rakhudu',
+    details: {
+      description:
+        "Chronicles Night of Stakeholder Engagements 2025",
+      venue: 'Invite Only!',
+      time: '6:30 PM',
+      DressCode: 'All Black' ,
+           
+    },
+    image: 'images/10thYearLeadershipVision.jpeg',
+    alt: 'Chronicles Night of Stakeholders Engagement 2025 ',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-23',
+    title: 'Dr Koketso Rakhudu Goodwill SOKA 2025',
+    details: {
+      description:
+        "State of Kgotla Address (SOKA) is an annual Lekgotla in which Kgosana of the community Reports on the status of the community and outlines the development plans for the upcoming year.  ",
+      venue: 'Tsitsing, Manape Secondary School',
+      time: '8:00 AM',
+      dressCode: 'Kgaka/Traditional Wear'
+           
+    },
+    image: 'images/SOKA2025.jpeg',
+    alt: 'State of Kgotla Address with Dr Koketso Rakhudu',
+    loading: 'lazy',
+  },
 ];
 
 const CalendarComponent = () => {
