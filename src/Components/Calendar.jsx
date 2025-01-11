@@ -238,6 +238,200 @@ const events = [
     alt: 'State of Kgotla Address with Dr Koketso Rakhudu',
     loading: 'lazy',
   },
+  {
+    date: '2025-02-01',
+    title: 'Cape Town Investment Summit',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Investment Summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-02',
+    title: 'Cape Town Investment Summit',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Investment Summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-03',
+    title: 'Cape Town Business Breakfast',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Business Breakfast",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-03',
+    title: 'Cape Town Mining Indaba',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Mining Indaba",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-04',
+    title: 'Cape Town Mining Indaba',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Mining Indaba",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-05',
+    title: 'Cape Town Mining Indaba',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Mining Indaba",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-06',
+    title: 'Cape Town Mining Indaba',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Mining Indaba",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-04',
+    title: 'Cape Town Fetola Partner summit',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Cape Town Fetola Partner Summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-04',
+    title: 'State of the Nation Address',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu has been invited to be a part of the State of the Nation Address",
+      venue: 'Cape Town',
+      dressCode: 'Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-05',
+    title: 'University of Cape town & Stellenbosch University Key Note',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be speaking as a keynote at the University of Cape Town and Stellenbosch University.",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-03',
+    title: 'Investment Stakeholder Summit',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Investment Stakeholder Summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/CommunityLeadershipExcellence.jpeg',
+    alt: 'Cape Town Investment Summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-27',
+    title: '5th Annual Africa ESG ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the 5th Annual Africa ESG impact investing & sustainable finance summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AnnualAfricaESG.jpeg',
+    alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-28',
+    title: '5th Annual Africa ESG ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the 5th Annual Africa ESG impact investing & sustainable finance summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AnnualAfricaESG.jpeg',
+    alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
 ];
 
 const CalendarComponent = () => {
