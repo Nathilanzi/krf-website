@@ -174,7 +174,6 @@ const SuccessStories = () => {
             media: [
                 { type: "image", src: "/images/KRFKgosanaGraduation.jpg" },
                 { type: "image", src: "/images/KRFGraduationStill2.jpg" },
-                { type: "image", src: "/images/KRFGraduationStill.jpg" },
                 { type: "image", src: "/images/KRFGraduationCrowd.jpg" },
                 { type: "video", src: "/videos/KRFGraduations.mp4", thumbnail: "/images/KRFLogo.png" },
             ],
