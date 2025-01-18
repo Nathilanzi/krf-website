@@ -173,9 +173,6 @@ const SuccessStories = () => {
                 "The Koketso Rakhudu Foundation (KRF) Graduation Ceremony is a celebration of achievement, empowerment, and growth. Scheduled for 29 November 2024, this prestigious event marks the culmination of the hard work and dedication of individuals who have completed various skills development, entrepreneurship, and leadership training programs offered by KRF.",
             media: [
                 { type: "image", src: "/images/KRFKgosanaGraduation.jpg" },
-                { type: "image", src: "/images/KRFGraduationGroup.jpg" },
-                { type: "image", src: "/images/KRFGraduationStill.jpg" },
-                { type: "image", src: "/images/KRFGraduationStill2.jpg" },
                 { type: "image", src: "/images/KRFGraduationCrowd.jpg" },
                 { type: "video", src: "/videos/KRFGraduations.mp4", thumbnail: "/images/KRFLogo.png" },
             ],
