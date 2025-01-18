@@ -15,6 +15,7 @@ function Footer() {
           <Link to="/successstories" className="hover:text-white">Success Stories</Link>
           <Link to="/divisions" className="hover:text-white">Divisions</Link>
           <Link to="/leadership" className="hover:text-white">Leadership</Link>
+          <Link to="/kgosana-koketso-rakhudu-profile" className="hover:text-white">  Kgosana Dr Koketso Rakhudu </Link>
           <Link to="/contact" className="hover:text-white">Contact</Link>
         </div>
       </div>

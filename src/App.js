@@ -16,6 +16,7 @@ import InvestmentSustainabilityTrust from './Components/InvestmentSustainability
 import BusinessSchoolOfLeadershipExcellence from './Components/BusinessSchoolOfLeadershipExcellence';
 import KoketsoRakhuduFoundation from './Components/KoketsoRakhuduFoundation';
 import KgosanaKoketsoRakhuduGroup from './Components/KgosanaKoketsoRakhuduGroup';
+import KgosanaKoketsoRakhuduProfile from './Components/KgosanaKoketsoRakhuduProfile'
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/investment-sustainability-trust" element={<InvestmentSustainabilityTrust />} />
           <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
           <Route path="/kgosana-koketso-rakhudu-group" element={<KgosanaKoketsoRakhuduGroup />} />
+          <Route path="/kgosana-koketso-rakhudu-profile" element={<KgosanaKoketsoRakhuduProfile />} />
         </Routes>
       </Layout>
     </Router>

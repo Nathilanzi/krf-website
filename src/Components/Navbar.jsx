@@ -9,7 +9,8 @@ import {
   FaEnvelope, 
   FaSeedling,
   FaCalendar, 
-  FaTrophy
+  FaTrophy,
+  FaCrown
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
 import ResponsiveLogo from './ResponsiveLogo';
@@ -36,6 +37,7 @@ const Navbar = () => {
     { icon: <FaTrophy className="w-5 h-5" />, text: "Success Stories", path: "/successstories" },
     { icon: <FaUsers className="w-5 h-5" />, text: "Divisions", path: "/divisions" },
     { icon: <FaUserTie className="w-5 h-5" />, text: "Leadership", path: "/leadership" },
+    { icon: <FaCrown className="w-5 h-5" />, text: "Kgosana Dr  Koketso Rakhudu", path: "/kgosana-koketso-rakhudu-profile"},
     { icon: <FaEnvelope className="w-5 h-5" />, text: "Contact", path: "/contact" }
   ];
 
