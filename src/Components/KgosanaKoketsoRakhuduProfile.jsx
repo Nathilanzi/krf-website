@@ -47,56 +47,75 @@ const KgosanaKoketsoRakhuduProfile = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-       
         <h2 className="text-3xl font-bold text-center text-[#1B5538] mb-8">
           Personal Profile
         </h2>
         <div className="flex justify-center">
-          {/* <img
-            src="/images/KgosanaChancellor.jpeg"
+          <img
+            src="/images/KgosanaKoketso.jpeg"
             alt="Kgosana Dr. Koketso Rakhudu"
-            className="w-48 h-48 rounded-full shadow-lg"
-          /> */}
+            className="w-48 h-48 rounded-contain shadow-lg"
+          />
         </div>
         <div className="grid gap-8">
+          {/* Primary Focus and Vision */}
           <motion.div
             className="bg-white rounded-xl shadow-lg p-8"
             whileHover={{ scale: 1.02 }}
           >
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Kgosana Dr. Koketso Rakhudu is a distinguished leader of the Royal
-              Bafokeng Nation, serving as the Kgosana of the Tsitsing community,
-              Kgotla ya Rakhudu. With a steadfast commitment to the betterment
-              of his community, Dr. Rakhudu holds several prominent positions,
-              including Deputy Chairperson of the Provincial Council on AIDS in
-              the North West Provincial Government and Founder of The Village
-              Economy Indaba Programme.
+            <h3 className="text-2xl font-bold text-[#1B5538] mb-4">Primary Focus and Vision</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              To actively contribute to and support initiatives that promote education, facilitate cultural exchange, and drive community development.
             </p>
           </motion.div>
+
+          {/* Paragraph 1 */}
           <motion.div
             className="bg-white rounded-xl shadow-lg p-8"
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              An accomplished academic, Dr. Rakhudu is a Guest Lecturer and
-              Strategic Implementation Partner at several esteemed institutions,
-              including the University of South Africa School of Business
-              Leadership and North West University School of Business &amp;
-              Governance. He is also the Patron of the South African Royal
-              Development Foundation.
+              Kgosana Dr. Koketso Rakhudu is a distinguished leader of the Royal Bafokeng Nation, serving as the Kgosana of the Tsitsing community, Kgotla ya Rakhudu. With a steadfast commitment to the betterment of his community, Dr. Rakhudu holds several prominent positions, including Deputy Chairperson of the Provincial Council on AIDS in the North West Provincial Government and Founder of The Village Economy Indaba Programme.
             </p>
           </motion.div>
+
+          {/* Paragraph 2 */}
           <motion.div
             className="bg-white rounded-xl shadow-lg p-8"
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              Dr. Rakhudu’s leadership extends to global fund programmes,
-              governance, and vital research collaborations with institutions
-              such as The Aurum Institute, Wits School of Public Health, and
-              Johns Hopkins University. He is dedicated to social welfare
-              through his leadership of the Royal Bafokeng Nation Godisanang
-              OVC Programme, supporting orphaned and vulnerable children.
+              An accomplished academic, Dr. Rakhudu is a Guest Lecturer and Strategic Implementation Partner at the University of South Africa School of Business Leadership, Tswane University of Technology's Faculty of Management Sciences and Entrepreneurship, and North West University School of Business & Governance, University of Kwazulu Natal, Graduate School of Business and Leadership. He is also the Patron of the South African Royal Development Foundation.
+            </p>
+          </motion.div>
+
+          {/* Paragraph 3 */}
+          <motion.div
+            className="bg-white rounded-xl shadow-lg p-8"
+            whileHover={{ scale: 1.02 }}
+          >
+            <p className="text-lg text-gray-700 leading-relaxed">
+              In addition to his role in global fund programmes and governance (NACOSA & AIDS Foundation South Africa), Dr. Koketso Rakhudu is actively involved in the South African Population Research Infrastructure Network, specifically focusing on the Bafokeng Health and Demographic Surveillance Node. This vital research is collaboratively implemented by esteemed institutions such as The Aurum Institute, Wits School of Public Health, Sefako Makgatho Health Sciences University, and Johns Hopkins University, where Dr. Rakhudu plays a crucial role as a member of the steering committee.
+            </p>
+          </motion.div>
+
+          {/* Paragraph 4 */}
+          <motion.div
+            className="bg-white rounded-xl shadow-lg p-8"
+            whileHover={{ scale: 1.02 }}
+          >
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Dr. Rakhudu's dedication to social welfare is exemplified through his leadership of various organizations. He serves as the Chairperson of the Board for the Royal Bafokeng Nation Godisanang OVC Programme, which addresses the needs of orphaned and vulnerable children in the Royal Bafokeng area and beyond.
+            </p>
+          </motion.div>
+
+          {/* Paragraph 5 */}
+          <motion.div
+            className="bg-white rounded-xl shadow-lg p-8"
+            whileHover={{ scale: 1.02 }}
+          >
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Recognized among the top 30 fast-rising professionals in Public Administration, Corporate Governance, and Community Leadership across the continent through the prestigious Pan African Leadership Institute's programme, Dr. Koketso Rakhudu also serves as the Chancellor of the Community Education & Training Centre.
             </p>
           </motion.div>
         </div>
