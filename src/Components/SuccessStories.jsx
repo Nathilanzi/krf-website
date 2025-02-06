@@ -220,6 +220,42 @@ const SuccessStories = () => {
                 { type: "video", src: "/videos/HakemEnergiesHowToConnectGas.mp4", thumbnail: "/images/KRFDesign.jpg" },
             ],
         },
+
+        {
+            title: "The Village Economy Indaba Launch in Baphalane Brits.",
+            description:
+                "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
+            media: [
+                { type: "image", src: "/images/TVEILaunchBaphalaneKgosana.jpeg" },
+                { type: "image", src: "/images/TVEILaunchBaphalaneSimon.jpeg" },
+                { type: "image", src: "/images/TVEILaunchBaphalaneGG.jpeg" },
+                { type: "image", src: "/images/TVEILaunchBaphalaneSpeaker.jpeg" },
+                { type: "video", src: "/videos/VillageEconomyIndabaLaunchBrits.mp4", thumbnail: "/images/TVEILogo.png" },
+                
+            ],
+        },
+        {
+            title: "The Village Economy Indaba Gala Dinner Baphalane",
+            description:
+                "The Village Economy Indaba Fundraising Gala Dinner in Baphalane Brits.",
+            media: [
+                { type: "image", src: "/images/TVEIGalaDinnerStakeholders.jpeg" },
+                { type: "image", src: "/images/TVEIGalaDinnerKgosana.jpeg" },
+                { type: "image", src: "/images/TVEIGalaDinnerStakeholder.jpeg" },
+                { type: "image", src: "/images/TVEIGalaDinnerSimon.jpeg" },
+                { type: "image", src: "/images/TVEIGalaDinnerKgosanaStakeholder.jpeg" },
+                { type: "video", src: "/videos/GalaDinnerHighlight.mp4", thumbnail: "/images/TVEILogo.png" },
+                
+            ],
+        },
+        {
+            title: "Kgosana Koketso Rakhudu Kwena Tlase High School visit",
+            description:
+                "Visit to the Kwena Tlase high school to inspire the learners",
+            media: [
+                { type: "video", src: "/videos/KKRKwenaTlaseHighlight.mp4", thumbnail: "/images/KgosanaLogo.png" },
+            ],
+        },
     ];
 
     return (
