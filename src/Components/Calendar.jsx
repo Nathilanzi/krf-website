@@ -219,7 +219,7 @@ const events = [
       DressCode: 'All Black' ,
            
     },
-    image: 'images/10thYearLeadershipVision.jpeg',
+    image: 'images/DrKoketsoRakhuduChroniclesNight.jpeg',
     alt: 'Chronicles Night of Stakeholders Engagement 2025 ',
     loading: 'lazy',
   },
@@ -234,7 +234,7 @@ const events = [
       dressCode: 'Kgaka/Traditional Wear'
            
     },
-    image: 'images/SOKA2025.jpeg',
+    image: 'images/SOKA2025Poster.jpeg',
     alt: 'State of Kgotla Address with Dr Koketso Rakhudu',
     loading: 'lazy',
   },
