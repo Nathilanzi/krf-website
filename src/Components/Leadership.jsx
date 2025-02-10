@@ -80,7 +80,7 @@ function Leadership() {
           loading: "lazy",
           title: "Hlolelo Rampete",
           description:
-            "Executive Head: Operations & Strategic Planning ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+            "Executive Portfolio: Operations, Programmes & Strategic Planning   Office of Dr. Koketso Rakhudu",
         },
         {
           image: "images/AdministrationCompliance.jpeg",
@@ -88,7 +88,7 @@ function Leadership() {
           loading: "lazy",
           title: "Kopano Mothibi",
           description:
-            "Executive Head: Administration, Compliance and M&E ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+            "Executive Portfolio: Executive Dean, Socio Economic & Enterprise Development Office of Dr Koketso Rakhudu",
         },
         {
           image: "images/LegalSocialEthics.jpeg",
@@ -104,7 +104,7 @@ function Leadership() {
           loading: "lazy",
           title: "Calvin Molokwane",
           description:
-            "Executive Head: Programmes & Stakeholders Engagement ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+            "Executive Portfolio: Senior Management Principal & Vice Chancellor Office of Dr. Koketso Rakhudu",
         },
         {
           image: "images/CommunityLiasonSupport.jpeg",
@@ -112,7 +112,7 @@ function Leadership() {
           loading: "lazy",
           title: "Tsholo Nape",
           description:
-            "Executive Head: Community Liaison and Support ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
+            "Executive Dean Community Development, Support Services & Administration. Office of Dr. Koketso Rakhudu",
         },
         {
           image: "images/InvestmentsPortfolio.jpeg",
