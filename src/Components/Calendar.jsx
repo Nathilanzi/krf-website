@@ -403,6 +403,36 @@ const events = [
     loading: 'lazy',
   },
   {
+    date: '2025-02-24',
+    title: 'Kgosana Dr Koketso Rakhudu School Visit ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be visiting Manape Secondary School this is with his A Road to quality 100% pass rate initiative.",
+      venue: 'Manape Secondary School',
+      time: '07:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SchoolVisit.png',
+    alt: 'A road to quality 100% Pass rate',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-24',
+    title: 'Learners in Need Program with Kgosana Dr Koketso Rakhudu and Khuli Chana ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the Learners in Need Program alongside Khuli Chana",
+      venue: 'Tsitsing Primary',
+      time: '10:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/KhuliChanaXDrRakhuduEvent.png',
+    alt: 'Learners in need program',
+    loading: 'lazy',
+  },
+  {
     date: '2025-02-27',
     title: '5th Annual Africa ESG ',
     details: {
@@ -418,6 +448,21 @@ const events = [
     loading: 'lazy',
   },
   {
+    date: '2025-02-27',
+    title: 'Kgosana Dr Koketso Rakhudu Birthday ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be celebrating his birthday on this day.",
+      venue: '',
+      time: 'All Day!',
+      dressCode: ''
+           
+    },
+    image: 'images/KgosanaBirthday.png',
+    alt: 'Kgosana Dr Koketso Rakhudu Birthday',
+    loading: 'lazy',
+  },
+  {
     date: '2025-02-28',
     title: '5th Annual Africa ESG ',
     details: {
@@ -430,6 +475,81 @@ const events = [
     },
     image: 'images/AnnualAfricaESG.jpeg',
     alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-03-01',
+    title: 'Leadership and Business summit ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be a specialist speaker at the leadership and business summit",
+      venue: 'CGIM Auditorium, Bapong',
+      time: '11:30 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/LeadersBusinessSummitEvent.png',
+    alt: 'Leadership and busines summit',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-03-25',
+    title: 'Solar and Storage Live Africa  ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be attending the Solar and Storage at the Nasrec Expo Center",
+      venue: 'Nasrec Expo Center',
+      time: '9:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SolarAndStorage.png',
+    alt: 'Solar & Storage',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-03-26',
+    title: 'Solar and Storage Live Africa  ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be attending the Solar and Storage at the Nasrec Expo Center",
+      venue: 'Nasrec Expo Center',
+      time: '9:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SolarAndStorage.png',
+    alt: 'Solar & Storage',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-03-27',
+    title: 'Solar and Storage Live Africa  ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be attending the Solar and Storage at the Nasrec Expo Center",
+      venue: 'Nasrec Expo Center',
+      time: '9:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SolarAndStorage.png',
+    alt: 'Solar & Storage',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-03-08',
+    title: 'Executive Leadership Lekgotla ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be hosting the executive leadership lekgotla for Q1",
+      venue: 'Invite Only',
+      time: '9:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/LeadershipLekgotla.png',
+    alt: 'Leadership Lekgotla',
     loading: 'lazy',
   },
 ];

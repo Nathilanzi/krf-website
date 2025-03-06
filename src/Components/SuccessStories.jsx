@@ -256,6 +256,43 @@ const SuccessStories = () => {
                 { type: "video", src: "/videos/KKRKwenaTlaseHighlight.mp4", thumbnail: "/images/KgosanaLogo.png" },
             ],
         },
+        {
+            title: "10th Year Leadership Vision Impact Of Dr Koketso Rakhudu Chronicles Night 2025",
+            description:
+                "Chronicles Night of Stakeholder Engagements 2025",
+            media: [
+                { type: "image", src: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },
+                { type: "image", src: "/images/ChroniclesKgosana.jpg" },
+                { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
+                { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
+                { type: "image", src: "/images/ChroniclesPortia.jpg" },                
+            ],
+        },
+        {
+            title: "SOKA 2025",
+            description:
+                "State of Kgotla Address (SOKA) is an annual Lekgotla in which Kgosana of the community Reports on the status of the community and outlines the development plans for the upcoming year.",
+            media: [
+                { type: "image", src: "/images/SOKA2025Event.png" },
+                { type: "image", src: "/images/SOKA25Kgosana.jpg" },
+                { type: "image", src: "/images/Soka25Sheila.png" },
+                { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
+                { type: "image", src: "/images/SOKA25Stakeholder.png" },    
+                { type: "image", src: "/images/PhemelaManape10Years.png" },             
+            ],
+        },
+        {
+            title: "Learners in Need Program in collaboration with Khuli Chana",
+            description:
+                "Dr Kgosana Koketso Rakhudu will be taking part in the Learners in Need Program alongside Khuli Chana",
+            media: [
+                { type: "image", src: "/images/KhuliChanaXDrRakhuduEvent.png" },
+                { type: "image", src: "/images/DrRakhuduXKhuli.png" },
+                { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
+                { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
+                { type: "image", src: "/images/KRFXKhuli.png" },                
+            ],
+        },
     ];
 
     return (
