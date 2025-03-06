@@ -230,7 +230,29 @@ const Divisions = () => {
           </Link>
         </div>
       </section>
+      {/* Hakem Energies Foundation Divisions */}
+<section className="mb-12 bg-gray-50 p-6 rounded-lg shadow-lg relative overflow-hidden">
+  <img 
+    src="/images/HakemEnergiesFoundationLogo.png" 
+    alt="Hakem Energies Foundation logo" 
+    loading="lazy" 
+    className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
+  />
+  <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Hakem Energies Foundation</h2>
+  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+    The <strong>Hakem Energies Foundation</strong> is dedicated to providing sustainable, clean energy solutions, empowering marginalized communities, and advocating for inclusive growth. By focusing on energy access, women and youth empowerment, and community-driven development, the Foundation creates lasting socio-economic impacts. Its initiatives are aimed at improving living conditions, fostering economic growth through energy access, and promoting gender equality in the energy sector. The Foundation works collaboratively with communities, governments, and stakeholders to create policies, programs, and projects that foster a cleaner, more equitable energy future for all.
+  </p>
 
+  {/* Learn More Link */}
+  <div className="text-center mt-8">
+    <Link
+      to="/hakem-energies-foundation"
+      className="inline-block px-8 py-3 bg-[#1B5538] text-white font-semibold rounded-lg shadow-lg hover:bg-[#397D5A] transition duration-200 transform hover:scale-105"
+    >
+      Learn More About Hakem Energies Foundation
+    </Link>
+  </div>
+</section>
 
     </div>
   );

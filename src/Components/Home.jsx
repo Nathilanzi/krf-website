@@ -316,6 +316,15 @@ function Home() {
         />
     </Link>
 
+    <Link to="/hakem-energies-foundation">
+    <img 
+          src="/images/HakemEnergiesFoundationLogo.png" 
+          alt="Hakem Energies Foundation"
+          loading= "lazy" 
+          className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
+        />
+    </Link>
+
   </div>
 
   {/* Call to Action */}

@@ -17,6 +17,7 @@ import BusinessSchoolOfLeadershipExcellence from './Components/BusinessSchoolOfL
 import KoketsoRakhuduFoundation from './Components/KoketsoRakhuduFoundation';
 import KgosanaKoketsoRakhuduGroup from './Components/KgosanaKoketsoRakhuduGroup';
 import KgosanaKoketsoRakhuduProfile from './Components/KgosanaKoketsoRakhuduProfile'
+import HakemEnergiesFoundation from './Components/HakemEnergiesFoundation'
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
           <Route path="/kgosana-koketso-rakhudu-group" element={<KgosanaKoketsoRakhuduGroup />} />
           <Route path="/kgosana-koketso-rakhudu-profile" element={<KgosanaKoketsoRakhuduProfile />} />
+          <Route path="/hakem-energies-foundation" element={<HakemEnergiesFoundation />} />
         </Routes>
       </Layout>
     </Router>
