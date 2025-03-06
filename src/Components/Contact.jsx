@@ -85,9 +85,9 @@ function Contact() {
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Email</h3>
-              <a href="mailto:executivesupport@koketsorakhudu.com" 
+              <a href="mailto:kopano@drkoketsorakhudu.com" 
                  className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
-                executivesupport@koketsorakhudu.com
+                kopano@drkoketsorakhudu.com
               </a>
             </div>
             
@@ -98,7 +98,7 @@ function Contact() {
                  className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
                 +27 63 644 5723
               </a>
-            </div>
+            </div>  
 
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
@@ -113,25 +113,15 @@ function Contact() {
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow mt-6">
               <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Calvin Molokwane</h3>
-              <p className="mb-2">Executive Head of Programmes and Stakeholder Engagement</p>
-              <a href="mailto:calvin@koketsorakhudu.com" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
-                calvin@koketsorakhudu.com
+              <p className="mb-2">Executive Senior Portfolio: Vice Chancellor & Principal</p>
+              <a href="mailto:calvin@drkoketsorakhudu.com" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                calvin@drkoketsorakhudu.com
               </a>
               <p className="mt-2">Cell: <a href="tel:+27606165450" className="text-[#397D5A] hover:text-[#1B5538]">+27 60 616 5450</a></p>
             </div>
           </div>
         </section> 
-
-           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow mt-6">
-              <FaEnvelope className="text-[#397D5A] text-2xl mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">Calvin Molokwane</h3>
-              <p className="mb-2">Executive Senior Portfolio: Vice Chancellor & Principal</p>
-              <a href="mailto:calvin@drkoketsorakhudu.com" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
-                calvin@koketsorakhudu.com
-              </a>
-              <p className="mt-2">Cell: <a href="tel:+27606165450" className="text-[#397D5A] hover:text-[#1B5538]">+27 60 616 5450</a></p>
-            </div>
-
+           
         {/* Contact Form */}
         {/* <section className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-16 relative overflow-hidden">
           {submitted && (

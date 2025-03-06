@@ -433,6 +433,51 @@ const events = [
     loading: 'lazy',
   },
   {
+    date: '2025-02-24',
+    title: '5th Annual Africa ESG ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the 5th Annual Africa ESG impact investing & sustainable finance summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AnnualAfricaESG.jpeg',
+    alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-25',
+    title: '5th Annual Africa ESG ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the 5th Annual Africa ESG impact investing & sustainable finance summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AnnualAfricaESG.jpeg',
+    alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-02-26',
+    title: '5th Annual Africa ESG ',
+    details: {
+      description:
+        "Dr Kgosana Koketso Rakhudu will be taking part in the 5th Annual Africa ESG impact investing & sustainable finance summit",
+      venue: 'Cape Town',
+      time: '8:00 AM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AnnualAfricaESG.jpeg',
+    alt: 'Annual Africa ESG',
+    loading: 'lazy',
+  },
+  {
     date: '2025-02-27',
     title: '5th Annual Africa ESG ',
     details: {
