@@ -13,7 +13,7 @@ const HakemEnergiesFoundation = () => {
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-8 text-[#397D5A]">Hakem Energies Foundation</h1>
         <img 
-          src="/images/HakemEnergiesFoundationlogo.png" 
+          src="/images/HakemEnergiesFoundationLogo.png" 
           alt="Hakem Energies Foundation logo" 
           className="mx-auto mb-4 w-64 h-64 object-contain opacity-90" 
           loading="lazy"
