@@ -265,7 +265,8 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChroniclesKgosana.jpg" },
                 { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
                 { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
-                { type: "image", src: "/images/ChroniclesPortia.jpg" },                
+                { type: "image", src: "/images/ChroniclesPortia.jpg" },   
+                { type: "video", src: "/videos/GalaDinner10yrs.mp4", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
             ],
         },
         {
@@ -278,7 +279,8 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/Soka25Sheila.png" },
                 { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
                 { type: "image", src: "/images/SOKA25Stakeholder.png" },    
-                { type: "image", src: "/images/PhemelaManape10Years.png" },             
+                { type: "image", src: "/images/PhemelaManape10Years.png" }, 
+                { type: "video", src: "/videos/SOKA25.mp4", thumbnail: "/images/SOKA2025Event.png" },            
             ],
         },
         {
@@ -290,7 +292,8 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/DrRakhuduXKhuli.png" },
                 { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
                 { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
-                { type: "image", src: "/images/KRFXKhuli.png" },                
+                { type: "image", src: "/images/KRFXKhuli.png" },      
+                { type: "video", src: "/videos/KgosanaRakhuduKhuliChana.mp4", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
             ],
         },
     ];
