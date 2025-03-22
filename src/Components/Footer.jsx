@@ -5,7 +5,9 @@ function Footer() {
   return (
     <footer className="bg-[#1B5538] text-white py-6 mt-12">
       <div className="container mx-auto px-6 text-center">
-        <p className="mb-4 text-sm md:text-base">&copy; {new Date().getFullYear()} OKKR - All Rights Reserved</p>
+        <p className="mb-4 text-sm md:text-base">
+          &copy; {new Date().getFullYear()} OKKR - All Rights Reserved
+        </p>
         <p>
           Designed with ♥ by{" "}
           <a
@@ -13,6 +15,13 @@ function Footer() {
             className="text-gray-300 hover:text-gray-100"
           >
             Astral Solutions
+          </a>
+          {" "} | Hosted by {" "}
+          <a
+            href="https://app.businesshustle.co.za/"
+            className="text-gray-300 hover:text-gray-100"
+          >
+            Business Hustle
           </a>
           .
         </p>
@@ -25,7 +34,7 @@ function Footer() {
           <Link to="/successstories" className="hover:text-white">Success Stories</Link>
           <Link to="/divisions" className="hover:text-white">Divisions</Link>
           <Link to="/leadership" className="hover:text-white">Leadership</Link>
-          <Link to="/kgosana-koketso-rakhudu-profile" className="hover:text-white">  Kgosana Dr Koketso Rakhudu </Link>
+          <Link to="/kgosana-koketso-rakhudu-profile" className="hover:text-white">Kgosana Dr Koketso Rakhudu</Link>
           <Link to="/contact" className="hover:text-white">Contact</Link>
         </div>
       </div>
