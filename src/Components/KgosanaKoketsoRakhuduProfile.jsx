@@ -52,9 +52,9 @@ const KgosanaKoketsoRakhuduProfile = () => {
         </h2>
         <div className="flex justify-center">
           <img
-            src="/images/KgosanaKoketso.jpeg"
+            src="/images/TVEIGalaDinnerKgosana.jpeg"
             alt="Kgosana Dr. Koketso Rakhudu"
-            className="w-48 h-48 rounded-contain shadow-lg"
+            className="w-60 h-60 rounded-contain shadow-lg"
           />
         </div>
         <div className="grid gap-8">

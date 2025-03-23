@@ -75,7 +75,7 @@ function Leadership() {
     <Carousel
       slides={[
         {
-          image: "images/OperationsStrategicPlanning.jpeg",
+          image: "images/HloleloRamps.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
           title: "Hlolelo Rampete",
@@ -83,7 +83,7 @@ function Leadership() {
             "Executive Portfolio: Operations, Programmes & Strategic Planning   Office of Dr. Koketso Rakhudu",
         },
         {
-          image: "images/AdministrationCompliance.jpeg",
+          image: "images/Kopano.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
           title: "Kopano Mothibi",
@@ -91,7 +91,7 @@ function Leadership() {
             "Executive Portfolio: Executive Dean, Socio Economic & Enterprise Development Office of Dr Koketso Rakhudu",
         },
         {
-          image: "images/LegalSocialEthics.jpeg",
+          image: "images/Bakang.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
           title: "Bakang Maluleka",
@@ -99,7 +99,7 @@ function Leadership() {
             "Executive Head: Legal & Social Ethics ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
         },
         {
-          image: "images/ProgrammesStakeholdersEngagement.jpeg",
+          image: "images/Calvin.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
           title: "Calvin Molokwane",
@@ -107,7 +107,7 @@ function Leadership() {
             "Executive Portfolio: Senior Management Principal & Vice Chancellor Office of Dr. Koketso Rakhudu",
         },
         {
-          image: "images/CommunityLiasonSupport.jpeg",
+          image: "images/Tsholo.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
           title: "Tsholo Nape",
@@ -121,14 +121,6 @@ function Leadership() {
           title: "Sibusiso Nxumalo",
           description:
             "Executive Investments Portfolio Head ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
-        },
-        {
-          image: "images/placeholder.jpeg",
-          alt: "Office of Kgosana Koketso Rakhudu Executive",
-          loading: "lazy",
-          title: "Jacob Seatlholo",
-          description:
-            "Product Development Specialist ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
         },
       ]}
     />

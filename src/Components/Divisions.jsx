@@ -52,7 +52,7 @@ const Divisions = () => {
               <button onClick={toggleVideoModal} className="text-gray-500 hover:text-gray-800 text-xl absolute top-2 right-2">
                 Close
               </button>
-              <video src="http://drkoketsorakhudu.com/wp-content/uploads/2024/11/KgosanaRakhuduSOKA.mp4" alt= "Introduction video of the State of The Kgotla Adress" loading= "lazy" controls className="w-full h-auto rounded-md" />
+              <video src="https://youtu.be/7ZfgMBaYv7Y" alt= "Introduction video of the State of The Kgotla Adress" loading= "lazy" controls className="w-full h-auto rounded-md" />
             </div>
           </div>
         )}
