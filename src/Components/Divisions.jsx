@@ -28,7 +28,7 @@ const Divisions = () => {
         <img 
           src="/images/KgotlhaLogo.png" 
           alt="Kgotla ya Rakhudu Logo" 
-          loading= "lazy"
+          loading="lazy"
           className="mx-auto mb-4 w-32 h-32 object-contain opacity-90"
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Kgotla ya Rakhudu</h2>
@@ -45,14 +45,23 @@ const Divisions = () => {
           </button>
         </div>
 
-        {/* Video Modal */}
+        {/* Video Modal with Iframe */}
         {isVideoOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
               <button onClick={toggleVideoModal} className="text-gray-500 hover:text-gray-800 text-xl absolute top-2 right-2">
                 Close
               </button>
-              <video src="https://youtu.be/7ZfgMBaYv7Y" alt= "Introduction video of the State of The Kgotla Adress" loading= "lazy" controls className="w-full h-auto rounded-md" />
+              <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/7ZfgMBaYv7Y" 
+                title="Introduction video of the State of The Kgotla Address" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen 
+                className="w-full h-auto rounded-md">
+              </iframe>
             </div>
           </div>
         )}
