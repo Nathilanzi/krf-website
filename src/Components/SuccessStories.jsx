@@ -7,24 +7,18 @@ import { Navigation } from "swiper/modules";
 const SuccessStory = ({ story }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentVideo, setCurrentVideo] = useState(null);
-    const modalRef = useRef(null); // Correctly define modalRef here
-
-    // Log the story object and media array
-    console.log("SuccessStory Loaded:", story);
+    const modalRef = useRef(null);
 
     const openModalWithVideo = (videoSrc) => {
-        console.log("Opening Modal with Video Src:", videoSrc); // Log the video src
         setCurrentVideo(videoSrc);
         setIsModalOpen(true);
     };
 
     const closeModal = () => {
-        console.log("Closing Modal"); // Log when the modal is closed
         setIsModalOpen(false);
         setCurrentVideo(null);
     };
 
-    // Close the modal when clicking outside the modal
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -32,10 +26,7 @@ const SuccessStory = ({ story }) => {
             }
         };
 
-        // Add event listener
         document.addEventListener("mousedown", handleClickOutside);
-
-        // Cleanup the event listener on unmount
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
@@ -44,11 +35,7 @@ const SuccessStory = ({ story }) => {
     return (
         <div className="flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full h-[450px]">
             {story.media ? (
-                <Swiper
-                    modules={[Navigation]}
-                    navigation
-                    className="w-full h-48 object-contain rounded-md"
-                >
+                <Swiper modules={[Navigation]} navigation className="w-full h-48 rounded-md">
                     {story.media.map((item, index) =>
                         item.type === "image" ? (
                             <SwiperSlide key={index}>
@@ -62,13 +49,13 @@ const SuccessStory = ({ story }) => {
                             <SwiperSlide key={index}>
                                 <div className="relative w-full h-48">
                                     <img
-                                        src={item.thumbnail || "/images/defaultThumbnail.png"} // Custom thumbnail or fallback
+                                        src={item.thumbnail || "/images/defaultThumbnail.png"}
                                         alt="Video Thumbnail"
                                         className="w-full h-48 object-contain rounded-md"
                                     />
                                     <button
                                         onClick={() => openModalWithVideo(item.src)}
-                                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-md text-white"
+                                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-md text-white text-lg"
                                     >
                                         ▶ Play Video
                                     </button>
@@ -89,23 +76,22 @@ const SuccessStory = ({ story }) => {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div
-                    ref={modalRef}
-                    className="bg-white rounded-lg shadow-lg max-w-3xl w-full"
-                    style={{ maxHeight: '80vh' }} // Limit max height
-                    >
-                        <button
-                            onClick={closeModal}
-                            className="text-gray-500 hover:text-gray-800 text-xl mb-4"
-                        >
-                            ✕ Close
-                        </button>
-                        <video
-                            src={currentVideo}
-                            controls
-                            autoPlay
-                            className="w-full h-80 rounded-md max-h-[80vh] object-contain"
-                        />
+        <div ref={modalRef} className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-4 relative">
+            {/* Close Button */}
+            <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
+            >
+                X
+            </button>
+
+                        <div className="relative w-full h-80">
+                            <iframe
+                                src={currentVideo}
+                                allow="autoplay"
+                                className="w-full h-full rounded-md"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             )}
@@ -154,7 +140,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/DancingKgotla.jpeg" },
                 { type: "image", src: "/images/DancingKgotla1.jpeg" },
                 { type: "image", src: "/images/KgotlaStakeholder.jpeg" },
-                { type: "video", src: "/videos/FinalKgotla2024.mp4", thumbnail: "/images/KgotlhaLogo.png" },
+                { type: "video", src: "https://www.youtube.com/embed/djSne4Ktam0?si=tXzmwNovwqy7ZMwC", thumbnail: "/images/KgotlhaLogo.png" },
             ],
         },
         {
@@ -174,7 +160,7 @@ const SuccessStories = () => {
             media: [
                 { type: "image", src: "/images/KRFKgosanaGraduation.jpg" },
                 { type: "image", src: "/images/KRFGraduationCrowd.jpg" },
-                { type: "video", src: "/videos/KRFGraduations.mp4", thumbnail: "/images/KRFLogo.png" },
+                { type: "video", src: "https://youtu.be/4NZktnrtKXQ", thumbnail: "/images/KRFLogo.png" },
             ],
         },
         {
@@ -198,7 +184,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEICptStakeholders.jpeg" },
                 { type: "image", src: "/images/TVEICPTTeam.jpeg" },
                 { type: "image", src: "/images/TVEICPT1.jpeg" },
-                { type: "video", src: "/videos/TVEICptReel.mp4", thumbnail: "/images/TVEILogo.png" },
+                { type: "video", src: "https://youtube.com/shorts/MLEizOe5sQs?feature=share", thumbnail: "/images/TVEILogo.png" },
                 { type: "image", src: "/images/TVEICptSB.jpg" },
             ],
         },
@@ -212,12 +198,12 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
                 { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
                 { type: "image", src: "/images/DancingParty.jpeg" },
-                { type: "video", src: "/videos/KgosanaRakhuduXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "/videos/RefilweHakemXmas.mp4", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "/videos/HakemEnergiesTumeloPhalane.mp4", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "/videos/HakemEnergiesInterview1.mp4", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "/videos/HakemEnergiesInterview2.mp4", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "/videos/HakemEnergiesHowToConnectGas.mp4", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/weIWn4lkWjA", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/cul_JBj6JPQ", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/xfkCX8igXF0", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/loqwTEyydCw", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/0qLqL1VkMxw", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://youtu.be/Mkn6ugRySl8", thumbnail: "/images/KRFDesign.jpg" },
             ],
         },
 
@@ -230,7 +216,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEILaunchBaphalaneSimon.jpeg" },
                 { type: "image", src: "/images/TVEILaunchBaphalaneGG.jpeg" },
                 { type: "image", src: "/images/TVEILaunchBaphalaneSpeaker.jpeg" },
-                { type: "video", src: "/videos/VillageEconomyIndabaLaunchBrits.mp4", thumbnail: "/images/TVEILogo.png" },
+                { type: "video", src: "https://youtu.be/2-dlMUANWBY", thumbnail: "/images/TVEILogo.png" },
                 
             ],
         },
@@ -244,7 +230,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEIGalaDinnerStakeholder.jpeg" },
                 { type: "image", src: "/images/TVEIGalaDinnerSimon.jpeg" },
                 { type: "image", src: "/images/TVEIGalaDinnerKgosanaStakeholder.jpeg" },
-                { type: "video", src: "/videos/GalaDinnerHighlight.mp4", thumbnail: "/images/TVEILogo.png" },
+                { type: "video", src: "https://youtu.be/5YvVWLEn77U", thumbnail: "/images/TVEILogo.png" },
                 
             ],
         },
@@ -253,7 +239,7 @@ const SuccessStories = () => {
             description:
                 "Visit to the Kwena Tlase high school to inspire the learners",
             media: [
-                { type: "video", src: "/videos/KKRKwenaTlaseHighlight.mp4", thumbnail: "/images/KgosanaLogo.png" },
+                { type: "video", src: "https://youtu.be/hGkljwmGd7A", thumbnail: "/images/KgosanaLogo.png" },
             ],
         },
         {
@@ -266,7 +252,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
                 { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
                 { type: "image", src: "/images/ChroniclesPortia.jpg" },   
-                { type: "video", src: "/videos/GalaDinner10yrs.mp4", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
+                { type: "video", src: "https://youtu.be/UMM4nSrZGPI", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
             ],
         },
         {
@@ -280,7 +266,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
                 { type: "image", src: "/images/SOKA25Stakeholder.png" },    
                 { type: "image", src: "/images/PhemelaManape10Years.png" }, 
-                { type: "video", src: "/videos/SOKA25.mp4", thumbnail: "/images/SOKA2025Event.png" },            
+                { type: "video", src: "https://youtu.be/ZcN4GMlxl6k", thumbnail: "/images/SOKA2025Event.png" },            
             ],
         },
         {
@@ -293,12 +279,12 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
                 { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
                 { type: "image", src: "/images/KRFXKhuli.png" },      
-                { type: "video", src: "/videos/KgosanaRakhuduKhuliChana.mp4", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
+                { type: "video", src: "https://youtu.be/j0FmVwesYw0", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
             ],
         },
     ];
 
-    return (
+     return (
         <section className="py-12 bg-gray-100">
             <div className="container mx-auto text-center mb-8">
                 <h2 className="text-3xl font-semibold text-green-700">Success Stories</h2>
