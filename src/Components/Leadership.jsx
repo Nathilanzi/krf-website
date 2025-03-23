@@ -120,7 +120,7 @@ function Leadership() {
           loading: "lazy",
           title: "Ontiretse Motene",
           description:
-            " Executive Sustainability Head: Applied Research, Technology and Innovation, Mr. Ontiretse Motene in the Office of Dr. Koketso Rakhudu ",
+            " Executive Sustainability Head: Applied Research, Technology and Innovation. Office of Dr. Koketso Rakhudu ",
         },
         {
           image: "images/InvestmentsPortfolio.jpeg",
