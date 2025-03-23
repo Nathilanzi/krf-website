@@ -168,7 +168,7 @@ const SuccessStories = () => {
             description:
                 "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
             media: [
-                { type: "image", src: "/images/TVEILimpopoKgosana.jpeg" },
+                { type: "image", src: "/images/TVEILimpopoKgosana.jpeg"  },
                 { type: "image", src: "/images/TVEILimpopoStakeholders.jpeg" },
                 { type: "image", src: "/images/TVEILimpopo1.jpeg" },
                 { type: "image", src: "/images/TVEILimpopoStakeholder1.jpeg" },

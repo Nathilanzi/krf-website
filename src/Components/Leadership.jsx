@@ -115,6 +115,14 @@ function Leadership() {
             "Executive Dean Community Development, Support Services & Administration. Office of Dr. Koketso Rakhudu",
         },
         {
+          image: "images/Ontiretse.jpeg",
+          alt: "Office of Kgosana Koketso Rakhudu Executive",
+          loading: "lazy",
+          title: "Ontiretse Motene",
+          description:
+            " Executive Sustainability Head: Applied Research, Technology and Innovation, Mr. Ontiretse Motene in the Office of Dr. Koketso Rakhudu ",
+        },
+        {
           image: "images/InvestmentsPortfolio.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
