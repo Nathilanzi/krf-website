@@ -160,7 +160,7 @@ const SuccessStories = () => {
             media: [
                 { type: "image", src: "/images/KRFKgosanaGraduation.jpg" },
                 { type: "image", src: "/images/KRFGraduationCrowd.jpg" },
-                { type: "video", src: "https://youtu.be/4NZktnrtKXQ", thumbnail: "/images/KRFLogo.png" },
+                { type: "video", src: "https://www.youtube.com/embed/4NZktnrtKXQ?si=Ub7gNJ2P3lWinIKq", thumbnail: "/images/KRFLogo.png" },
             ],
         },
         {
@@ -198,12 +198,12 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
                 { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
                 { type: "image", src: "/images/DancingParty.jpeg" },
-                { type: "video", src: "https://youtu.be/weIWn4lkWjA", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://youtu.be/cul_JBj6JPQ", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://youtu.be/xfkCX8igXF0", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://youtu.be/loqwTEyydCw", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://youtu.be/0qLqL1VkMxw", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://youtu.be/Mkn6ugRySl8", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/weIWn4lkWjA?si=z1JGyhbmmcFW6va7", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/cul_JBj6JPQ?si=oQoBh2ovL1GmriFX", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/xfkCX8igXF0?si=ytV26O5MP_whiY9F", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/Mkn6ugRySl8?si=pBSl5UwkPsnpSSug", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/loqwTEyydCw?si=_bfGhQe3KMfy1Z5h", thumbnail: "/images/KRFDesign.jpg" },
+                { type: "video", src: "https://www.youtube.com/embed/0qLqL1VkMxw?si=o-Po6Ut3ZOzr6rbZ", thumbnail: "/images/KRFDesign.jpg" },
             ],
         },
 
@@ -216,7 +216,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEILaunchBaphalaneSimon.jpeg" },
                 { type: "image", src: "/images/TVEILaunchBaphalaneGG.jpeg" },
                 { type: "image", src: "/images/TVEILaunchBaphalaneSpeaker.jpeg" },
-                { type: "video", src: "https://youtu.be/2-dlMUANWBY", thumbnail: "/images/TVEILogo.png" },
+                { type: "video", src: "https://www.youtube.com/embed/2-dlMUANWBY?si=V_0tWT3Lh_hhJuSg", thumbnail: "/images/TVEILogo.png" },
                 
             ],
         },
@@ -230,7 +230,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/TVEIGalaDinnerStakeholder.jpeg" },
                 { type: "image", src: "/images/TVEIGalaDinnerSimon.jpeg" },
                 { type: "image", src: "/images/TVEIGalaDinnerKgosanaStakeholder.jpeg" },
-                { type: "video", src: "https://youtu.be/5YvVWLEn77U", thumbnail: "/images/TVEILogo.png" },
+                { type: "video", src: "https://www.youtube.com/embed/5YvVWLEn77U?si=0gp34uZJSN5tfVxN", thumbnail: "/images/TVEILogo.png" },
                 
             ],
         },
@@ -239,7 +239,7 @@ const SuccessStories = () => {
             description:
                 "Visit to the Kwena Tlase high school to inspire the learners",
             media: [
-                { type: "video", src: "https://youtu.be/hGkljwmGd7A", thumbnail: "/images/KgosanaLogo.png" },
+                { type: "video", src: "https://www.youtube.com/embed/hGkljwmGd7A?si=3ACP6EpZ4zK5M3vv", thumbnail: "/images/KgosanaLogo.png" },
             ],
         },
         {
@@ -252,7 +252,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
                 { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
                 { type: "image", src: "/images/ChroniclesPortia.jpg" },   
-                { type: "video", src: "https://youtu.be/UMM4nSrZGPI", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
+                { type: "video", src: "https://www.youtube.com/embed/UMM4nSrZGPI?si=Jkwkm5YCRaY12K2J", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
             ],
         },
         {
@@ -266,7 +266,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
                 { type: "image", src: "/images/SOKA25Stakeholder.png" },    
                 { type: "image", src: "/images/PhemelaManape10Years.png" }, 
-                { type: "video", src: "https://youtu.be/ZcN4GMlxl6k", thumbnail: "/images/SOKA2025Event.png" },            
+                { type: "video", src: "https://www.youtube.com/embed/ZcN4GMlxl6k?si=yFq0jKUl2iAqISYu", thumbnail: "/images/SOKA2025Event.png" },            
             ],
         },
         {
@@ -279,7 +279,7 @@ const SuccessStories = () => {
                 { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
                 { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
                 { type: "image", src: "/images/KRFXKhuli.png" },      
-                { type: "video", src: "https://youtu.be/j0FmVwesYw0", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
+                { type: "video", src: "https://www.youtube.com/embed/j0FmVwesYw0?si=qKz9a27aJ09ffRSu", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
             ],
         },
     ];
