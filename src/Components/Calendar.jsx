@@ -597,6 +597,36 @@ const events = [
     alt: 'Leadership Lekgotla',
     loading: 'lazy',
   },
+  {
+    date: '2025-05-19',
+    title: 'Zimbabwe High Impact Investment 2025 ',
+    details: {
+      description:
+        "Our leader, Dr. Koketso Rakhudu, will be in Zimbabwe 🇿🇼 on May 19th and 20th, 2025, with Ms. Pai Mbanje-Kondile and Mr. Koketso Molefi for the High Impact Investment Roundtable 2025, themed 'Investing Today, Building the Africa We Want Tomorrow. This summit aligns with the principles of Tsitsing, Kgotla ya Rakhudu, focusing on community engagement and sustainable development. It also supports the G20's Global Mandate for inclusive economic growth and investment strategies.",
+      venue: 'Zimbabwe',
+      time: '8:00 AM - 5:00 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/Zimbabwe.jpg',
+    alt: 'Leadership Lekgotla',
+    loading: 'lazy',
+  },
+   {
+    date: '2025-05-20',
+    title: 'Zimbabwe High Impact Investment 2025 ',
+    details: {
+      description:
+        "Our leader, Dr. Koketso Rakhudu, will be in Zimbabwe 🇿🇼 on May 19th and 20th, 2025, with Ms. Pai Mbanje-Kondile and Mr. Koketso Molefi for the High Impact Investment Roundtable 2025, themed 'Investing Today, Building the Africa We Want Tomorrow.' This summit aligns with the principles of Tsitsing, Kgotla ya Rakhudu, focusing on community engagement and sustainable development. It also supports the G20's Global Mandate for inclusive economic growth and investment strategies.",
+      venue: 'Zimbabwe',
+      time: '8:00 AM - 5:00 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/Zimbabwe.jpg',
+    alt: 'Leadership Lekgotla',
+    loading: 'lazy',
+  },
 ];
 
 const CalendarComponent = () => {
