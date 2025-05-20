@@ -60,7 +60,7 @@ function Contact() {
         <div className="relative z-10">
           <div className="relative">
             <img 
-              src="/images/TVEIGalaDinnerKgosana.jpeg" 
+              src="/images/KgosanaSmiling.jpeg" 
               alt="Kgosana Koketso Rakhudu" 
               loading= "lazy"
               className="mx-auto w-60 h-60 mb-4 shadow-lg border-4 border-white"
