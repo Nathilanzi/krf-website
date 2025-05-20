@@ -102,186 +102,183 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
-            title: "Empowering Rural Women",
-            description:
-                "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
-            image: "/images/constructionlearners.jpeg",
-        },
-        {
-            title: "Youth Entrepreneurship",
-            description:
-                "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
-            image: "/images/KgosanaYouthStakeholders.jpeg",
-        },
-        {
-            title: "Agricultural Advancements",
-            description:
-                "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
-            media: [{ type: "image", src: "/images/Communityengagement.jpeg" }],
-        },
-        {
-            title: "The Village Economy Indaba Launch 01 November 2024",
-            description:
-                "The Village Economy Indaba marked a significant milestone in fostering collaboration, celebrating Kgosana Koketso Rakhudu's leadership, and driving sustainable development across the community.",
-            media: [
-                { type: "image", src: "/images/TVEIRTB.jpg" },
-                {
-                    type: "video",
-                    src: "https://drive.google.com/uc?export=download&id=1zVxBsaVYQH-pSe8naFzqryoF-7IZktOh",
-                    thumbnail: "/images/TVEILogo.png",
-                },
-            ],
-        },
-        {
-            title: "Final Kgotla of 2024",
-            description:
-                "The final kgotla of 2024 was held on the 17th of November where Kgosana Koketso Rakhudu celebrated 9 years of leadership excellence and appreciated those who have played a pivotal role in his leadership term.",
-            media: [
-                { type: "image", src: "/images/DancingKgotla.jpeg" },
-                { type: "image", src: "/images/DancingKgotla1.jpeg" },
-                { type: "image", src: "/images/KgotlaStakeholder.jpeg" },
-                { type: "video", src: "https://www.youtube.com/embed/djSne4Ktam0?si=tXzmwNovwqy7ZMwC", thumbnail: "/images/KgotlhaLogo.png" },
-            ],
-        },
-        {
-            title: "9th Year of Leadership Celebration",
-            description:
-                "Celebrate Kgosana Koketso Rakhudu's 9 years of dedication and leadership with a special graduation ceremony and inauguration of Dr. Koketso Rakhudu as Chancellor of KRF CET.",
-            media: [
-                { type: "image", src: "/images/KgosanaChancellor.jpeg" },
-                { type: "image", src: "/images/KgosanaChancellor2.jpeg" },
-                { type: "image", src: "/images/KgosanaChancellor1.jpeg" },
-            ],
-        },
-        {
-            title: "KRF Graduation ceremony",
-            description:
-                "The Koketso Rakhudu Foundation (KRF) Graduation Ceremony is a celebration of achievement, empowerment, and growth. Scheduled for 29 November 2024, this prestigious event marks the culmination of the hard work and dedication of individuals who have completed various skills development, entrepreneurship, and leadership training programs offered by KRF.",
-            media: [
-                { type: "image", src: "/images/KRFKgosanaGraduation.JPG" },
-                { type: "image", src: "/images/KRFGraduationCrowd.JPG" },
-                { type: "video", src: "https://www.youtube.com/embed/4NZktnrtKXQ?si=Ub7gNJ2P3lWinIKq", thumbnail: "/images/KRFLogo.png" },
-            ],
-        },
-        {
-            title: "The Village Economy Indaba Launch in Limpopo 02 December 2024",
-            description:
-                "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
-            media: [
-                { type: "image", src: "/images/TVEILimpopoKgosana.jpeg"  },
-                { type: "image", src: "/images/TVEILimpopoStakeholders.jpeg" },
-                { type: "image", src: "/images/TVEILimpopo1.jpeg" },
-                { type: "image", src: "/images/TVEILimpopoStakeholder1.jpeg" },
-                { type: "image", src: "/images/TVEILimpopoStakeholder.jpeg" },
-                { type: "image", src: "/images/TVEILimpopoSB.jpg" },
-            ],
-        },
-        {
-            title: "The Village Economy Indaba Launch in Cape Town 05 December 2024",
-            description:
-                "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
-            media: [
-                { type: "image", src: "/images/TVEICptStakeholders.jpeg" },
-                { type: "image", src: "/images/TVEICPTTeam.jpeg" },
-                { type: "image", src: "/images/TVEICPT1.jpeg" },
-                { type: "video", src: "https://youtube.com/shorts/MLEizOe5sQs?feature=share", thumbnail: "/images/TVEILogo.png" },
-                { type: "image", src: "/images/TVEICptSB.jpg" },
-            ],
-        },
-        {
-            title: "100 Families Christmas Donation",
-            description:
-                "Hakem Energies Community Christmas Party with Kgosana Koketso Rakhudu & Mrs Refilwe Sebothoma, CEO of Hakem Energies were celebrating the spirit of togetherness with the Christmas Party! To remind people that the true sense of the season lies in unity, kindness and giving back.",
-            media: [
-                { type: "image", src: "/images/KgosanaHelping.jpeg" },
-                { type: "image", src: "/images/RefilweSebothomaHelping.jpeg" },
-                { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
-                { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
-                { type: "image", src: "/images/DancingParty.jpeg" },
-                { type: "video", src: "https://www.youtube.com/embed/weIWn4lkWjA?si=z1JGyhbmmcFW6va7", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://www.youtube.com/embed/cul_JBj6JPQ?si=oQoBh2ovL1GmriFX", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://www.youtube.com/embed/xfkCX8igXF0?si=ytV26O5MP_whiY9F", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://www.youtube.com/embed/Mkn6ugRySl8?si=pBSl5UwkPsnpSSug", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://www.youtube.com/embed/loqwTEyydCw?si=_bfGhQe3KMfy1Z5h", thumbnail: "/images/KRFDesign.jpg" },
-                { type: "video", src: "https://www.youtube.com/embed/0qLqL1VkMxw?si=o-Po6Ut3ZOzr6rbZ", thumbnail: "/images/KRFDesign.jpg" },
-            ],
-        },
-
-        {
-            title: "The Village Economy Indaba Launch in Baphalane Brits.",
-            description:
-                "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
-            media: [
-                { type: "image", src: "/images/TVEILaunchBaphalaneKgosana.jpeg" },
-                { type: "image", src: "/images/TVEILaunchBaphalaneSimon.jpeg" },
-                { type: "image", src: "/images/TVEILaunchBaphalaneGG.jpeg" },
-                { type: "image", src: "/images/TVEILaunchBaphalaneSpeaker.jpeg" },
-                { type: "video", src: "https://www.youtube.com/embed/2-dlMUANWBY?si=V_0tWT3Lh_hhJuSg", thumbnail: "/images/TVEILogo.png" },
-                
-            ],
-        },
-        {
-            title: "The Village Economy Indaba Gala Dinner Baphalane",
-            description:
-                "The Village Economy Indaba Fundraising Gala Dinner in Baphalane Brits.",
-            media: [
-                { type: "image", src: "/images/TVEIGalaDinnerStakeholders.jpeg" },
-                { type: "image", src: "/images/TVEIGalaDinnerKgosana.jpeg" },
-                { type: "image", src: "/images/TVEIGalaDinnerStakeholder.jpeg" },
-                { type: "image", src: "/images/TVEIGalaDinnerSimon.jpeg" },
-                { type: "image", src: "/images/TVEIGalaDinnerKgosanaStakeholder.jpeg" },
-                { type: "video", src: "https://www.youtube.com/embed/5YvVWLEn77U?si=0gp34uZJSN5tfVxN", thumbnail: "/images/TVEILogo.png" },
-                
-            ],
-        },
-        {
-            title: "Kgosana Koketso Rakhudu Kwena Tlase High School visit",
-            description:
-                "Visit to the Kwena Tlase high school to inspire the learners",
-            media: [
-                { type: "video", src: "https://www.youtube.com/embed/hGkljwmGd7A?si=3ACP6EpZ4zK5M3vv", thumbnail: "/images/KgosanaLogo.png" },
-            ],
-        },
-        {
-            title: "10th Year Leadership Vision Impact Of Dr Koketso Rakhudu Chronicles Night 2025",
-            description:
-                "Chronicles Night of Stakeholder Engagements 2025",
-            media: [
-                { type: "image", src: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },
-                { type: "image", src: "/images/ChroniclesKgosana.jpg" },
-                { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
-                { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
-                { type: "image", src: "/images/ChroniclesPortia.jpg" },   
-                { type: "video", src: "https://www.youtube.com/embed/UMM4nSrZGPI?si=Jkwkm5YCRaY12K2J", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },             
-            ],
-        },
-        {
-            title: "SOKA 2025",
-            description:
-                "State of Kgotla Address (SOKA) is an annual Lekgotla in which Kgosana of the community Reports on the status of the community and outlines the development plans for the upcoming year.",
-            media: [
-                { type: "image", src: "/images/SOKA2025Event.png" },
-                { type: "image", src: "/images/SOKA25Kgosana.jpg" },
-                { type: "image", src: "/images/Soka25Sheila.png" },
-                { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
-                { type: "image", src: "/images/SOKA25Stakeholder.png" },    
-                { type: "image", src: "/images/PhemelaManape10Years.png" }, 
-                { type: "video", src: "https://www.youtube.com/embed/ZcN4GMlxl6k?si=yFq0jKUl2iAqISYu", thumbnail: "/images/SOKA2025Event.png" },            
-            ],
-        },
-        {
-            title: "Learners in Need Program in collaboration with Khuli Chana",
-            description:
-                "Dr Kgosana Koketso Rakhudu will be taking part in the Learners in Need Program alongside Khuli Chana",
-            media: [
-                { type: "image", src: "/images/KhuliChanaXDrRakhuduEvent.png" },
-                { type: "image", src: "/images/DrRakhuduXKhuli.png" },
-                { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
-                { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
-                { type: "image", src: "/images/KRFXKhuli.png" },      
-                { type: "video", src: "https://www.youtube.com/embed/j0FmVwesYw0?si=qKz9a27aJ09ffRSu", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },          
-            ],
-        },
+        title: "Learners in Need Program in collaboration with Khuli Chana",
+        description:
+            "Dr Kgosana Koketso Rakhudu will be taking part in the Learners in Need Program alongside Khuli Chana",
+        media: [
+            { type: "image", src: "/images/KhuliChanaXDrRakhuduEvent.png" },
+            { type: "image", src: "/images/DrRakhuduXKhuli.png" },
+            { type: "image", src: "/images/DrRakhuduXKhuliStakeholders.png" },
+            { type: "image", src: "/images/DrRakhuduuXKhuliKids.png" },
+            { type: "image", src: "/images/KRFXKhuli.png" },
+            { type: "video", src: "https://www.youtube.com/embed/j0FmVwesYw0?si=qKz9a27aJ09ffRSu", thumbnail: "/images/KhuliChanaXDrRakhuduEvent.png" },
+        ],
+    },
+    {
+        title: "SOKA 2025",
+        description:
+            "State of Kgotla Address (SOKA) is an annual Lekgotla in which Kgosana of the community Reports on the status of the community and outlines the development plans for the upcoming year.",
+        media: [
+            { type: "image", src: "/images/SOKA2025Event.png" },
+            { type: "image", src: "/images/SOKA25Kgosana.jpg" },
+            { type: "image", src: "/images/Soka25Sheila.png" },
+            { type: "image", src: "/images/SOKA25KgosanaXSheila.png" },
+            { type: "image", src: "/images/SOKA25Stakeholder.png" },
+            { type: "image", src: "/images/PhemelaManape10Years.png" },
+            { type: "video", src: "https://www.youtube.com/embed/ZcN4GMlxl6k?si=yFq0jKUl2iAqISYu", thumbnail: "/images/SOKA2025Event.png" },
+        ],
+    },
+    {
+        title: "10th Year Leadership Vision Impact Of Dr Koketso Rakhudu Chronicles Night 2025",
+        description:
+            "Chronicles Night of Stakeholder Engagements 2025",
+        media: [
+            { type: "image", src: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },
+            { type: "image", src: "/images/ChroniclesKgosana.jpg" },
+            { type: "image", src: "/images/ChroniclesOnalenna.jpg" },
+            { type: "image", src: "/images/ChroniclesCommisioner.jpg" },
+            { type: "image", src: "/images/ChroniclesPortia.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/UMM4nSrZGPI?si=Jkwkm5YCRaY12K2J", thumbnail: "/images/DrKoketsoRakhuduChroniclesNight.jpeg" },
+        ],
+    },
+    {
+        title: "Kgosana Koketso Rakhudu Kwena Tlase High School visit",
+        description:
+            "Visit to the Kwena Tlase high school to inspire the learners",
+        media: [
+            { type: "video", src: "https://www.youtube.com/embed/hGkljwmGd7A?si=3ACP6EpZ4zK5M3vv", thumbnail: "/images/KgosanaLogo.png" },
+        ],
+    },
+    {
+        title: "The Village Economy Indaba Gala Dinner Baphalane",
+        description:
+            "The Village Economy Indaba Fundraising Gala Dinner in Baphalane Brits.",
+        media: [
+            { type: "image", src: "/images/TVEIGalaDinnerStakeholders.jpeg" },
+            { type: "image", src: "/images/TVEIGalaDinnerKgosana.jpeg" },
+            { type: "image", src: "/images/TVEIGalaDinnerStakeholder.jpeg" },
+            { type: "image", src: "/images/TVEIGalaDinnerSimon.jpeg" },
+            { type: "image", src: "/images/TVEIGalaDinnerKgosanaStakeholder.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/5YvVWLEn77U?si=0gp34uZJSN5tfVxN", thumbnail: "/images/TVEILogo.png" },
+        ],
+    },
+    {
+        title: "The Village Economy Indaba Launch in Baphalane Brits.",
+        description:
+            "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
+        media: [
+            { type: "image", src: "/images/TVEILaunchBaphalaneKgosana.jpeg" },
+            { type: "image", src: "/images/TVEILaunchBaphalaneSimon.jpeg" },
+            { type: "image", src: "/images/TVEILaunchBaphalaneGG.jpeg" },
+            { type: "image", src: "/images/TVEILaunchBaphalaneSpeaker.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/2-dlMUANWBY?si=V_0tWT3Lh_hhJuSg", thumbnail: "/images/TVEILogo.png" },
+        ],
+    },
+    {
+        title: "100 Families Christmas Donation",
+        description:
+            "Hakem Energies Community Christmas Party with Kgosana Koketso Rakhudu & Mrs Refilwe Sebothoma, CEO of Hakem Energies were celebrating the spirit of togetherness with the Christmas Party! To remind people that the true sense of the season lies in unity, kindness and giving back.",
+        media: [
+            { type: "image", src: "/images/KgosanaHelping.jpeg" },
+            { type: "image", src: "/images/RefilweSebothomaHelping.jpeg" },
+            { type: "image", src: "/images/ChristmasGiveaway.jpeg" },
+            { type: "image", src: "/images/StakeholderGiveaways.jpeg" },
+            { type: "image", src: "/images/DancingParty.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/weIWn4lkWjA?si=z1JGyhbmmcFW6va7", thumbnail: "/images/KRFDesign.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/cul_JBj6JPQ?si=oQoBh2ovL1GmriFX", thumbnail: "/images/KRFDesign.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/xfkCX8igXF0?si=ytV26O5MP_whiY9F", thumbnail: "/images/KRFDesign.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/Mkn6ugRySl8?si=pBSl5UwkPsnpSSug", thumbnail: "/images/KRFDesign.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/loqwTEyydCw?si=_bfGhQe3KMfy1Z5h", thumbnail: "/images/KRFDesign.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/0qLqL1VkMxw?si=o-Po6Ut3ZOzr6rbZ", thumbnail: "/images/KRFDesign.jpg" },
+        ],
+    },
+    {
+        title: "The Village Economy Indaba Launch in Cape Town 05 December 2024",
+        description:
+            "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
+        media: [
+            { type: "image", src: "/images/TVEICptStakeholders.jpeg" },
+            { type: "image", src: "/images/TVEICPTTeam.jpeg" },
+            { type: "image", src: "/images/TVEICPT1.jpeg" },
+            { type: "video", src: "https://youtube.com/shorts/MLEizOe5sQs?feature=share", thumbnail: "/images/TVEILogo.png" },
+            { type: "image", src: "/images/TVEICptSB.jpg" },
+        ],
+    },
+    {
+        title: "The Village Economy Indaba Launch in Limpopo 02 December 2024",
+        description:
+            "The Village Economy Indaba marked a significant milestone in fostering collaboration, and driving sustainable development across the community.",
+        media: [
+            { type: "image", src: "/images/TVEILimpopoKgosana.jpeg" },
+            { type: "image", src: "/images/TVEILimpopoStakeholders.jpeg" },
+            { type: "image", src: "/images/TVEILimpopo1.jpeg" },
+            { type: "image", src: "/images/TVEILimpopoStakeholder1.jpeg" },
+            { type: "image", src: "/images/TVEILimpopoStakeholder.jpeg" },
+            { type: "image", src: "/images/TVEILimpopoSB.jpg" },
+        ],
+    },
+    {
+        title: "KRF Graduation ceremony",
+        description:
+            "The Koketso Rakhudu Foundation (KRF) Graduation Ceremony is a celebration of achievement, empowerment, and growth. Scheduled for 29 November 2024, this prestigious event marks the culmination of the hard work and dedication of individuals who have completed various skills development, entrepreneurship, and leadership training programs offered by KRF.",
+        media: [
+            { type: "image", src: "/images/KRFKgosanaGraduation.JPG" },
+            { type: "image", src: "/images/KRFGraduationCrowd.JPG" },
+            { type: "video", src: "https://www.youtube.com/embed/4NZktnrtKXQ?si=Ub7gNJ2P3lWinIKq", thumbnail: "/images/KRFLogo.png" },
+        ],
+    },
+    {
+        title: "9th Year of Leadership Celebration",
+        description:
+            "Celebrate Kgosana Koketso Rakhudu's 9 years of dedication and leadership with a special graduation ceremony and inauguration of Dr. Koketso Rakhudu as Chancellor of KRF CET.",
+        media: [
+            { type: "image", src: "/images/KgosanaChancellor.jpeg" },
+            { type: "image", src: "/images/KgosanaChancellor2.jpeg" },
+            { type: "image", src: "/images/KgosanaChancellor1.jpeg" },
+        ],
+    },
+    {
+        title: "Final Kgotla of 2024",
+        description:
+            "The final kgotla of 2024 was held on the 17th of November where Kgosana Koketso Rakhudu celebrated 9 years of leadership excellence and appreciated those who have played a pivotal role in his leadership term.",
+        media: [
+            { type: "image", src: "/images/DancingKgotla.jpeg" },
+            { type: "image", src: "/images/DancingKgotla1.jpeg" },
+            { type: "image", src: "/images/KgotlaStakeholder.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/djSne4Ktam0?si=tXzmwNovwqy7ZMwC", thumbnail: "/images/KgotlhaLogo.png" },
+        ],
+    },
+    {
+        title: "The Village Economy Indaba Launch 01 November 2024",
+        description:
+            "The Village Economy Indaba marked a significant milestone in fostering collaboration, celebrating Kgosana Koketso Rakhudu's leadership, and driving sustainable development across the community.",
+        media: [
+            { type: "image", src: "/images/TVEIRTB.jpg" },
+            {
+                type: "video",
+                src: "https://drive.google.com/uc?export=download&id=1zVxBsaVYQH-pSe8naFzqryoF-7IZktOh",
+                thumbnail: "/images/TVEILogo.png",
+            },
+        ],
+    },
+    {
+        title: "Agricultural Advancements",
+        description:
+            "Modern farming techniques were introduced, boosting productivity and creating a steady income stream for farmers.",
+        media: [{ type: "image", src: "/images/Communityengagement.jpeg" }],
+    },
+    {
+        title: "Youth Entrepreneurship",
+        description:
+            "Young entrepreneurs were able to launch their own startups, creating jobs and fostering innovation in their communities.",
+        image: "/images/KgosanaYouthStakeholders.jpeg",
+    },
+    {
+        title: "Empowering Rural Women",
+        description:
+            "This initiative helped women in rural areas build sustainable businesses and contribute to their local economy.",
+        image: "/images/constructionlearners.jpeg",
+    },
     ];
 
      return (
