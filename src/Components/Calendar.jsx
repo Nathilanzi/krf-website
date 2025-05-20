@@ -598,6 +598,66 @@ const events = [
     loading: 'lazy',
   },
   {
+    date: '2025-04-11',
+    title: 'SMME Business Expo',
+    details: {
+      description:
+        "SMME Business Expo: Our Senior Executives were featured speakers and contributors at the SMME Business Expo, which included discussions on funding opportunities, business networking, and product advertising",
+      venue: 'Ramokoka Community Hall',
+      time: '8:00 AM - 3:00 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SMMEexpo.jpeg',
+    alt: 'SMME Business Expo',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-04-30',
+    title: 'Leadership Skills Training Session',
+    details: {
+      description:
+        " Leadership Skills Training Session: Facilitated by the Operations Team, this training session focused on Leadership, Communication, and Google Workspace tools. All OOKKR staff members were in attendance.",
+      venue: 'Anglo American Zimele Hub',
+      time: '9:00 AM - 2:30 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/SkillsTraining.jpeg',
+    alt: 'Leadership Skills Training',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-05-09',
+    title: 'Women Creating Wealth Event',
+    details: {
+      description:
+        "Women Creating Wealth Event: Female staff members of OOKKR attended this event hosted by the Graça Machel Trust in Sandton. The event focused on women empowerment, entrepreneurship, and financial inclusion.",
+      venue: 'Sandton Hotel',
+      time: '9:00 AM - 7:00 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/AWFII.jpeg',
+    alt: 'Women Creating Wealth',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-05-09',
+    title: 'G20 Community Enagement',
+    details: {
+      description:
+        "G20 Community Engagement: Our Senior Executives attended the G20 Community Engagement, where they announced their inclusion in this prestigious global mandate. The initiative is focused on shaping solutions that drive economic growth, social development, and community empowerment worldwide.",
+      venue: '@Functions Hall 4th Floor. Kgorong Building, Pretoria ',
+      time: '9:00 AM ',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/G20.jpeg',
+    alt: 'G20 Community Engagement',
+    loading: 'lazy',
+  },
+  {
     date: '2025-05-19',
     title: 'Zimbabwe High Impact Investment 2025 ',
     details: {
