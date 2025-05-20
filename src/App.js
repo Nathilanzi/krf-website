@@ -41,7 +41,6 @@ function App() {
           <Route path="/investment-sustainability-trust" element={<InvestmentSustainabilityTrust />} />
           <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
           <Route path="/kgosana-koketso-rakhudu-group" element={<KgosanaKoketsoRakhuduGroup />} />
-          <Route path="/kgosana-koketso-rakhudu-profile" element={<KgosanaKoketsoRakhuduProfile />} />
           <Route path="/hakem-energies-foundation" element={<HakemEnergiesFoundation />} />
         </Routes>
       </Layout>
