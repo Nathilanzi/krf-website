@@ -162,10 +162,10 @@ function Leadership() {
             " Executive Sustainability Head: Applied Research, Technology and Innovation. Office of Dr. Koketso Rakhudu ",
         },
         {
-          image: "images/InvestmentsPortfolio.jpeg",
+          image: "images/PaiMbanje.jpeg",
           alt: "Office of Kgosana Koketso Rakhudu Executive",
           loading: "lazy",
-          title: "Sibusiso Nxumalo",
+          title: "Pai Mbanje-Kondile",
           description:
             "Executive Investments Portfolio Head ⁠Office of Dr. Koketso Rakhudu Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
         },
