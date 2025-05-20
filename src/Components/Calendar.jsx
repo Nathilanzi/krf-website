@@ -643,7 +643,7 @@ const events = [
     loading: 'lazy',
   },
   {
-    date: '2025-05-09',
+    date: '2025-05-14',
     title: 'G20 Community Enagement',
     details: {
       description:
@@ -685,6 +685,21 @@ const events = [
     },
     image: 'images/Zimbabwe.jpg',
     alt: 'Leadership Lekgotla',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-06-07',
+    title: 'World LPG Day 2025 ',
+    details: {
+      description:
+        "Join us in celebrating World LPG Day, bringing clean cooking to the world.",
+      venue: 'Mmanape Secondary School',
+      time: '9:00 AM - 1:00 PM',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/LPGDay.jpeg',
+    alt: 'LPG Day',
     loading: 'lazy',
   },
 ];
