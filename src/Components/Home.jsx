@@ -124,7 +124,7 @@ function Home() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
         <img 
-          src="/images/OfficeofKgosanaTeam.jpeg" 
+          src="/images/KgosanaTeam.jpeg" 
           alt="Office Of Kgosana Koketso Rakhudu Team" 
           loading= "lazy"
           className="w-full h-full object-contain object-top"
@@ -260,8 +260,8 @@ function Home() {
     Discover the divisions that drive our mission forward. Each division plays a unique role in supporting and empowering our community.
   </p>
   
-  <div className="flex flex-wrap justify-center gap-8">
-    {/* Logos with hover and routing */}
+   {/* Grid Layout */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 place-items-center">
     <Link to="/koketso-rakhudu-foundation">
       <img 
         src="/images/KRFLogo.png" 
@@ -308,23 +308,22 @@ function Home() {
     </Link>
     
     <Link to="/kgosana-koketso-rakhudu-group">
-    <img 
-          src="/images/KKRGLogo.png" 
-          alt="Kgosana Koketso Rakhudu Group logo"
-          loading= "lazy" 
-          className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
-        />
+      <img 
+        src="/images/KKRGLogo.png" 
+        alt="Kgosana Koketso Rakhudu Group logo"
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
+      />
     </Link>
 
     <Link to="/hakem-energies-foundation">
-    <img 
-          src="/images/HakemEnergiesFoundationLogo.png" 
-          alt="Hakem Energies Foundation"
-          loading= "lazy" 
-          className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
-        />
+      <img 
+        src="/images/HakemEnergiesFoundationLogo.png" 
+        alt="Hakem Energies Foundation"
+        loading="lazy" 
+        className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110"
+      />
     </Link>
-
   </div>
 
   {/* Call to Action */}
