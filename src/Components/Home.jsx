@@ -124,7 +124,7 @@ function Home() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
         <img 
-          src="/images/KgosanaTeam.jpeg" 
+          src="/images/Team.jpg" 
           alt="Office Of Kgosana Koketso Rakhudu Team" 
           loading= "lazy"
           className="w-full h-full object-contain object-top"
