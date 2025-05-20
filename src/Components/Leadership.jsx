@@ -63,9 +63,48 @@ function Leadership() {
                  initial={{ opacity: 0 }}
                  animate={{ opacity: 1 }}
                  transition={{ duration: 0.5 }}
-               />
+               />            
 
-                 {/* Leadership Carousel */}
+        {/* Intro Section */}
+        <motion.p 
+          className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu.
+        </motion.p>
+
+        {/* Leadership and Legacy Section */}
+        <motion.section 
+          className="flex flex-col items-center mb-12 relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45" />
+          <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full" />
+          
+          <img 
+            src="/images/KgosanaSmiling.jpeg" 
+            alt="Dr Kgosana Koketso Rakhudu" 
+            className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
+          />
+          <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">
+            Leadership and Legacy of the Office of Kgosana Koketso Rakhudu
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
+            The Office of Kgosana Koketso Rakhudu is rooted in a legacy of strong, visionary leadership established by Kgosana Rantatja Jacob Rakhudu, whose service was defined by integrity, humility, and a commitment to his people. Kgosana Koketso continues this legacy with a forward-thinking approach, ensuring the collective well-being of the community.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
+            Observing his father's dedication to Tsitsing, Kgosana Koketso has adopted a style that values engagement, collaboration, and community growth. His leadership is not about authority but about creating a thriving community through purpose-driven governance.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl text-center">
+            Integrating African traditional governance with modern principles, the Office of Kgosana Koketso Rakhudu encourages each community member to reach their potential through various empowerment initiatives in education, healthcare, and economic development, all contributing to VisionPlan 2035.
+          </p>
+        </motion.section>
+
+        {/* Leadership Carousel */}
                  <section className="flex flex-col items-center justify-center bg-gray-100 py-12">
   <h2 className="text-3xl font-bold mb-8 text-[#1B5538] text-center">
     Executive Leaders
@@ -134,55 +173,6 @@ function Leadership() {
     />
   </div>
 </section>
-              
-
-        {/* Intro Section */}
-        <motion.p 
-          className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu.
-        </motion.p>
-
-        {/* Leadership and Legacy Section */}
-        <motion.section 
-          className="flex flex-col items-center mb-12 relative"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45" />
-          <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full" />
-          
-          <img 
-            src="/images/KgosanaKoketso.jpeg" 
-            alt="Dr Kgosana Koketso Rakhudu" 
-            className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
-          />
-          <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">
-            Leadership and Legacy of the Office of Kgosana Koketso Rakhudu
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
-            The Office of Kgosana Koketso Rakhudu is rooted in a legacy of strong, visionary leadership established by Kgosana Rantatja Jacob Rakhudu, whose service was defined by integrity, humility, and a commitment to his people. Kgosana Koketso continues this legacy with a forward-thinking approach, ensuring the collective well-being of the community.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
-            Observing his father's dedication to Tsitsing, Kgosana Koketso has adopted a style that values engagement, collaboration, and community growth. His leadership is not about authority but about creating a thriving community through purpose-driven governance.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl text-center">
-            Integrating African traditional governance with modern principles, the Office of Kgosana Koketso Rakhudu encourages each community member to reach their potential through various empowerment initiatives in education, healthcare, and economic development, all contributing to VisionPlan 2035.
-          </p>
-        </motion.section>
-
-        {/* Community Initiatives Image */}
-        <section className="flex flex-col items-center mb-12">
-          <img 
-            src="/images/Hlolelo.jpeg" 
-            alt="Head of Stakeholder Engagements Office of Kgosana Koketso Rakhudu" 
-            className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
-          />
-        </section>
 
         {/* Principles of Leadership Section */}
         <h3 className="text-2xl font-semibold text-[#397D5A] mb-6 text-center">Principles of Leadership in the Office</h3>
