@@ -684,7 +684,64 @@ const events = [
            
     },
     image: 'images/Zimbabwe.jpg',
-    alt: 'Leadership Lekgotla',
+    alt: 'Kgosana Event',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-05-26',
+    title: 'Kgosana Koketso Rakhudu Excellence Award ',
+    details: {
+      description:
+        "Join us tomorrow as our esteemed leader, Dr. Koketso Rakhudu, officially launches the “Kgosana Koketso Rakhudu Excellence Award “at Tsitsing, Mmanape Secondary School!",
+      venue: 'Mmanape Secondary School',
+      time: '7:00 AM ',
+      dressCode: 'Semi-Formal'
+           
+    },
+    image: 'images/ExcellenceAward.jpeg',
+    alt: 'Kgosana Rakhudu Excellence Award',
+    loading: 'lazy',
+  },
+  {
+    date: '2025-05-29',
+    title: '2nd Annual financial inclusion sumit & expo',
+    details: {
+      description:
+        "Please be a part of the 2nd annual financial inclusion sumit & expo where Mr Rampete out strategic head of strategic planning and opperations will be a guest speaker ",
+      venue: 'Johannesburg',
+      time: '9:00 AM ',
+      dressCode: 'Semi-Formal'           
+    },
+    image: 'images/FinancialInclusionHlolelo.jpeg',
+    alt: 'Hlolelo Rampete financial inclusion speaker announcement',
+    loading: 'lazy',
+  },
+   {
+    date: '2025-05-30',
+    title: '2nd Annual financial inclusion sumit & expo',
+    details: {
+      description:
+        "Please be a part of the 2nd annual financial inclusion sumit & expo where Mr Rampete out strategic head of strategic planning and opperations will be a guest speaker ",
+      venue: 'Johannesburg',
+      time: '9:00 AM ',
+      dressCode: 'Semi-Formal'           
+    },
+    image: 'images/FinancialInclusionHlolelo.jpeg',
+    alt: 'Hlolelo Rampete financial inclusion speaker announcement',
+    loading: 'lazy',
+  },
+     {
+    date: '2025-05-30',
+    title: 'Leadership Skills Training session',
+    details: {
+      description:
+        "Join us for an interactive skills training session for our team",
+      venue: 'Rustenburg',
+      time: '9:00 AM ',
+      dressCode: 'Semi-Formal'           
+    },
+    image: 'images/',
+    alt: 'Leadership Skills Training session',
     loading: 'lazy',
   },
   {
@@ -698,7 +755,7 @@ const events = [
       dressCode: 'Semi-Formal'
            
     },
-    image: 'images/LPGDay.jpeg',
+    image: 'images/LPGYouthDay.jpeg',
     alt: 'LPG Day',
     loading: 'lazy',
   },
