@@ -102,6 +102,23 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+        title: "Kgosana Koketso Rakhudu Excellence Awards",
+        description:
+            "Our esteemed leader, Dr. Koketso Rakhudu, officially launched the “Kgosana Koketso Rakhudu Excellence Award “at Tsitsing, Mmanape Secondary School! This award aims to recognize and celebrate our outstanding learners who achieve an overall pass percentage of 80% and above. ",
+        media: [
+            { type: "image", src: "/images/ExcellenceAward.jpeg" },
+            { type: "image", src: "/images/KgosanaExcellenceAwards.jpg" },
+            { type: "image", src: "/images/ExcellenceAwardsGraduates.jpg" },
+            { type: "image", src: "/images/KgosanaExcellenceAwards1.jpg" },
+            { type: "video", src: "https://www.youtube.com/embed/LZpuvGZ_KjU", thumbnail: "/images/ExcellenceAward.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/Qu9QhtnIVaU", thumbnail: "/images/ExcellenceAward.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/iXcKkcTWxB0", thumbnail: "/images/ExcellenceAward.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/iQ4Nnm7I4jA", thumbnail: "/images/ExcellenceAward.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/U7fKbGhUS08", thumbnail: "/images/ExcellenceAward.jpeg" },
+            { type: "video", src: "https://www.youtube.com/embed/b_GOVmVLxEc", thumbnail: "/images/ExcellenceAward.jpeg" },
+        ],
+    },
+     {
         title: "Learners in Need Program in collaboration with Khuli Chana",
         description:
             "Dr Kgosana Koketso Rakhudu will be taking part in the Learners in Need Program alongside Khuli Chana",
